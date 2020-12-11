@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="37f8e4bb-2a1e-413f-bd6b-f1c7e8bd8ae2" name="mogupomogu.u.org.ua" url="http://195.138.64.213">
+        <fileTransfer rootFolder="/www/mogupomogu.u.org.ua" host="195.138.64.213" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" showHiddenFiles="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

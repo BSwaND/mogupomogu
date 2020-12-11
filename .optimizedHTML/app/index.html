@@ -21,27 +21,46 @@
 <header class="header">
 	<div class="container">
 		<div class="row align-items-center">
-			<div class="col-md-6">
+			<div class="col-xl-6">
 				<div class="header_logo_block">
 					<a href="/" class="header_logo">
 						<img src="images/logo.svg" alt="logo">
 					</a>
 				</div>
 			</div>
-			<div class="col-md-10">
+			<div class="col-xl-12">
 				<div class="header_info_outer">
+					
 					<div class="header_info_top">
 						<div class="phone_outer">
-							<img src="images/phone.svg" alt="phone" class="phone_img">
-							<div class="phone_block">
-								<a href="tel:380939393933" class="phone">+380939393933</a>
-								<a href="tel:380969396966" class="phone">+380969396966</a>
+							<div class="hamburger hamburger--slider">
+								<div class="hamburger-box">
+									<div class="hamburger-inner"></div>
+								</div>
+							</div>
+							<div class="d-flex">
+								<img src="images/phone.svg" alt="phone" class="phone_img">
+								<div class="phone_block">
+									<a href="tel:380939393933" class="phone">+380939393933</a>
+									<a href="tel:380969396966" class="phone">+380969396966</a>
+								</div>
 							</div>
 						</div>
-						<a href="#" class="btn btn_header">Подать объявление</a>
-						<a href="#" class="btn btn_login "></a>
+						<div class="d-flex">
+								<a href="#" class="btn btn_header">Подать объявление</a>
+								<a href="#" class="btn btn_login "></a>
+						</div>
 					</div>
+					
 					<div class="header_info_nav">
+						<div class="hamburger hamburger--slider hamburger__mob-menu">
+							<div class="hamburger-box">
+								<div class="hamburger-inner"></div>
+							</div>
+						</div>
+						<a href="/" class="nav_header__logo">
+							<img src="images/logo.svg" alt="logo">
+						</a>
 						<ul class="nav nav_header">
 							<li class=""><a href="#">Условия доставки</a></li>
 							<li class=""><a href="#">О нас</a></li>
@@ -70,7 +89,58 @@
 					<div class="form_search_dop-filter__control__btn">Фильтр</div>
 				</div>
 				
-				<div class="form_search_dop-filter"></div>
+				<div class="form_search_dop-filter">
+					<div class="form_search_dop-filter__top-control">
+						<div class="row">
+							<div class="col-9">
+								<label class="input_btn_outer">
+									<input type="radio" name="type" checked>
+									<span class="input_btn">Помогу</span>
+								</label>
+							</div>
+							<div class="col-9">
+								<label class="input_btn_outer">
+									<input type="radio" name="type">
+									<span class="input_btn">Нуждаюсь</span>
+								</label>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-10">
+							<label>
+								<p class="form_search_dop-filter__name-input">Место расположения</p>
+								<input type="text" name="location">
+							</label>
+							<label>
+								<p class="form_search_dop-filter__name-input">Страна</p>
+								<input type="text" name="country">
+							</label>
+							<label>
+								<p class="form_search_dop-filter__name-input">Город</p>
+								<input type="text" name="sity">
+							</label>
+							<label>
+								<p class="form_search_dop-filter__name-input">Область</p>
+								<input type="text" name="region">
+							</label>
+						</div>
+						<div class="col-md-8">
+							<div class="form_search_dop-filter__last-col">
+								<label class="label__radius">
+									<span class="label__radius__marker"></span>
+									<input type="text" name="radius"  placeholder="Растояние">
+								</label>
+								
+								<div class="form_search_dop-filter__control__footer">
+									<input class="form_search__btn-footer" type="submit" value="Искать">
+									<span class="form_search__btn-footer form_search__btn-footer__reset">Сбросить настройки</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</form>
 			
 			<div class="parent-category">
@@ -85,18 +155,24 @@
 		
 		<div class="main_body">
 			<div class="row">
-				<div class="col-md-13">
+				<div class="col-lg-14">
 					<div class="adt_block bg-white">
-						<div class="bg-white__header d-flex">
-							<div class="h1">Объявления</div>
-							<div class="tab_btn-block">
-								<span class="tab_btn active">Помогу</span>
-								<span class="tab_btn">Нуждаюсь</span>
+						<div class="bg-white__header">
+							<div class="row">
+								<div class="col-md-10">
+									<div class="h1">Объявления</div>
+								</div>
+								<div class="col-md-8">
+									<div class="tab_btn-block">
+										<span class="tab_btn active">Помогу</span>
+										<span class="tab_btn">Нуждаюсь</span>
+									</div>
+								</div>
 							</div>
 						</div>
-						<div class="adt_items">
+						<div class="adt_items tab_window tab_window__active">
 							<div class="row">
-								<div class="col-md-8">
+								<div class="col-sm-9">
 									<div class="adt_item">
 										<img src="https://matrason.ua/uploaded/Content_foto/blog_foto/prihogaya.jpg" alt="" class="adt_item__img">
 										<div class="adt_item_info">
@@ -108,7 +184,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="col-md-8">
+								<div class="col-sm-9">
 									<div class="adt_item">
 										<img  class="adt_item__img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTH3QxB_del4nknmEQFXETUfGKusHVxbvK07g&usqp=CAU" alt="">
 										<div class="adt_item_info">
@@ -120,7 +196,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="col-md-8">
+								<div class="col-sm-9">
 									<div class="adt_item">
 										<img  class="adt_item__img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTH3QxB_del4nknmEQFXETUfGKusHVxbvK07g&usqp=CAU" alt="">
 										<div class="adt_item_info">
@@ -132,7 +208,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="col-md-8">
+								<div class="col-sm-9">
 									<div class="adt_item">
 										<img  class="adt_item__img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCheWSYSAO3s9rN5vB3CwBi6Ic-pmiRP9A0Q&usqp=CAU" alt="">
 										<div class="adt_item_info">
@@ -144,7 +220,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="col-md-8">
+								<div class="col-sm-9">
 									<div class="adt_item">
 										<img  class="adt_item__img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTH3QxB_del4nknmEQFXETUfGKusHVxbvK07g&usqp=CAU" alt="">
 										<div class="adt_item_info">
@@ -156,7 +232,96 @@
 										</div>
 									</div>
 								</div>
-								<div class="col-md-8">
+								<div class="col-sm-9">
+									<div class="adt_item">
+										<img  class="adt_item__img" src="https://yablor.ru/media/images/top/original/krovat-cherdak-1.jpg" alt="">
+										<div class="adt_item_info">
+											<a href="#" class="adt_item__header">Кровать детская</a>
+											<div class="adt_item__date">13.12.20</div>
+											<a href="#" class="adt_item__category">Мебель</a>
+											<div class="label label_boo">б/у</div>
+											<div class="adt_item__sity">Киев</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="adt_items tab_window">
+							<div class="row">
+								<div class="col-sm-9">
+									<div class="adt_item">
+										<img src="https://matrason.ua/uploaded/Content_foto/blog_foto/prihogaya.jpg" alt="" class="adt_item__img">
+										<div class="adt_item_info">
+											<a href="#" class="adt_item__header">Кровать детская</a>
+											<div class="adt_item__date">13.12.20</div>
+											<a  href="#" class="adt_item__category">Мебель</a>
+											<div class="label label_hot">Горячее</div>
+											<div class="adt_item__sity">Киев</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-9">
+									<div class="adt_item">
+										<img src="https://detyam-shop.com.ua/image/cache/catalog/image-kolyaski/ges-prom-00000076481-500x500-450x450.jpg" alt="" class="adt_item__img">
+										<div class="adt_item_info">
+											<a href="#" class="adt_item__header">Кровать детская</a>
+											<div class="adt_item__date">13.12.20</div>
+											<a  href="#" class="adt_item__category">Мебель</a>
+											<div class="label label_hot">Горячее</div>
+											<div class="adt_item__sity">Киев</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-9">
+									<div class="adt_item">
+										<img  class="adt_item__img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTH3QxB_del4nknmEQFXETUfGKusHVxbvK07g&usqp=CAU" alt="">
+										<div class="adt_item_info">
+											<a href="#" class="adt_item__header">Стол обеденный</a>
+											<div class="adt_item__date">13.12.20</div>
+											<a href="#" class="adt_item__category">Мебель</a>
+											<div class="label label_new">Горячее</div>
+											<div class="adt_item__sity">Киев</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-9">
+									<div class="adt_item">
+										<img  class="adt_item__img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTH3QxB_del4nknmEQFXETUfGKusHVxbvK07g&usqp=CAU" alt="">
+										<div class="adt_item_info">
+											<a href="#" class="adt_item__header">Стол обеденный</a>
+											<div class="adt_item__date">13.12.20</div>
+											<a href="#" class="adt_item__category">Мебель</a>
+											<div class="label label_new">Горячее</div>
+											<div class="adt_item__sity">Киев</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-9">
+									<div class="adt_item">
+										<img  class="adt_item__img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCheWSYSAO3s9rN5vB3CwBi6Ic-pmiRP9A0Q&usqp=CAU" alt="">
+										<div class="adt_item_info">
+											<a href="#" class="adt_item__header">Стол обеденный</a>
+											<div class="adt_item__date">13.12.20</div>
+											<a href="#" class="adt_item__category">Мебель</a>
+											<div class="label label_new">Горячее</div>
+											<div class="adt_item__sity">Киев</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-9">
+									<div class="adt_item">
+										<img  class="adt_item__img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTH3QxB_del4nknmEQFXETUfGKusHVxbvK07g&usqp=CAU" alt="">
+										<div class="adt_item_info">
+											<a href="#" class="adt_item__header">Стол обеденный</a>
+											<div class="adt_item__date">13.12.20</div>
+											<a href="#" class="adt_item__category">Мебель</a>
+											<div class="label label_new">Горячее</div>
+											<div class="adt_item__sity">Киев</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-9">
 									<div class="adt_item">
 										<img  class="adt_item__img" src="https://yablor.ru/media/images/top/original/krovat-cherdak-1.jpg" alt="">
 										<div class="adt_item_info">
@@ -173,19 +338,19 @@
 					</div>
 				</div>
 				
-				<div class="col-md-3">
-					<div class="bg-white">
-						<div class="bg-white__header">
-							<div class="h2">Все регионы</div>
+				<div class="col-lg-4">
+					<div class="bg-white mb-5">
+						<div class="bg-white__header ">
+							<div class="h2">Все регионы <img src="images/marker.svg" alt="map" class="marker-map__img"></div>
 						</div>
-						<div class="">
-							<ul>
+						<div class="all-region_outer">
+							<ul class="all-region_mainland">
 								<li>
 									<span><a href="#">Европа (20)</a></span>
-									<ul>
+									<ul class="all-region_contry">
 										<li>
 											<span><a href="#">Германия(8)</a></span>
-											<ul>
+											<ul  class="all-region_sity">
 												<li><a href="#">Берлин(4)</a></li>
 												<li><a href="#">Гамбург(2)</a></li>
 												<li><a href="#">Мюнхен(2)</a></li>
@@ -196,7 +361,7 @@
 								
 								<li>
 									<span><a href="#">Испания(5)</a></span>
-									<ul>
+									<ul  class="all-region_contry">
 										<li><a href="#">Мадрид</a></li>
 										<li><a href="#">Барселона</a></li>
 									</ul>
@@ -204,34 +369,36 @@
 								
 								<li>
 									<span><a href="">Украина(13)</a></span>
-									<ul>
+									<ul  class="all-region_contry">
 										<li><a href="#">Одесса</a></li>
 										<li><a href="#">Киев</a></li>
 										<li><a href="#">Ивано-Франковск</a></li>
 										<li><a href="#">Львов</a></li>
 									</ul>
 								</li>
-								
-								<li>
-									<span><a href="#">Северная Америка(4)</a></span>
-									<ul>
-										<li><a href="#">Чикаго</a></li>
-										<li><a href="#">Нью Йорк</a></li>
-									</ul>
-								</li>
 							</ul>
+							
+								<ul  class="all-region_mainland">
+									<li>
+										<span><a href="#">Северная Америка(4)</a></span>
+										<ul  class="all-region_contry">
+											<li><a href="#">Чикаго</a></li>
+											<li><a href="#">Нью Йорк</a></li>
+										</ul>
+									</li>
+								</ul>
 						</div>
 					</div>
-					<div class="bg-white">
+					<div class="bg-white mb-5">
 						<div class="bg-white__header">
-							<div class="h1">Случайное объявление</div>
+							<div class="h2">Случайное объявление</div>
 						</div>
 					</div>
 				</div>
 			</div>
 			
 			<div class="row">
-				<div class="col-16">
+				<div class="col-18">
 					<div class="bg-white">
 						<div class="bg-white__header">
 							<div class="h2">Карта объявления <img src="images/marker-map.svg" alt="map" class="marker-map__img"></div>
@@ -252,20 +419,19 @@
 	<div class="footer_top">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-5">
+				<div class="col-md-6">
 					<div class="footer_top__title">Свяжитесь с нами</div>
 				</div>
-				<div class="col-md-5">
+				<div class="col-md-6">
 					<div class="footer_top__title">Информация</div>
 				</div>
-				<div class="col-md-4"></div>
 			</div>
 		</div>
 	</div>
 	<div class="footer_body">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-5">
+				<div class="col-md-6">
 					<div class="footer_address_outer">
 						<div class="footer_address_item d-flex">
 							<img src="images/marker.svg" alt="" class="footer_address_item__icon">
@@ -287,7 +453,7 @@
 						<div class="btn btn_footer">Отправьте нам сообщение</div>
 					</div>
 				</div>
-				<div class="col-md-5">
+				<div class="col-md-6">
 					<ul class="nav nav_footer">
 						<li><a href="#">О нас</a></li>
 						<li><a href="#">Политика конфиденциальности</a></li>

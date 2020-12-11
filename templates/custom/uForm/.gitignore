@@ -1,0 +1,11 @@
+.idea/
+
+dump.log
+test.php
+error.log
+statistic.log
+
+*.zip
+*.rar
+/official_exemple_form.php
+/config.php

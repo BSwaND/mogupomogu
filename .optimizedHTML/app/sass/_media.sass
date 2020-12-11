@@ -4,20 +4,130 @@
 /*==========  Desktop First  ==========*/
 // ≥2000px
 @media screen and (min-width: 2000px)
-	.nav
-		&_haeder
+ //
 
 // ≥1200px
 +media-breakpoint-down(lg)
-			
+	.adt
+		&_item
+			display: block
 // ≥992px
 +media-breakpoint-down(md)
-
+	.parent-category
+		width: 100%
+		&_item
+			height: 120px
+			margin: 0  20px 40px 0
+			flex: 0 0 calc(50% - 10px)
+			&__header
+				font-size: 17px
+		                          
 // ≥768px
 +media-breakpoint-down(sm)
-		
+	.header_info_top
+		flex-direction: column
+		&_info
+			&_nav
+				justify-content: flex-start
+
+	.hamburger
+		display: block
+
+
+	.header_info_nav
+		display: none
+		position: fixed
+		width: 100%
+		height: 100%
+		background: #ffffff
+		z-index: 10
+		top: 0
+		left: 0
+		width: 100%
+		padding: 30px 
+		text-align: center
+
+	.nav_header
+		&__logo
+			display: block
+			margin-bottom: 60px
+
+		li
+			display: block
+		a
+			text-align: center
+			display: block
+			margin: auto
+			border: none
+		.nav_header__parent
+			&:after
+				display: none
+		.separator
+			border: none
+			text-align: center
+			display: block
+			//font-size: 12px
+			height: 25px
+			display: none
+		.nav_header__children
+			display: block
+			opacity: 1
+			border: none
+			//background: #eee
+			padding: 10px 0px 0
+			position: static
+			a
+				font-size: 16px
+	.phone
+		font-size: 17px
+		&_outer
+			margin: 30px 0
+			width: 100%
+
+
+	.form_search
+		margin: 40px 0 20px
+		&__input
+			height: 45px
+			font-size: 12px
+		&__submit
+			height: 45px
+		&_dop-filter
+			font-size: 14px
+			.input_btn
+				width: auto
+				padding: 5px 10px
+				font-size: 14px
+			&__top-control
+				margin: 40px 0 20px
+		&__btn-footer
+			padding: 7px
+			font-size: 14px
+
+
+
+
+	.tab_btn
+		margin: 0 20px 10px
+		&-block
+			justify-content: center
+			padding: 20px 0 0
+
+	.adt_item
+		padding: 20px 20px
+		border-bottom: 1px solid $grey
+
+		&__img
+			margin: auto
+			width:  auto
+
+
 // ≥576px
 +media-breakpoint-down(xs)
+	//
+
+@media (max-width: 420px)
+	//
 
 /*==========  Mobile First  ==========*/
 

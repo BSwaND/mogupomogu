@@ -51,6 +51,9 @@ a
 			justify-content: flex-end
 			display: flex
 			align-items: center
+			&__control
+				display: flex
+				justify-content: space-between
 		&_nav
 			display: flex
 			justify-content: flex-end
@@ -75,6 +78,8 @@ a
 		list-style: none
 	&_header
 		padding: 0
+		&__logo
+			display: none
 		li
 			display: inline-block
 			margin: 2px
@@ -193,6 +198,7 @@ a
 			min-height: 90px
 			position: relative
 			align-items: flex-end
+			display: flex
 			&:before
 				content: ''
 				width: 3px
@@ -226,6 +232,7 @@ a
 			width: 200px
 			height: 200px
 			object-fit: cover
+			display: block
 		&_info
 			margin-left: 15px
 			.label
@@ -247,6 +254,70 @@ a
 				height: 30px
 				left: -10px
 				filter: grayscale(1)
+
+	&_card
+		&_body
+			border-bottom: 1px solid $grey-2
+			padding-bottom: 60px
+			margin-bottom: 60px
+		&_header
+			display: flex
+			justify-content: space-between
+			margin-bottom: 10px
+			&_info
+				display: flex
+				margin-bottom: 10px
+				.adt_item__sity
+					margin-right: 40px
+			.h1, .h1
+				padding: 0
+
+
+	&_author
+		&_block
+		&_foto
+			width: 73px
+			height: 73px
+			object-fit: cover
+		&_card
+			font-weight: 300
+			font-size: 15px
+			&_header
+				display: flex
+				&__name
+					font-size: 18px
+					font-weight: 400
+
+
+
+
+
+
+
+
+
+
+
+
+.all-region
+	&_outer
+		li
+			display: block
+			margin-bottom: 5px
+		ul
+			padding:  0px
+	&_mainland
+		padding-left:  20px !important
+		font-size: 17px
+	&_contry
+		font-size: 15px
+		padding-left: 10px !important
+	&_sity
+		font-size: 12px
+		padding-left: 10px !important
+
+
+
 
 
 
@@ -290,5 +361,22 @@ a
 	.phone
 		color: $text-footer
 		margin-bottom: 7px
+		
+		
+		
+.social
+	&_outer
+		text-align: right
+	&_link
+		display: inline-block
+		height: 110px
+		width: 110px
+		background:  $accent
+		text-align: center
+		border-radius: 50%
+		line-height: 110px
+		margin: 30px 15px
+		&:hover
+			background: lighten($accent, 10%)
 
 @import media

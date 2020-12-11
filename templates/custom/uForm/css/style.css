@@ -1,0 +1,89 @@
+.uForm {
+    position: relative;
+
+    width: 300px;
+    min-height: 200px;
+
+    padding: 35px;
+    font-family: Roboto;
+
+    display: block;
+    margin: 0 auto;
+
+    border: 2px dashed lightgrey;
+}
+
+form > * {
+    display: block;
+    margin: 10px auto;
+}
+
+.uForm__radio-btn {
+    display: inline-block;
+}
+
+.uForm__checkbox {
+    display: inline-block;
+}
+
+.uForm__modal {
+    width: 300px;
+    height: max-content;
+    max-height: 150px;
+
+    padding: 30px;
+
+    text-align: center;
+    font-size: 23px;
+
+    background: #fff;
+    z-index: 1000;
+
+    position: fixed;
+    top: -200px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+    display: none;
+}
+
+.uForm__error-msg {
+    display: none;
+    color: red;
+}
+
+.uForm__overlay {
+    width: 100vw;
+    height: 100vw;
+
+    background: rgba(0, 0, 0, .5);
+    z-index: 100;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: none;
+}
+
+.uForm__preload {
+    display: none;
+    position: absolute;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../img/loading.gif) no-repeat;
+    background-size: 120px;
+    background-position: center;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+.uForm__extended {
+    display: none;
+}

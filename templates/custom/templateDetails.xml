@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.9" type="template" client="site">
+	<name>custom</name>
+	<version>1.7</version>
+	<creationDate>15/05/2019</creationDate>
+	<author>Sofona.com</author>
+	<authorEmail>admin@sofona.com</authorEmail>
+	<copyright>Copyright (C) 2005 - 2019 Open Source Matters, Inc. All rights reserved.</copyright>
+	<description>Standard Joomla 3.x template for Sofona developers</description>
+	<files>
+		<filename>component.php</filename>
+		<filename>error.php</filename>
+		<filename>offline.php</filename>
+		<filename>index.php</filename>
+		<filename>templateDetails.xml</filename>
+		<filename>template_preview.png</filename>
+		<filename>template_thumbnail.png</filename>
+		<folder>uForm</folder>
+		<folder>css</folder>
+		<folder>html</folder>
+		<folder>fonts</folder>
+		<folder>icon</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+		<folder>language</folder>
+		<folder>webfonts</folder>
+	</files>
+	<positions>
+		<position>position-2</position>
+		<position>menu</position>
+		<position>header</position>
+		<position>breadcrumbs</position>
+		<position>footer</position>
+	</positions>
+	<languages folder="language">
+		<language tag="en-GB">language/en-GB/en-GB.tpl_custom.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.tpl_custom.sys.ini</language>
+		<language tag="ru-RU">language/ru-RU/ru-RU.tpl_custom.ini</language>
+		<language tag="ru-RU">language/ru-RU/ru-RU.tpl_custom.sys.ini</language>
+		<language tag="uk-UA">language/uk-UA/uk-UA.tpl_custom.ini</language>
+		<language tag="uk-UA">language/uk-UA/uk-UA.tpl_custom.sys.ini</language>
+	</languages>
+</extension>
