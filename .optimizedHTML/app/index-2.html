@@ -176,6 +176,56 @@
 						<div class="bg-white__header ">
 							<div class="h2">Фильтр</div>
 						</div>
+						<form action="" class="form_aside-search">
+							<div class="form_aside-search__input-outer">
+								<input type="text" placeholder="Что вы ищете?">
+								<input type="text" placeholder="Адрес">
+								<label class="label__radius">
+									<span class="label__radius__marker"></span>
+									<input type="text" name="radius" placeholder="Растояние">
+								</label>
+							</div>
+
+							<div class="form_aside-search__input-outer">
+								<div class="form_aside-search__title">Место расположениея</div>
+								<select name="" id="">
+									<option value="Киев">Киев</option>
+									<option value="Одесса">Одесса</option>
+									<option value="Львов">Львов</option>
+								</select>
+							</div>
+							
+							<div class="form_aside-search__input-outer">
+								<select name="" >
+									<option value="Киев">Мебель</option>
+									<option value="Одесса">Одесса</option>
+									<option value="Львов">Львов</option>
+								</select>
+							</div>
+							
+							<div class="form_aside-search__input-outer">
+								<div class="form_aside-search__title">Спальни</div>
+								<label class="checkbox_outer">
+									<input type="checkbox" class="checkbox_hidden-input">
+									<span class="checkbox_span-label">1</span>
+								</label>
+								<label class="checkbox_outer">
+									<input type="checkbox" class="checkbox_hidden-input">
+									<span class="checkbox_span-label">2</span>
+								</label>
+								<label class="checkbox_outer">
+									<input type="checkbox" class="checkbox_hidden-input">
+									<span class="checkbox_span-label">3</span>
+								</label>
+								<label class="checkbox_outer">
+									<input type="checkbox" class="checkbox_hidden-input">
+									<span class="checkbox_span-label">4+</span>
+								</label>
+							</div>
+							
+							<input type="submit" class="btn form_aside-search__btn-submit" value="Искать">
+							<div class="form_aside-search__btn-clear">Сбросить настройки</div>
+						</form>
 					</div>
 				</div>
 				
@@ -198,7 +248,7 @@
 									<img src="images/krovat.jpg" alt="">
 								</div>
 								<div class="col-md-10">
-									<div class="bg-white p-3">
+									<div class="bg-white p-3 fw-3">
 										<p>
 											Безперечно, ліжко – предмет меблів, на якому людина проводить значну частину свого часу, на якому відпочиває та відновлюється щоночі. Спеціально для вас ми створили посібник з вибору ліжка та матраца, тепер ви будете знати на що потрібно звернути увагу у магазині, чи при онлайн замовленні.
 										</p>
@@ -211,7 +261,7 @@
 					<div class="adt_author_block">
 						<div class="">
 							<div class="h1">Информация о пользователе</div>
-							<div class="row">
+							<div class="row mt-3">
 								<div class="col-md-10">
 									<div class="bg-white p-3">
 										<div class="adt_author_card">
@@ -223,37 +273,92 @@
 												</div>
 											</div>
 											
-											<div class="">
-												<div class="">
-													<span>Детали:</span>
-													<span>Подробнее о моем профиле</span>
+											<div class="adt_author_block_body">
+												<div class="adt_author_block_body_row">
+													<span class="adt_author_block_body_row__title">Детали:</span>
+													<span><a href="#">Подробнее о моем профиле</a></span>
 												</div>
-												<div class="">
-													<span>Детали:</span>
+												<div class="adt_author_block_body_row">
+													<span class="adt_author_block_body_row__title">Телефон:</span>
 													<span>+38(093)939 39 33</span>
 												</div>
-												<div class="">
-													<span>Email:</span>
+												<div class="adt_author_block_body_row">
+													<span class="adt_author_block_body_row__title">Email:</span>
 													<span>хххх@mail.com</span>
 												</div>
 											</div>
 										</div>
-										
-										
-										
-
 									</div>
 								</div>
 								<div class="col-md-8">
-									<a href="#" class="btn">Связаться с автором</a>
-									<a href="#" class="btn">Пожаловаться</a>
+									<div class="adt_author_block__control">
+										<a href="#" class="btn btn_accent">Связаться с автором</a>
+										<a href="#" class="btn btn_accent-black">Пожаловаться</a>
+									</div>
 								</div>
 							</div>
 
 						</div>
 					</div>
 				</div>
+			</div>
+			
+			<div class="adt_card_statistics">
+				<div class="h1">Статистика объявления</div>
+				<div class="row">
+					<div class="col-md-4">
+						<div class="">Идентификатор:</div>
+						<div class="fw-3">74</div>
+					</div>
+					<div class="col-md-3">
+						<div class="">Показы:</div>
+						<div class="fw-3">123</div>
+					</div>
+					<div class="col-md-4">
+						<div class="">Срок действия истекает:</div>
+						<div class="fw-3">12.12.2020   21:00</div>
+					</div>
+					<div class="col-md-6">
+						<div class="">В категориях:</div>
+						<div class="fw-3">Мебель, для дома, спальня</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="mb-5 bb">
+				<div class="h1">Другие объявления автора</div>
+				<div class="">
+					<div class="row">
+						<div class="col-sm-7">
+							<div class="adt_item">
+								<img src="https://matrason.ua/uploaded/Content_foto/blog_foto/prihogaya.jpg" alt="" class="adt_item__img">
+								<div class="adt_item_info">
+									<a href="#" class="adt_item__header">Кровать детская</a>
+									<div class="adt_item__date">13.12.20</div>
+									<a href="#" class="adt_item__category">Мебель</a>
+									<div class="label label_hot">Горячее</div>
+									<div class="adt_item__sity">Киев</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-7">
+							<div class="adt_item">
+								<img class="adt_item__img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTH3QxB_del4nknmEQFXETUfGKusHVxbvK07g&amp;usqp=CAU" alt="">
+								<div class="adt_item_info">
+									<a href="#" class="adt_item__header">Стол обеденный</a>
+									<div class="adt_item__date">13.12.20</div>
+									<a href="#" class="adt_item__category">Мебель</a>
+									<div class="label label_new">Горячее</div>
+									<div class="adt_item__sity">Киев</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 				
+				<div class="text-center mb-5">
+					<a href="#" class="btn btn_white">Показать все</a>
+				</div>
 
 			</div>
 			

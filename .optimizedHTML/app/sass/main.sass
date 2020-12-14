@@ -2,6 +2,7 @@
 @import fonts
 @import libs
 @import btn
+@import adt
 
 ::placeholder
 	color: #666
@@ -16,6 +17,18 @@ input, textarea
 		border-color: red
 	&:required:valid
 		border-color: green
+	&[type=submit]
+		border: none
+		background: $accent
+		padding: 5px 0
+		margin: 0 0 10px
+input
+	padding: 8px 10px
+	border: none
+	background: $grey
+	border-radius: 4px
+	width: 100%
+
 
 body
 	font-size: 16px
@@ -26,6 +39,12 @@ body
 	overflow-x: hidden
 	color: $text
 	background: $grey
+
+pre
+	background: #eee
+	padding: 10px
+	border-radius: 10px
+	font-size: 12px
 
 img
 	max-width: 100%
@@ -43,6 +62,7 @@ a
 	background: #ffffff
 	&_logo
 		&_block
+			//
 	&_info
 		&_outer
 			display: flex
@@ -95,8 +115,10 @@ a
 			font-size: 16px
 		&__parent
 			position: relative
-			.separator
+			.separator,
+			a
 				padding-right: 20px
+
 			&:after
 				content: ''
 				position: absolute
@@ -161,11 +183,10 @@ a
 		align-items: center
 		display: flex
 		border-radius: 8px
-		margin: 0 100px 0 0
+		margin: 0 100px 60px 0
 		overflow: hidden
 		cursor: pointer
 		transition: all 0.4s
-		margin-bottom: 60px
 		&:hover
 			.parent-category_item__header
 				background: $accent
@@ -194,7 +215,7 @@ a
 		box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25)
 		&__header
 			border-bottom: 1px solid $grey
-			padding: 20px 0px 10px
+			padding: 20px 0 10px
 			min-height: 90px
 			position: relative
 			align-items: flex-end
@@ -207,96 +228,9 @@ a
 				position: absolute
 				top: 0
 				left: -10px
-
-
-
-
-
-.adt
-	&_block
-		padding: 0 10px
-	&_items
-		margin-top: 40px
-	&_item
-		font-size: 14px
-		display: flex
-		padding: 0 0 60px 30px
-		.label
-			min-width: 90px
-		&__header
-			font-size: 20px
-			display: block
-			letter-spacing: -1px
-			margin-bottom: 15px
-		&__img
-			width: 200px
-			height: 200px
-			object-fit: cover
-			display: block
-		&_info
-			margin-left: 15px
-			.label
-				margin-bottom: 10px
-		&__date
-			margin-bottom: 3px
-		&__category
-			display: block
-			margin-bottom: 10px
-		&__sity
-			font-size: 18px
-			position: relative
-			padding-left: 20px
-			&:before
-				position: absolute
-				content: ''
-				background: url(../images/marker.svg) no-repeat center
-				width: 30px
-				height: 30px
-				left: -10px
-				filter: grayscale(1)
-
-	&_card
-		&_body
-			border-bottom: 1px solid $grey-2
-			padding-bottom: 60px
-			margin-bottom: 60px
-		&_header
-			display: flex
-			justify-content: space-between
-			margin-bottom: 10px
-			&_info
-				display: flex
-				margin-bottom: 10px
-				.adt_item__sity
-					margin-right: 40px
-			.h1, .h1
-				padding: 0
-
-
-	&_author
-		&_block
-		&_foto
-			width: 73px
-			height: 73px
-			object-fit: cover
-		&_card
-			font-weight: 300
-			font-size: 15px
-			&_header
-				display: flex
-				&__name
-					font-size: 18px
-					font-weight: 400
-
-
-
-
-
-
-
-
-
-
+			.h1
+				padding-left: 30px
+				margin-bottom: 0
 
 
 .all-region
@@ -305,7 +239,7 @@ a
 			display: block
 			margin-bottom: 5px
 		ul
-			padding:  0px
+			padding:  0
 	&_mainland
 		padding-left:  20px !important
 		font-size: 17px
@@ -378,5 +312,36 @@ a
 		margin: 30px 15px
 		&:hover
 			background: lighten($accent, 10%)
+
+
+
+
+
+.control-group
+	display: flex
+	margin-bottom: 20px
+	font-size: 18px
+	&__authorization
+		.btn
+			padding: 7px 45px
+	.checkbox_span-label
+		font-size: 18px
+	.controls
+		margin: auto
+		text-align: center
+
+.control-label
+	min-width: 37%
+
+
+
+.nav-stacked__authorization
+	&__item
+		border-bottom: 1px solid $grey-2
+		padding: 20px 20px 20px
+		&:last-child
+			border: none
+			padding-bottom: 0
+
 
 @import media

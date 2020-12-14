@@ -1,0 +1,103 @@
+.adt
+	&_block
+		padding: 0 10px
+	&_items
+		margin-top: 40px
+	&_item
+		font-size: 14px
+		display: flex
+		padding: 0 0 60px 30px
+		.label
+			min-width: 90px
+		&__header
+			font-size: 20px
+			display: block
+			letter-spacing: -1px
+			margin-bottom: 15px
+		&__img
+			width: 200px
+			height: 200px
+			object-fit: cover
+			display: block
+		&_info
+			margin-left: 15px
+			.label
+				margin-bottom: 10px
+		&__date
+			margin-bottom: 3px
+		&__category
+			display: block
+			margin-bottom: 10px
+		&__sity
+			font-size: 18px
+			position: relative
+			padding-left: 20px
+			&:before
+				position: absolute
+				content: ''
+				background: url(../images/marker.svg) no-repeat center
+				width: 30px
+				height: 30px
+				left: -10px
+				filter: grayscale(1)
+
+	&_card
+		&_body
+			border-bottom: 1px solid $grey-2
+			padding-bottom: 60px
+			margin-bottom: 30px
+		&_header
+			display: flex
+			justify-content: space-between
+			margin-bottom: 10px
+			&_info
+				display: flex
+				margin-bottom: 10px
+				.adt_item__sity
+					margin-right: 40px
+			.h1, .h1
+				padding: 0
+		&_statistics
+			border-bottom: 1px solid $grey-2
+			border-top: 1px solid $grey-2
+			margin-bottom: 60px
+			padding: 30px 0
+
+		&_statistics
+			font-size: 18px
+
+
+
+	&_author
+		&_block
+			&__control
+				display: flex
+				flex-direction: column
+				justify-content: center
+				margin-bottom: 60px
+				padding-top: 60px
+				.btn
+					width: 80%
+					margin: 0 auto 20px
+			&_body
+				&_row
+					margin: 5px 0 5px
+					&__title
+						display: inline-block
+						min-width: 20%
+		&_foto
+			width: 73px
+			height: 73px
+			object-fit: cover
+			margin: 0 15px 15px 0
+		&_card
+			font-weight: 300
+			font-size: 15px
+			&_header
+				display: flex
+				&__name
+					font-size: 18px
+					font-weight: 400
+
+
+

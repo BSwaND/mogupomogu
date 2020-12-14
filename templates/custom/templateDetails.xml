@@ -26,11 +26,11 @@
 		<folder>webfonts</folder>
 	</files>
 	<positions>
-		<position>position-2</position>
 		<position>menu</position>
 		<position>header</position>
 		<position>breadcrumbs</position>
 		<position>footer</position>
+		<position>slogin</position>
 	</positions>
 	<languages folder="language">
 		<language tag="en-GB">language/en-GB/en-GB.tpl_custom.ini</language>

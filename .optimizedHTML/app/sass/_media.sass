@@ -13,6 +13,9 @@
 			display: block
 // ≥992px
 +media-breakpoint-down(md)
+	input
+		width: 100%
+		
 	.parent-category
 		width: 100%
 		&_item
@@ -21,9 +24,14 @@
 			flex: 0 0 calc(50% - 10px)
 			&__header
 				font-size: 17px
-		                          
+
+
+	.control-group
+		display: block
+
 // ≥768px
 +media-breakpoint-down(sm)
+
 	.header_info_top
 		flex-direction: column
 		&_info
@@ -120,6 +128,7 @@
 		&__img
 			margin: auto
 			width:  auto
+
 
 
 // ≥576px

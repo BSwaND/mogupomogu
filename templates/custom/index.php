@@ -88,7 +88,7 @@
 							</div>
 						</div>
 						<div class="d-flex">
-							<a href="#" class="btn btn_header">Подать объявление</a>
+							<a href="/dobavit-obyavlenie" class="btn btn_header">Подать объявление</a>
 							<a href="#" class="btn btn_login "></a>
 						</div>
 					</div>
@@ -102,17 +102,7 @@
 						<a href="/" class="nav_header__logo">
 							<img src="images/logo.svg" alt="logo">
 						</a>
-						<ul class="nav nav_header">
-							<li class=""><a href="#">Условия доставки</a></li>
-							<li class=""><a href="#">О нас</a></li>
-							<li class=""><a href="#">Контакты</a></li>
-							<li class="nav_header__parent">
-								<span class="separator">Руководство к пользованию</span>
-								<ul class="nav_header__children">
-									<li><a href="#">Политика конфиденциальности</a></li>
-								</ul>
-							</li>
-						</ul>
+						<jdoc:include type="modules" name="menu" style="none"/>
 					</div>
 				</div>
 			</div>
@@ -184,7 +174,7 @@
 				</div>
 			</form>
 
-			<jdoc:include type="modules" name="position-7" style="none"/>
+
 
 			<jdoc:include type="modules" name="breadcrumbs" style="none"/>
 
