@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="wbamp" method="upgrade">
+    <name>com_djclassifieds wbAMP support</name>
+    <author>DJ-Extensions.com</author>
+    <creationDate>2017-01-23</creationDate>
+	<authorEmail>contact@dj-extensions.com</authorEmail>
+	<authorUrl>http://www.dj-extensions.com</authorUrl>
+	<copyright>Copyright DJ-Extensions.com</copyright>
+	<license>GNU General Public License version 3, or later</license>
+	<creationDate>2017-01-23</creationDate>
+	<version>1.0</version>
+    <description>com_djclassifieds wbAMP support</description>
+    <files>
+        <filename plugin="djclassifieds">djclassifieds.php</filename>
+    </files>
+</extension>
+
+

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="user"  method="upgrade">
+	<name>DJ Classifieds Users Points</name>
+	<author>DJ-Extensions.com</author>
+	<creationDate>May 2013</creationDate>
+	<copyright>Copyright (C) 2010 DJ-Extensions.com LTD, All rights reserved.</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+    <authorEmail>contact@design-jooma.eu</authorEmail>
+	<authorUrl>http://design-joomla.eu</authorUrl>
+	<version>3.7.8</version>
+	<description>DJ Classifieds User Points</description>
+	<files>
+		<filename plugin="djcfpoints">djcfpoints.php</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.plg_user_djcfpoints.ini</language>
+		<language tag="pl-PL">pl-PL.plg_user_djcfpoints.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">						        
+				<field name="points" type="text" size="50" default="1" label="PLG_DJCFPOINTS_POINTS_ON_START" description="PLG_DJCFPOINTS_POINTS_ON_START_DESC"/>
+				<field name="points_desc" type="text" size="50" default="Start Package" label="PLG_DJCFPOINTS_BONUS_DESCRIPTION" description="PLG_DJCFPOINTS_BONUS_DESCRIPTION_DESC"/>
+				<field name="user_groups" type="usergrouplist" default="" label="PLG_DJCFPOINTS_USER_GROUPS" description="PLG_DJCFPOINTS_USER_GROUPS_DESC" multiple="true" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

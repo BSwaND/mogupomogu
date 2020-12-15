@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="emailalerts" method="upgrade">
+	<name>J!MailAlerts - DJ-Classifieds - Latest Ads</name>
+	<creationDate>November 2013</creationDate>
+    	<author>DJ-Extensions.com</author>
+	<copyright>Copyright (C) 2013 DJ-Extensions.com, All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses GNU/GPL</license>
+	<authorEmail>contact@dj-extensions.com</authorEmail>
+	<authorUrl>http://dj-extensions.com</authorUrl>
+	<version>1.0.7</version>
+	<description>
+		This Plugin pulls the Latest Ads from DJ-Classifieds to J!MailAlerts.
+	</description>
+	
+	<files>
+		<file plugin="jma_latestads_djcf">jma_latestads_djcf.php</file>
+		<folder>jma_latestads_djcf</folder>
+	</files>
+
+	<languages folder="language/en-GB">
+        	<language tag="en-GB">en-GB.plg_emailalerts_jma_latestads_djcf.ini</language>
+	</languages>
+
+	<config name="params">
+  	<fields name="params">
+     	<fieldset name="basic" label="Parameters">
+				<field name="plugintitle" type="text" default="DJ-Classifieds Latest Ads" label="PLG_JMA_DJCLASSIFIEDS_TITLE" description="PLG_JMA_DJCLASSIFIEDS_TITLE_DESC" size="40"/>
+				<field name="no_of_ads" type="text" class="validate-numeric inputbox" label="PLG_JMA_DJCLASSIFIEDS_NO_OF_ADS" description="PLG_JMA_DJCLASSIFIEDS_NO_OF_ADS_DESC" size="10"/>
+				<field name="user_filter" type="list" default="0" label="PLG_JMA_DJCLASSIFIEDS_USER_FILTER" description="PLG_JMA_DJCLASSIFIEDS_USER_FILTER_DESC">
+					<option value="0">PLG_JMA_DJCLASSIFIEDS_FROM_ANYONE</option>
+					<option value="1">PLG_JMA_DJCLASSIFIEDS_ADDED_BY_ADMIN</option>
+				</field>
+				<field name="cat" type="sql" 
+					query="SELECT id, name FROM #__djcf_categories WHERE published=1 AND ads_disabled=0" 
+					key_field="id" value_field="name" multiple="multiple" label="PLG_JMA_DJCLASSIFIEDS_CATEGORIES" description="PLG_JMA_DJCLASSIFIEDS_CATEGORIES_DESC" />
+				<field name="restr_cat" type="sql" 
+					query="SELECT id, name FROM #__djcf_categories WHERE published=1 AND ads_disabled=0" 
+					key_field="id" value_field="name" multiple="multiple" label="PLG_JMA_DJCLASSIFIEDS_RESTRICTED_CATEGORIES" description="PLG_JMA_DJCLASSIFIEDS_RESTRICTED_CATEGORIES_DESC" />
+	    </fieldset>
+	</fields>
+	</config>
+</extension>

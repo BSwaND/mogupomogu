@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+  <form>
+  	<fields name="jma_latestads_djcf">
+    	<fieldset name="legacy" >
+				<field name="no_of_ads" type="text" class="validate-numeric inputbox" label="Max. Number of Ads" description="Maximum number of ads to display" size="10"/>
+				<field name="user_filter" type="list" default="0" label="User Filter" description="Select whether to display all the ads or just these added by users with administrator rights" >
+					<option value="0">From anyone</option>
+					<option value="1">Only added by admin</option>
+				</field>
+				<field name="cat" type="sql" 
+					query="SELECT id, name FROM #__djcf_categories WHERE published=1 AND ads_disabled=0" 
+					key_field="id" value_field="name" multiple="multiple" label="Categories" description="Categories from which the latest ads will be displayed" />
+				<field name="restr_cat" type="sql" 
+					query="SELECT id, name FROM #__djcf_categories WHERE published=1 AND ads_disabled=0" 
+					key_field="id" value_field="name" multiple="multiple" label="Restricted Categories" description="Categories from which the latest ads will NOT be displayed" />
+			</fieldset>
+		</fields>
+	</form>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="1.6.0" client="site" method="upgrade" group="djclassifieds">
+	<name>PLG_DJCLASSIFIEDS_LEAFLET</name>
+	<creationDate>November 2018</creationDate>
+	<author>DJ-Extensions.com LTD</author>
+	<copyright>Copyright (C) 2010-2012 DJ-Extensions.com LTD, All rights reserved.</copyright>
+	<license> http://www.gnu.org/licenses GNU/GPL</license>
+	<authorEmail>contact@dj-extensions.com</authorEmail>
+	<authorUrl>http://dj-extensions.com</authorUrl>
+	<version>3.7.9</version>
+	<description>PLG_DJCLASSIFIEDS_LEAFLET_DESCRIPTION</description>
+	<files>
+		<filename plugin="leaflet">leaflet.php</filename>
+		<filename>index.html</filename>
+		<folder>assets</folder>
+		<folder>language</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">	
+				<field name="tile_provider" type="textarea" default="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" label="PLG_DJCLASSIFIEDS_LEAFLET_TILE_PROVIDER" description="PLG_DJCLASSIFIEDS_LEAFLET_TILE_PROVIDER_DESC" />
+				<field name="tile_options" type="textarea" filter="raw" rows="5" default="&#123;&quot;attribution&quot;: &quot;&#169; &lt;a target=&apos;_blank&apos; href=&apos;https://www.openstreetmap.org/copyright&apos;&gt;OpenStreetMap&lt;/a&gt;&quot;&#125;" label="PLG_DJCLASSIFIEDS_LEAFLET_TILE_OPTIONS" description="PLG_DJCLASSIFIEDS_LEAFLET_TILE_OPTIONS_DESC" />
+			</fieldset>
+			<fieldset name="advanced">
+				<field pattern="^\d+(\.\d+)*$" name="ver" type="text" default="1.3.4" label="PLG_DJCLASSIFIEDS_LEAFLET_VERSION" description="PLG_DJCLASSIFIEDS_LEAFLET_VERSION_DESC"/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

@@ -27,6 +27,7 @@
 	</files>
 	<positions>
 		<position>menu</position>
+		<position>menu_for_user</position>
 		<position>header</position>
 		<position>breadcrumbs</position>
 		<position>footer</position>

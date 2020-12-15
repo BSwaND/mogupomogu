@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="1.6.0" client="site" method="upgrade" group="djclassifieds">
+	<name>plg_djclassifieds_multicategories</name>
+	<creationDate>December 2015</creationDate>
+	<author>DJ-Extensions.com LTD</author>
+	<copyright>Copyright (C) 2010-2012 DJ-Extensions.com LTD, All rights reserved.</copyright>
+	<license> http://www.gnu.org/licenses GNU/GPL</license>
+	<authorEmail>contact@dj-extensions.com</authorEmail>
+	<authorUrl>http://dj-extensions.com</authorUrl>
+	<version>3.7</version>
+	<description>PLG_DJCLASSIFIEDS_DJCLASSIFIEDSMULTICATEGORIES</description>
+	<files>
+		<filename plugin="multicategories">multicategories.php</filename>
+		<filename>index.html</filename>
+		<folder>language</folder>
+	</files>	
+	<config>
+		<fields name="params">
+			<fieldset name="basic">	
+				<field name="mc_cats_limit" type="text" default="5" label="COM_DJCLASSIFIEDS_CONFIG_CATEGORIES_LIMIT" description="COM_DJCLASSIFIEDS_CONFIG_CATEGORIES_LIMIT_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

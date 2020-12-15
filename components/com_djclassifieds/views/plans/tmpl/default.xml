@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_DJCLASSIFIEDS_SUBSCRIPTIONS_PLANS">
+		<message></message>
+	</layout>
+	<state>
+		<name>COM_DJCLASSIFIEDS_SUBSCRIPTIONS_PLANS</name>
+	</state>
+	<fields name="params">
+		<fieldset name="request">
+			<field
+				name="plans"
+				type="sql"
+				multiple="true"
+				default="0"
+				label="COM_DJCLASSIFIEDS_SUBSCRIPTIONS_PLANS"
+				query="SELECT id, name FROM #__djcf_plans WHERE published=1 ORDER BY name"
+				key_field="id"
+				value_field="name"
+			/>
+		</fieldset>
+	</fields>
+</metadata>

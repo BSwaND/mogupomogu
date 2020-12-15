@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="3.0" group="system" method="upgrade" overwrite="true">
+	
+	<name>plg_system_djcfghostads</name>
+	<creationDate>April 2017</creationDate>
+	<author>DJ-Extensions.com</author>
+	<authorEmail>contact@dj-extensions.com</authorEmail>
+	<authorUrl>http://dj-extensions.com</authorUrl>
+	<copyright>dj-extensions.com</copyright>
+	<license>GPL</license>
+	<version>1.0.0</version>
+	<description>PLG_SYSTEM_DJCFGHOSTADS_DESC</description>
+	<install>
+		<sql>
+			<file charset="utf8" driver="mysql">sql/install.sql</file>
+		</sql>
+	</install>
+	
+	<update>
+		<schemas>
+			<schemapath type="mysql">sql/updates</schemapath>
+		</schemas>
+	</update>
+	
+	<uninstall>
+		<sql>
+			<file charset="utf8" driver="mysql">sql/uninstall.sql</file>
+		</sql>
+	</uninstall>
+	
+	<files>
+		<filename plugin="djcfghostads">djcfghostads.php</filename>
+		<folder>language</folder>
+		<folder>sql</folder>
+	</files>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+			</fieldset>
+		</fields>
+	</config>
+
+</extension>

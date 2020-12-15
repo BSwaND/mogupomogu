@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="user"  method="upgrade">
+	<name>DJ Classifieds User Token Adverts</name>
+	<author>DJ-Extensions.com</author>
+	<creationDate>May 2013</creationDate>
+	<copyright>Copyright (C) 2010 DJ-Extensions.com LTD, All rights reserved.</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+    <authorEmail>contact@design-jooma.eu</authorEmail>
+	<authorUrl>http://design-joomla.eu</authorUrl>
+	<version>1.0</version>
+	<description>PLG_USER_DJCFADSTOKEN_DESCRIPTION</description>
+	<files>
+		<filename plugin="djcfadstoken">djcfadstoken.php</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.plg_user_djcfadstoken.ini</language>
+		<language tag="pl-PL">pl-PL.plg_user_djcfadstoken.ini</language>
+	</languages>
+</extension>

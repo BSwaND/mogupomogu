@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="3.0" group="logman" method="upgrade" overwrite="true">
+    <identifier>plg:logman.djclassifieds</identifier>
+    <name>plg_logman_djclassifieds</name>
+    <author>Joomlatools</author>
+    <creationDate>September 2016</creationDate>
+    <copyright>Copyright (C) 2011 - 2016 Timble CVBA (http://www.timble.net)</copyright>
+    <license>GNU GPLv3 - http://www.gnu.org/licenses/gpl.html</license>
+    <authorEmail>support@joomlatools.com</authorEmail>
+    <authorUrl>www.joomlatools.com</authorUrl>
+    <version>3.7.7</version>
+    <description>PLG_LOGMAN_DJCLASSIFIEDS_DESC</description>
+
+    <files>
+        <filename plugin="djclassifieds">djclassifieds.php</filename>
+        <folder>activity</folder>
+        <folder>language</folder>
+    </files>
+
+    <config>
+        <fields name="params" />
+    </config>
+
+    <resources>
+       <resource name="category">
+            <actions>
+                <action>add</action>
+                <action>edit</action>
+                <action>delete</action>
+                <action>publish</action>
+                <action>unpublish</action>
+            </actions>
+        </resource>
+        <resource name="item">
+            <actions>
+                <action>add</action>
+                <action>edit</action>
+                <action>delete</action>
+                <action>publish</action>
+                <action>unpublish</action>
+                <action>archive</action>
+            </actions>
+        </resource>
+        <resource name="field">
+            <actions>
+                <action>add</action>
+                <action>edit</action>
+                <action>delete</action>
+                <action>publish</action>
+                <action>unpublish</action>
+            </actions>
+        </resource>
+        <resource name="region">
+            <actions>
+                <action>add</action>
+                <action>edit</action>
+                <action>delete</action>
+                <action>publish</action>
+                <action>unpublish</action>
+            </actions>
+        </resource>
+        <resource name="promotion">
+            <actions>
+                <action>add</action>
+                <action>edit</action>
+                <action>delete</action>
+                <action>publish</action>
+                <action>unpublish</action>
+            </actions>
+        </resource>
+        <resource name="day">
+            <actions>
+                <action>add</action>
+                <action>edit</action>
+                <action>delete</action>
+                <action>publish</action>
+                <action>unpublish</action>
+            </actions>
+        </resource>
+        <resource name="type">
+            <actions>
+                <action>add</action>
+                <action>edit</action>
+                <action>delete</action>
+                <action>publish</action>
+                <action>unpublish</action>
+            </actions>
+        </resource>
+        <resource name="point">
+            <actions>
+                <action>add</action>
+                <action>edit</action>
+                <action>delete</action>
+                <action>publish</action>
+                <action>unpublish</action>
+            </actions>
+        </resource>
+        <resource name="userspoint">
+            <actions>
+                <action>add</action>
+                <action>edit</action>
+                <action>delete</action>
+            </actions>
+        </resource>
+        <resource name="profile">
+            <actions>
+                <action>edit</action>
+            </actions>
+        </resource>
+        <resource name="payment">
+            <actions>
+                <action>change</action>
+            </actions>
+        </resource>
+        <resource name="email">
+            <actions>
+                <action>edit</action>
+            </actions>
+        </resource>
+        <resource name="itemsunit">
+            <actions>
+                <action>add</action>
+                <action>edit</action>
+                <action>delete</action>
+                <action>publish</action>
+                <action>unpublish</action>
+            </actions>
+        </resource>
+    </resources>
+</extension>

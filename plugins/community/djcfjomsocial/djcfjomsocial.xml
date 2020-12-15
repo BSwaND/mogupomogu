@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="community"  method="upgrade">
+	<name>Community - DJ Classifieds</name>
+	<author>DJ-Extensions.com</author>
+	<creationDate>July 2013</creationDate>
+	<copyright>Copyright (C) 2010 DJ-Extensions.com LTD, All rights reserved.</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<authorEmail>contact@design-jooma.eu</authorEmail>
+	<authorUrl>http://design-joomla.eu</authorUrl>
+	<version>1.4.1</version>
+	<description>DJ Classifieds JomSocial plugin</description>
+	<files>
+		<filename plugin="djcfjomsocial">djcfjomsocial.php</filename>
+		<filename>style.css</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.plg_community_djcfjomsocial.ini</language>
+		<language tag="pl-PL">pl-PL.plg_community_djcfjomsocial.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="enable_mod_latest" type="list" default="1" label="PLG_DJCLASSIFIEDS_ENABLE_MODULE_LATEST" description="PLG_DJCLASSIFIEDS_ENABLE_MODULE_LATEST_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="mod_latest_limit" type="text" default="5" label="PLG_DJCLASSIFIEDS_MODULE_LATES_LIMIT" description="PLG_DJCLASSIFIEDS_MODULE_LATES_LIMIT_DESC" />
+		   </fieldset>
+		   <fieldset name="advanced">
+				<field name="coreapp" type="list" default="0" label="PLG_DJCLASSIFIEDS_CORE_APPLICATION" description="PLG_DJCLASSIFIEDS_CORE_APPLICATION_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="position" type="list" default="content" label="PLG_DJCLASSIFIEDS_AVAILAIBLE_POSITIONS" description="PLG_DJCLASSIFIEDS_AVAILAIBLE_POSITIONS_DESC">
+					<option value="content">PLG_DJCLASSIFIEDS_CONTENT</option>
+					<option value="sidebar-top">PLG_DJCLASSIFIEDS_SIDEBAR_TOP</option>
+					<option value="sidebar-bottom">PLG_DJCLASSIFIEDS_SIDEBAR_BOTTOM</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

@@ -1,0 +1,72 @@
+.pac-container.osm-poi-autocomplete{
+    border-top: 0;
+}
+
+.pac-container {
+    background-color: #fff;
+    border-radius: 2px;
+    border-top: 1px solid #d9d9d9;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    font-family: Arial,sans-serif;
+    overflow: hidden;
+    position: absolute !important;
+    z-index: 1000;
+}
+.pac-item {
+    border-top: 1px solid #e6e6e6;
+    color: #999;
+    cursor: default;
+    font-size: 11px;
+    line-height: 30px;
+    overflow: hidden;
+    padding: 0 4px;
+    text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.pac-item:hover {
+    background-color: #fafafa;
+}
+.pac-item-selected, .pac-item-selected:hover {
+    background-color: #ebf2fe;
+}
+.pac-matched {
+    font-weight: 700;
+}
+.pac-item-query {
+    color: #000;
+    font-size: 13px;
+    padding-right: 3px;
+}
+.pac-placeholder {
+    color: gray;
+}
+
+.pac-icon {
+    width: 15px;
+    height: 20px;
+    margin-right: 7px;
+    margin-top: 6px;
+    display: inline-block;
+    vertical-align: top;
+    background-image: url(https://maps.gstatic.com/mapfiles/api-3/images/autocomplete-icons.png);
+    background-size: 34px;
+}
+.pac-icon-marker {
+    background-position: -1px -161px;
+}
+
+/* .pac-logo:after {
+    content: "Powered by OpenStreeeMap";
+    padding: 1px 1px 1px 0;
+    height: 18px;
+    box-sizing: border-box;
+    text-align: right;
+    display: block;
+    background-image: url(https://maps.gstatic.com/mapfiles/api-3/images/powered-by-google-on-white3.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 120px 14px;
+}
+*/

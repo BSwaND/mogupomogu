@@ -11,6 +11,9 @@
 	background-color: $accent
 	color: #fff
 
+*:focus
+	overflow: hidden
+
 input, textarea
 	outline: none
 	&:focus:required:invalid
@@ -22,12 +25,17 @@ input, textarea
 		background: $accent
 		padding: 5px 0
 		margin: 0 0 10px
-input
+input,
+select
 	padding: 8px 10px
 	border: none
 	background: $grey
 	border-radius: 4px
 	width: 100%
+textarea
+	max-width: 100%
+	border: 1px solid $grey
+	min-height: 170px
 
 
 body

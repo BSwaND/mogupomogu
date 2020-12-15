@@ -1,0 +1,54 @@
+.djcf_community_items .item {
+	border-bottom: 1px solid #EAEAEA;
+    float: left;
+    width: 100%;
+	padding: 0 0 10px;
+	margin-bottom: 10px;
+}
+
+.djcf_community_items div.title {
+	float: left;
+    width: 100%;
+	padding-bottom: 7px;
+}
+
+.djcf_community_items div.title a.title {
+	font-weight: bold;
+}
+
+.djcf_community_items .date_cat {
+	color: #888888;
+}
+
+.djcf_community_items div.title a.title {
+	padding-bottom: 6px;
+	display: block;
+	font-size: 1.1em;
+}
+
+.djcf_community_items div.title span.date,
+.djcf_community_items div.title span.category,
+.djcf_community_items div.title span.type, 
+.djcf_community_items div.title span.price {
+	padding-bottom: 3px;
+	display: block;
+}
+
+.djcf_community_items div.title span.price {
+	font-weight: bold;
+}
+
+.djcf_community_items .title img {
+	border: 1px solid #EAEAEA;
+    float: left;
+	background: #ffffff;
+    margin-right: 10px !important;
+	margin-bottom: 3px;
+    padding: 1px;
+    vertical-align: top;
+}
+
+.djcf_community_items .desc {
+    float: left;
+    width: 100%;
+}

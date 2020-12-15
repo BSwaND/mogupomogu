@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="user"  method="upgrade">
+	<name>User - DJ Classifieds Subscription Plans</name>
+	<author>DJ-Extensions.com</author>
+	<creationDate>May 2016</creationDate>
+	<copyright>Copyright (C) 2010 DJ-Extensions.com LTD, All rights reserved.</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+    <authorEmail>contact@design-jooma.eu</authorEmail>
+	<authorUrl>http://design-joomla.eu</authorUrl>
+	<version>1.0</version>
+	<description>DJ Classifieds User Subscription Plans</description>
+	<files>
+		<filename plugin="djcfplans">djcfplans.php</filename>
+		<folder>language</folder>
+	</files>	
+	<config>
+		<fields name="params">
+			<fieldset name="basic">		
+									    
+				<field type="spacer" name="spacerlabel0" label="PLG_DJCFPLANS_GROUP1" />				   
+				<field name="usergroup0" type="usergroup" size="50" default="1" label="PLG_DJCFPLANS_USER_GROUP1" description="PLG_DJCFPLANS_USER_GROUP_DESC"/>
+				<field name="plan_id0" type="sql" default="" label="PLG_DJCFPLANS_PLAN_FOR_GROUP1" description="PLG_DJCFPLANS_PLAN_FOR_GROUP_DESC" query="SELECT id, CONCAT(name,' (id ',id,') ') as title FROM #__djcf_plans ORDER BY name" key_field="id" value_field="title" size="10"  >
+					<option value="">PLG_DJCFPLANS_SELECT_PLAN</option>
+				</field>
+				<field name="plan_renew0" type="list" default="0" label="PLG_DJCFPLANS_RENEW_PLAN1" description="PLG_DJCFPLANS_RENEW_PLAN_DESC">
+					<option value="0">PLG_DJCFPLANS_ONLY_ONCE</option>
+					<option value="1">PLG_DJCFPLANS_REPEATABLE</option>
+				</field>
+				
+				<field type="spacer" name="spacer1" hr="true" />				        
+				<field type="spacer" name="spacerlabel1" label="PLG_DJCFPLANS_GROUP2" />			
+				<field name="usergroup1" type="usergroup" size="50" default="1" label="PLG_DJCFPLANS_USER_GROUP2" description="PLG_DJCFPLANS_USER_GROUP_DESC"/>
+				<field name="plan_id1" type="sql" default="" label="PLG_DJCFPLANS_PLAN_FOR_GROUP2" description="PLG_DJCFPLANS_PLAN_FOR_GROUP_DESC" query="SELECT id, CONCAT(name,' (id ',id,') ') as title FROM #__djcf_plans ORDER BY name" key_field="id" value_field="title" size="10"  >
+					<option value="">PLG_DJCFPLANS_SELECT_PLAN</option>
+				</field>
+				<field name="plan_renew1" type="list" default="0" label="PLG_DJCFPLANS_RENEW_PLAN2" description="PLG_DJCFPLANS_RENEW_PLAN_DESC">
+					<option value="0">PLG_DJCFPLANS_ONLY_ONCE</option>
+					<option value="1">PLG_DJCFPLANS_REPEATABLE</option>
+				</field>
+			
+				<field type="spacer" name="spacer2" hr="true" />					    
+				<field type="spacer" name="spacerlabel2" label="PLG_DJCFPLANS_GROUP3" />				   
+				<field name="usergroup2" type="usergroup" size="50" default="1" label="PLG_DJCFPLANS_USER_GROUP3" description="PLG_DJCFPLANS_USER_GROUP_DESC"/>
+				<field name="plan_id2" type="sql" default="" label="PLG_DJCFPLANS_PLAN_FOR_GROUP3" description="PLG_DJCFPLANS_PLAN_FOR_GROUP_DESC" query="SELECT id, CONCAT(name,' (id ',id,') ') as title FROM #__djcf_plans ORDER BY name" key_field="id" value_field="title" size="10"  >
+					<option value="">PLG_DJCFPLANS_SELECT_PLAN</option>
+				</field>
+				<field name="plan_renew2" type="list" default="0" label="PLG_DJCFPLANS_RENEW_PLAN3" description="PLG_DJCFPLANS_RENEW_PLAN_DESC">
+					<option value="0">PLG_DJCFPLANS_ONLY_ONCE</option>
+					<option value="1">PLG_DJCFPLANS_REPEATABLE</option>
+				</field>
+				
+				<field type="spacer" name="spacer3" hr="true" />					    
+				<field type="spacer" name="spacerlabel3" label="PLG_DJCFPLANS_GROUP4" />				   
+				<field name="usergroup3" type="usergroup" size="50" default="1" label="PLG_DJCFPLANS_USER_GROUP4" description="PLG_DJCFPLANS_USER_GROUP_DESC"/>
+				<field name="plan_id3" type="sql" default="" label="PLG_DJCFPLANS_PLAN_FOR_GROUP4" description="PLG_DJCFPLANS_PLAN_FOR_GROUP_DESC" query="SELECT id, CONCAT(name,' (id ',id,') ') as title FROM #__djcf_plans ORDER BY name" key_field="id" value_field="title" size="10"  >
+					<option value="">PLG_DJCFPLANS_SELECT_PLAN</option>
+				</field>
+				<field name="plan_renew3" type="list" default="0" label="PLG_DJCFPLANS_RENEW_PLAN4" description="PLG_DJCFPLANS_RENEW_PLAN_DESC">
+					<option value="0">PLG_DJCFPLANS_ONLY_ONCE</option>
+					<option value="1">PLG_DJCFPLANS_REPEATABLE</option>
+				</field>
+				
+				<field type="spacer" name="spacer4" hr="true" />					    
+				<field type="spacer" name="spacerlabel4" label="PLG_DJCFPLANS_GROUP5" />				   
+				<field name="usergroup4" type="usergroup" size="50" default="1" label="PLG_DJCFPLANS_USER_GROUP5" description="PLG_DJCFPLANS_USER_GROUP_DESC"/>
+				<field name="plan_id4" type="sql" default="" label="PLG_DJCFPLANS_PLAN_FOR_GROUP5" description="PLG_DJCFPLANS_PLAN_FOR_GROUP_DESC" query="SELECT id, CONCAT(name,' (id ',id,') ') as title FROM #__djcf_plans ORDER BY name" key_field="id" value_field="title" size="10"  >
+					<option value="">PLG_DJCFPLANS_SELECT_PLAN</option>
+				</field>
+				<field name="plan_renew4" type="list" default="0" label="PLG_DJCFPLANS_RENEW_PLAN5" description="PLG_DJCFPLANS_RENEW_PLAN_DESC">
+					<option value="0">PLG_DJCFPLANS_ONLY_ONCE</option>
+					<option value="1">PLG_DJCFPLANS_REPEATABLE</option>
+				</field>
+				
+				<field type="spacer" name="spacer5" hr="true" />					    
+				<field type="spacer" name="spacerlabel5" label="PLG_DJCFPLANS_GROUP6" />				   
+				<field name="usergroup5" type="usergroup" size="50" default="1" label="PLG_DJCFPLANS_USER_GROUP6" description="PLG_DJCFPLANS_USER_GROUP_DESC"/>
+				<field name="plan_id5" type="sql" default="" label="PLG_DJCFPLANS_PLAN_FOR_GROUP6" description="PLG_DJCFPLANS_PLAN_FOR_GROUP_DESC" query="SELECT id, CONCAT(name,' (id ',id,') ') as title FROM #__djcf_plans ORDER BY name" key_field="id" value_field="title" size="10"  >
+					<option value="">PLG_DJCFPLANS_SELECT_PLAN</option>
+				</field>
+				<field name="plan_renew5" type="list" default="0" label="PLG_DJCFPLANS_RENEW_PLAN6" description="PLG_DJCFPLANS_RENEW_PLAN_DESC">
+					<option value="0">PLG_DJCFPLANS_ONLY_ONCE</option>
+					<option value="1">PLG_DJCFPLANS_REPEATABLE</option>
+				</field>
+				
+				<field type="spacer" name="spacer6" hr="true" />					    
+				<field type="spacer" name="spacerlabel6" label="PLG_DJCFPLANS_GROUP7" />				   
+				<field name="usergroup6" type="usergroup" size="50" default="1" label="PLG_DJCFPLANS_USER_GROUP7" description="PLG_DJCFPLANS_USER_GROUP_DESC"/>
+				<field name="plan_id6" type="sql" default="" label="PLG_DJCFPLANS_PLAN_FOR_GROUP7" description="PLG_DJCFPLANS_PLAN_FOR_GROUP_DESC" query="SELECT id, CONCAT(name,' (id ',id,') ') as title FROM #__djcf_plans ORDER BY name" key_field="id" value_field="title" size="10"  >
+					<option value="">PLG_DJCFPLANS_SELECT_PLAN</option>
+				</field>
+				<field name="plan_renew6" type="list" default="0" label="PLG_DJCFPLANS_RENEW_PLAN7" description="PLG_DJCFPLANS_RENEW_PLAN_DESC">
+					<option value="0">PLG_DJCFPLANS_ONLY_ONCE</option>
+					<option value="1">PLG_DJCFPLANS_REPEATABLE</option>
+				</field>
+				
+				<field type="spacer" name="spacer7" hr="true" />					    
+				<field type="spacer" name="spacerlabel7" label="PLG_DJCFPLANS_GROUP8" />				   
+				<field name="usergroup7" type="usergroup" size="50" default="1" label="PLG_DJCFPLANS_USER_GROUP8" description="PLG_DJCFPLANS_USER_GROUP_DESC"/>
+				<field name="plan_id7" type="sql" default="" label="PLG_DJCFPLANS_PLAN_FOR_GROUP8" description="PLG_DJCFPLANS_PLAN_FOR_GROUP_DESC" query="SELECT id, CONCAT(name,' (id ',id,') ') as title FROM #__djcf_plans ORDER BY name" key_field="id" value_field="title" size="10"  >
+					<option value="">PLG_DJCFPLANS_SELECT_PLAN</option>
+				</field>
+				<field name="plan_renew7" type="list" default="0" label="PLG_DJCFPLANS_RENEW_PLAN8" description="PLG_DJCFPLANS_RENEW_PLAN_DESC">
+					<option value="0">PLG_DJCFPLANS_ONLY_ONCE</option>
+					<option value="1">PLG_DJCFPLANS_REPEATABLE</option>
+				</field>
+				
+				<field type="spacer" name="spacer8" hr="true" />					    
+				<field type="spacer" name="spacerlabel8" label="PLG_DJCFPLANS_GROUP9" />				   
+				<field name="usergroup8" type="usergroup" size="50" default="1" label="PLG_DJCFPLANS_USER_GROUP9" description="PLG_DJCFPLANS_USER_GROUP_DESC"/>
+				<field name="plan_id8" type="sql" default="" label="PLG_DJCFPLANS_PLAN_FOR_GROUP9" description="PLG_DJCFPLANS_PLAN_FOR_GROUP_DESC" query="SELECT id, CONCAT(name,' (id ',id,') ') as title FROM #__djcf_plans ORDER BY name" key_field="id" value_field="title" size="10"  >
+					<option value="">PLG_DJCFPLANS_SELECT_PLAN</option>
+				</field>
+				<field name="plan_renew8" type="list" default="0" label="PLG_DJCFPLANS_RENEW_PLAN9" description="PLG_DJCFPLANS_RENEW_PLAN_DESC">
+					<option value="0">PLG_DJCFPLANS_ONLY_ONCE</option>
+					<option value="1">PLG_DJCFPLANS_REPEATABLE</option>
+				</field>
+				
+				<field type="spacer" name="spacer9" hr="true" />					    
+				<field type="spacer" name="spacerlabel9" label="PLG_DJCFPLANS_GROUP10" />				   
+				<field name="usergroup9" type="usergroup" size="50" default="1" label="PLG_DJCFPLANS_USER_GROUP10" description="PLG_DJCFPLANS_USER_GROUP_DESC"/>
+				<field name="plan_id9" type="sql" default="" label="PLG_DJCFPLANS_PLAN_FOR_GROUP10" description="PLG_DJCFPLANS_PLAN_FOR_GROUP_DESC" query="SELECT id, CONCAT(name,' (id ',id,') ') as title FROM #__djcf_plans ORDER BY name" key_field="id" value_field="title" size="10"  >
+					<option value="">PLG_DJCFPLANS_SELECT_PLAN</option>
+				</field>
+				<field name="plan_renew9" type="list" default="0" label="PLG_DJCFPLANS_RENEW_PLAN10" description="PLG_DJCFPLANS_RENEW_PLAN_DESC">
+					<option value="0">PLG_DJCFPLANS_ONLY_ONCE</option>
+					<option value="1">PLG_DJCFPLANS_REPEATABLE</option>
+				</field>
+				
+			</fieldset>
+		</fields>
+	</config>
+</extension>

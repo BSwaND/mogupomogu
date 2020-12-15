@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="1.6.0" client="site" method="upgrade" group="djclassifieds">
+	<name>PLG_DJCLASSIFIEDS_BADWORDS</name>
+	<creationDate>August 2017</creationDate>
+	<author>DJ-Extensions.com LTD</author>
+	<copyright>Copyright (C) 2010-2012 DJ-Extensions.com LTD, All rights reserved.</copyright>
+	<license> http://www.gnu.org/licenses GNU/GPL</license>
+	<authorEmail>contact@dj-extensions.com</authorEmail>
+	<authorUrl>http://dj-extensions.com</authorUrl>
+	<version>1.0</version>
+	<description>PLG_DJCLASSIFIEDS_BADWORDS_DESC</description>
+	<files>
+		<filename plugin="badwords">badwords.php</filename>
+		<filename>index.html</filename>
+		<folder>language</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="word_blacklist" type="textarea" label="PLG_DJCLASSIFIEDS_BADWORDS_BLACKLIST" cols="50" rows="5" description="PLG_DJCLASSIFIEDS_BADWORDS_BLACKLIST_DESC" default="" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

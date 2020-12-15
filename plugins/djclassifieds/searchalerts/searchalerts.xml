@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="1.6.0" client="site" method="upgrade" group="djclassifieds">
+	<name>plg_djclassifieds_searchalerts</name>
+	<creationDate>March 2017</creationDate>
+	<author>DJ-Extensions.com LTD</author>
+	<copyright>Copyright (C) 2010-2012 DJ-Extensions.com LTD, All rights reserved.</copyright>
+	<license> http://www.gnu.org/licenses GNU/GPL</license>
+	<authorEmail>contact@dj-extensions.com</authorEmail>
+	<authorUrl>http://dj-extensions.com</authorUrl>
+	<version>1.0</version>
+	<description>PLG_DJCLASSIFIEDS_DJCLASSIFIEDSSEARCHALERTS</description>
+	<files>
+		<filename plugin="searchalerts">searchalerts.php</filename>
+		<filename>index.html</filename>
+		<folder>language</folder>
+	</files>
+	<scriptfile>script.searchalerts.php</scriptfile>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">		
+				<field name="sa_display_search" type="list" default="1" label="COM_DJCLASSIFIEDS_CONFIG_SALERTS_DISPLAY_IN_SEARCH" description="COM_DJCLASSIFIEDS_CONFIG_SALERTS_DISPLAY_IN_SEARCH_DESC">
+				    <option value="0">JNO</option>
+				    <option value="1">JYES</option>
+				</field>			
+				<field name="sa_display_category" type="list" default="1" label="COM_DJCLASSIFIEDS_CONFIG_SALERTS_DISPLAY_IN_CATEGORY" description="COM_DJCLASSIFIEDS_CONFIG_SALERTS_DISPLAY_IN_CATEGORY_DESC">
+				    <option value="0">JNO</option>
+				    <option value="1">JYES</option>
+				</field>
+				<field name="sa_list_position" type="list" default="0" label="COM_DJCLASSIFIEDS_CONFIG_SALERTS_DISPLAY_POSITION_ON_LIST" description="COM_DJCLASSIFIEDS_CONFIG_SALERTS_DISPLAY_POSITION_ON_LIST_DESC">
+				    <option value="0">COM_DJCLASSIFIEDS_CONFIG_SALERTS_TOP_OF_ADVERTS</option>
+				    <option value="1">COM_DJCLASSIFIEDS_CONFIG_SALERTS_BOTTOM_OF_ADVERTS</option>
+				    <option value="2">COM_DJCLASSIFIEDS_CONFIG_SALERTS_TOP_BOTTOM_OF_ADVERTS</option>
+				</field>
+				<field name="sa_display_advert" type="list" default="1" label="COM_DJCLASSIFIEDS_CONFIG_SALERTS_DISPLAY_IN_ADVERT" description="COM_DJCLASSIFIEDS_CONFIG_SALERTS_DISPLAY_IN_ADVERT_DESC">
+				    <option value="0">JNO</option>
+				    <option value="1">JYES</option>
+				</field>				
+				<field name="sa_advert_position" type="list" default="0" label="COM_DJCLASSIFIEDS_CONFIG_SALERTS_DISPLAY_POSITION_ON_ADVERT" description="COM_DJCLASSIFIEDS_CONFIG_SALERTS_DISPLAY_POSITION_ON_ADVERT_DESC">
+				    <option value="0">COM_DJCLASSIFIEDS_CONFIG_SALERTS_TOP_OF_ADVERT</option>
+				    <option value="1">COM_DJCLASSIFIEDS_CONFIG_SALERTS_BOTTOM_OF_ADVERT</option>
+				    <option value="2">COM_DJCLASSIFIEDS_CONFIG_SALERTS_TOP_BOTTOM_OF_ADVERT</option>
+				</field>						
+				
+			</fieldset>
+		</fields>
+	</config>
+</extension>
