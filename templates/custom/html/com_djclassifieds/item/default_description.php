@@ -39,8 +39,8 @@ if($item->description || $par->get('intro_desc_in_advert','0') || isset($item->t
 		</div>
 	<?php }
 
-	//if(!$item->description){$item->description = $item->intro_desc;}
-	echo '<div class="description"><h2>'.JText::_('COM_DJCLASSIFIEDS_DESCRIPTION').'</h2>';
+
+	echo '<div class="description ">';
 		if($par->get('intro_desc_in_advert','0')){
 			echo '<div class="intro_desc_content">'.$item->intro_desc.'</div>';
 		}	

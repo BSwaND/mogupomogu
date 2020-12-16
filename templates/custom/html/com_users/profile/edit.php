@@ -20,7 +20,10 @@ $lang = JFactory::getLanguage();
 $lang->load('plg_user_profile', JPATH_ADMINISTRATOR);
 
 ?>
-<div class="profile-edit<?php echo $this->pageclass_sfx; ?>">
+<div class="bg-white">
+
+<div class="profile-edit<?php echo $this->pageclass_sfx; ?> ">
+</div>
 	<?php if ($this->params->get('show_page_heading')) : ?>
 		<div class="page-header">
 			<h1>

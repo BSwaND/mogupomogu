@@ -186,10 +186,7 @@
 						<div class="bg-white__header">
 							<div class="h2">Карта объявления <img src="images/marker-map.svg" alt="map" class="marker-map__img"></div>
 						</div>
-						<div class="map-block" id="map-block"></div>
-
-
-
+						<jdoc:include type="modules" name="map" style="none"/>
 					</div>
 				</div>
 			</div>
@@ -262,59 +259,9 @@
 
 </footer>
 
-
-<script>
-	function initMap() {
-		var element = document.getElementById('map-block');
-		var options = {
-			zoom: 12,
-			center: {lat: 46.468982, lng: 30.740729 	}
-
-		};
-
-		var myMap = new google.maps.Map(element, options);
-
-		var markers = [
-			{
-				coordinates: {lat: 46.468982, lng: 30.740729 	},
-				info: '<p>Этот объект</p>'
-			}
-		];
+<jdoc:include type="modules" name="footer" style="none"/>
 
 
-		for(var i = 0; i < markers.length; i++) {
-			addMarker(markers[i]);
-		}
-		//
-		// new MarkerClusterer(myMap, markers, {
-		// 	imagePath:
-		// 			"https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m",
-		// });
-
-		function addMarker(properties) {
-			var marker = new google.maps.Marker({
-				position: properties.coordinates,
-				map: myMap
-			});
-
-			if(properties.image) {
-				marker.setIcon(properties.image);
-			}
-
-			if(properties.info) {
-				var InfoWindow = new google.maps.InfoWindow({
-					content: properties.info
-				});
-
-				marker.addListener('click', function(){
-					InfoWindow.open(myMap, marker);
-				});
-			}
-		}
-	}
-</script>
-
-<script async defer  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD05yH55GKkhSphg8Fz8OIueKEp-kq_hkg&callback=initMap&libraries=&v=weekly"></script>
 <script src="/templates/<?php echo $this->template; ?>/js/scripts.min.js"></script>
 
 </body>

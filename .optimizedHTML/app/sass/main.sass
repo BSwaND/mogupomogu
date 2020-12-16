@@ -25,6 +25,9 @@ input, textarea
 		background: $accent
 		padding: 5px 0
 		margin: 0 0 10px
+	&[type=checkbox]
+		width: auto
+
 input,
 select
 	padding: 8px 10px
@@ -52,7 +55,8 @@ pre
 	background: #eee
 	padding: 10px
 	border-radius: 10px
-	font-size: 12px
+	font-size: 11px
+	font-family: "JetBrains Mono"
 
 img
 	max-width: 100%
@@ -182,6 +186,7 @@ a
 				color: $accent
 
 
+
 .parent-category
 	display: flex
 	padding-top: 30px
@@ -214,6 +219,7 @@ a
 
 
 
+
 .bg
 	&-white
 		background: #ffffff
@@ -243,6 +249,7 @@ a
 
 .all-region
 	&_outer
+		margin: 30px 0
 		li
 			display: block
 			margin-bottom: 5px
@@ -250,13 +257,19 @@ a
 			padding:  0
 	&_mainland
 		padding-left:  20px !important
-		font-size: 17px
+		font-size: 16px
 	&_contry
 		font-size: 15px
 		padding-left: 10px !important
 	&_sity
 		font-size: 12px
 		padding-left: 10px !important
+	&_children
+		font-size: 15px
+		padding-left: 10px !important
+		.all-region_children
+			font-size: 12px
+
 
 
 
@@ -350,6 +363,33 @@ a
 		&:last-child
 			border: none
 			padding-bottom: 0
+
+
+
+
+
+.menu_for_user
+	padding-top: 30px
+	padding-left: 40px
+	li
+		margin-bottom: 15px
+		font-size: 14px
+		font-weight: 300
+		
+		
+		
+		
+		
+		
+.ask
+	&_form
+		text-align: left
+		&_abuse_outer
+			text-align: center
+		
+		
+		
+		
 
 
 @import media

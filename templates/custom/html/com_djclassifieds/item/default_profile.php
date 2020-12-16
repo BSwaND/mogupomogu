@@ -42,6 +42,7 @@ $Itemid = JRequest::getVar('Itemid', 0,'', 'int');
 $item = $this->item;
 
 ?>
+
 	<div class="row_gd user_name">
 		<span class="row_label"><?php echo JText::_('COM_DJCLASSIFIEDS_CREATED_BY'); ?></span>
 			<div class="row_value" itemprop="seller" itemscope itemtype="http://schema.org/Person" >
@@ -166,4 +167,3 @@ $item = $this->item;
 				}?>
 			</div>
 		</div>
-<?php 		

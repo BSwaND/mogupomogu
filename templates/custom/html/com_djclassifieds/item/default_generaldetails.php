@@ -62,47 +62,10 @@ if(!$user->id){
 	if(!count($this->item_images) && $par->get('ad_image_default','0')==0 ){ $gd_class=' no_images';
 	}else{ $gd_class=''; }
 	
-	$gd_style = $gd_class ?  '' : ' style="width:calc(100% - 1px - '.$par->get('gallery_width','200').'px)"';
-	echo '<div class="general_det'.$gd_class.'"'.$gd_style.'><div class="general_det_in">';
-	if($item->price || $item->price_negotiable){ ?>
-		<div class="row_gd">
-			<div class="price_wrap">
-				<?php if($item->price){?>
-				<span class="row_label"><?php echo JText::_('COM_DJCLASSIFIEDS_PRICE'); ?>:</span>
-				<span class="row_value">
-					<?php echo DJClassifiedsTheme::priceFormat($item->price,$item->currency);?>					
-				</span>
-				<span style="display:none">
-					<span itemprop="price" ><?php echo $item->price; ?></span>
-					<?php if(!$item->currency){$item->currency = $par->get('unit_price','EUR'); }?>
-					<span itemprop="priceCurrency" ><?php echo $item->currency; ?></span>
-				</span>
-				<?php
-					}
-					if($item->price_negotiable){ ?>		
-					<span class="row_negotiable">
-						<?php echo JText::_('COM_DJCLASSIFIEDS_PRICE_IS_NEGOTIABLE'); ?>
-					</span>
-				<?php } ?>
-				<?php if($par->get('buynow','0') && $item->buynow && JFactory::getDate() < $item->date_exp){
-					 echo $this->loadTemplate('buynow');
-				} ?>
-				<?php if($par->get('auctions_price_link',0)==1 && $par->get('auctions','0') && $item->auction){ ?>
-					<a href="#djauctions" class="auctions_link">
-						<?php echo JText::_('COM_DJCLASSIFIEDS_CURRENT_BIDS'); ?>
-					</a> 
-				<?php } ?>												
-				<div class="clear_both"></div>								
-			</div>
-		</div>
-		<?php } ?>
-		
-		<?php			
-		if($par->get('auctions','0') && $item->auction && $par->get('auctions_position','top')=='top'){
-			echo  $this->loadTemplate('auctions');
-		} ?>
-		
-		<?php if($this->item->event->beforeDJClassifiedsDisplayContact) { ?>
+	$gd_style = '';
+	echo '<div class=""><div class="general_det_in">';
+
+if($this->item->event->beforeDJClassifiedsDisplayContact) { ?>
 			<div class="djcf_before_contact">
 				<?php echo $this->item->event->beforeDJClassifiedsDisplayContact; ?>
 			</div>
@@ -111,61 +74,6 @@ if(!$user->id){
 		<?php					
 		if(($par->get('show_contact','1') && $item->contact) || ($par->get('show_website','1') && $item->website) || count($this->fields_contact)){?>
 		<div class="row_gd djcf_contact">
-			<div class="contact_mainrow">
-				<span class="row_label"><?php echo JText::_('COM_DJCLASSIFIEDS_CONTACT'); ?></span>
-				<span class="row_value"><?php 
-				if($item->event->onDJClassifiedsAccessContact){
-					echo $item->event->onDJClassifiedsAccessContact;
-				}elseif($par->get('show_contact_only_registered',0)==1 && $user->id==0){
-					$uri = JFactory::getURI();
-					$login_url = JRoute::_('index.php?option=com_users&view=login&return='.base64_encode($uri),false);
-					echo '<a href="'.$login_url.'">'.JText::_('COM_DJCLASSIFIEDS_PLEASE_LOGIN_TO_SEE_CONTACT').'</a>';
-				}else{
-					
-					if($item->contact){
-						$contact_hide_on_start = 0;
-						if(count($this->fields_contact)>0){
-							foreach($this->fields_contact as $f){
-								if($f->name=='contact'){
-									if($f->hide_on_start){
-										$contact_hide_on_start = 1;
-									}
-									break;
-								}
-							}
-						}	
-						
-						if($contact_hide_on_start){ 
-							echo '<span class="row_value djsvoc" title="'.htmlentities($item->contact).'"  >';
-								echo substr($item->contact, 0,2).'..........<a href="javascript:void(0)" class="djsvoc_link">'.JText::_('COM_DJCLASSIFIEDS_SHOW').'</a>';
-							echo '</span>';							
-						}else{
-							echo $item->contact;
-						}					
-					}
-					
-					if($par->get('show_website','1') && $item->website){
-						if($item->contact){
-							echo '<br />';		
-						}				
-						echo '<a target="_blank" itemprop="url" ';
-						$url_rel = '';
-						if($par->get('website_nofollow','1')){
-							$url_rel = ' nofollow';
-						}
-						echo ' rel="noopener noreferrer'.$url_rel.'" ';
-						
-						echo 'href="';
-						if(strstr($item->website, 'http://') || strstr($item->website, 'https://')){
-							echo $item->website;
-						}else{
-							echo 'http://'.$item->website;
-						}
-						echo '">'.$item->website.'</a>';
-					}
-				}			
-				 ?></span>
-			 </div>
 			 
 			<?php			
 			$display_fields = 1;
@@ -280,61 +188,36 @@ if(!$user->id){
 						 			 			 
 		</div>
 		<?php } ?>
-	<?php if($par->get('show_ad_added_date','1')==1){?>
-			<div class="row_gd added">
-				<span class="row_label"><?php echo JText::_('COM_DJCLASSIFIEDS_AD_ADDED'); ?></span>
-				<span class="row_value">
-					<?php echo DJClassifiedsTheme::formatDate(strtotime($item->date_start),'',$par->get('date_format_type_item',0)); ?>
-				</span>
-			</div>
-		<?php } ?>
-		<?php if($par->get('show_ad_modified_date','1')==1 && $item->date_mod!='0000-00-00 00:00:00'){?>
-			<div class="row_gd added modified">
-				<span class="row_label"><?php echo JText::_('COM_DJCLASSIFIEDS_AD_MODIFIED'); ?>:</span>
-				<span class="row_value">
-					<?php echo DJClassifiedsTheme::formatDate(strtotime($item->date_mod),'',$par->get('date_format_type_item',0)); ?>
-				</span>
-			</div>
-		<?php  }
-		
-		if($par->get('showauthor','1')==1){
-			echo  $this->loadTemplate('profile');
-		}
-		/*
-		 <div class="row">
-		<span><?php echo JText::_('Email:'); ?></span><?php echo $item->email; ?>
-		</div>
-		*/?>
+
 <?php
 			if($par->get('ask_seller_position',0)==1){
 				//general details end
 			 	echo '</div></div>'; 	
 			 }
-			 echo '<div class="clear_both"></div>';
 						
 			if($par->get('ask_seller','0')==1 || ($par->get('ask_seller','0')==2 && $item->user_id>0) || ($par->get('abuse_reporting','0')==1 && $par->get('notify_user_email','')!='')){ ?>
 				<div class="ask_form_abuse_outer">
 			<?php }			 
 			if($par->get('ask_seller','0')==1 && ($item->user_id>0 || $item->email)){?>
-				<button id="ask_form_button" class="button" type="button" ><?php echo JText::_('COM_DJCLASSIFIEDS_ASK_SELLER'); ?></button>
+				<div id="ask_form_button" class="btn btn_accent"><?php echo JText::_('COM_DJCLASSIFIEDS_ASK_SELLER'); ?></div>
 			<?php }else if($par->get('ask_seller','0')==2 && $item->user_id>0){
 				if ( file_exists( JPATH_ROOT.'/components/com_community/libraries/core.php' ) ) {
 					$jspath = JPATH_ROOT.DS.'components'.DS.'com_community';
 					include_once($jspath.DS.'libraries'.DS.'core.php');
 					include_once($jspath.DS.'libraries'.DS.'messaging.php');
 					$onclick = CMessaging::getPopup($item->user_id); ?>
-					<button id="ask_form_button" class="button" type="button" onclick="<?php echo $onclick; ?>" ><?php echo JText::_('COM_DJCLASSIFIEDS_ASK_SELLER'); ?></button>					
+					<div id="ask_form_button" class="button" onclick="<?php echo $onclick; ?>" ><?php echo JText::_('COM_DJCLASSIFIEDS_ASK_SELLER'); ?></div>
 				<?php }else{
 					echo 'JoomSocial not installed!';
 				} ?> 
 				
 			<?php }
 			if($par->get('abuse_reporting','0')==1){?>
-				<button id="abuse_form_button" class="button" type="button" ><?php echo JText::_('COM_DJCLASSIFIEDS_REPORT_ABUSE'); ?></button>
+				<div id="abuse_form_button" class="btn btn_accent-black"><?php echo JText::_('COM_DJCLASSIFIEDS_REPORT_ABUSE'); ?></div>
 			<?php } ?>
 		 <div class="clear_both"></div>
 		<?php if($par->get('ask_seller','0')==1 && ($item->user_id>0 || $item->email) && (($par->get('ask_seller_type','0')==1) || ($par->get('ask_seller_type','0')==0 && $user->id>0))){?>
-			<div id="ask_form" class="af_hidden" style="display:none;overflow:hidden;">
+			<div id="ask_form" class="af_hidden bg-white p-3" style="display:none;overflow:hidden;">
 			<form action="<?php echo JURI::base();?>index.php" method="post" name="djForm" id="djForm" class="form-validate" enctype="multipart/form-data" >
 				<?php if($par->get('ask_seller_type','0')==0 || $user->id>0){?>
 			   		<label for="ask_name" id="ask_name-lbl"><?php echo JText::_('COM_DJCLASSIFIEDS_YOUR_NAME'); ?></label>
@@ -452,7 +335,7 @@ if(!$user->id){
 
 		<?php if($par->get('abuse_reporting','0')==1 && $user->id>0){?>
 			<div id="abuse_form" style="display:none;overflow:hidden;">
-			<form action="index.php" method="post" name="djabuseForm" id="djabuseForm" class="form-validate"  enctype="multipart/form-data" >
+			<form action="index.php" method="post" name="djabuseForm" id="djabuseForm" class="form-validate bg-white p-3"  enctype="multipart/form-data" >
 			   <label for="abuse_message" id="abuse_message-lbl"><?php echo JText::_('COM_DJCLASSIFIEDS_MESSAGE'); ?></label><br />
 			   <textarea id="abuse_message" name="abuse_message" rows="5" cols="55" class="inputbox required"></textarea><br />
 			   
@@ -525,7 +408,7 @@ if(!$user->id){
 			   <input type="hidden" name="view" value="item" />
 			   <input type="hidden" name="task" value="abuse" />
 			</form> 	 
-			</div>
+			</div>       
 		<?php } ?>
 		<?php if($par->get('ask_seller','0')==1 || ($par->get('ask_seller','0')==2 && $item->user_id>0) || ($par->get('abuse_reporting','0')==1 && $par->get('notify_user_email','')!='')){ ?>
 				</div>

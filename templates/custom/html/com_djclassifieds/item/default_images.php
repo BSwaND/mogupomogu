@@ -37,7 +37,7 @@ $djMediaToolsMinimum = (int)$par->get('djmediatools_minimum', 1);
 JHtml::_('jquery.framework');
 ?>
 
-	<div class="images_wrap" style="width:<?php echo $par->get('gallery_width','200');?>px"><div class="images">
+	<div class="images_wrap" ><div class="images">
 		<?php if ($djMediaTools > 0 && count($this->item_images) >= $djMediaToolsMinimum) {?>
 			<div class="djc_images">
 			<?php echo JHtml::_('content.prepare', '{djmedia '.(int)$djMediaTools.'}', $par, 'com_djclassifieds.item.djmediatools'); ?>
@@ -59,7 +59,7 @@ JHtml::_('jquery.framework');
 					</div>
 					<?php
 					if (count($this->item_images) > 1) { ?>
-						<div class="djc_thumbnails djc_thumbs_gal<?php echo $thumbs_limit;?> " id="djc_thumbnails">
+						<div class="djc_thumbnails d-flex pt-2   djc_thumbs_gal<?php echo $thumbs_limit;?> " id="djc_thumbnails">
 						<?php foreach($this->item_images as $im=>$img){
 								if($im>0 && $im%$thumbs_limit==0){
 									$new_row_class = ' new_row';

@@ -30,12 +30,12 @@ $par = JComponentHelper::getParams( 'com_djclassifieds' );
 $app = JFactory::getApplication();
 $item = $this->item;
 
- if((int)$par->get('showaddetails','1')){?>
+ if((int)$par->get('showaddetails','1')){?>   
 	<div class="additional"><h2><?php echo JText::_('COM_DJCLASSIFIEDS_AD_DETAILS'); ?></h2>
 		<div class="row">
 			<span class="row_label"><?php echo JText::_('COM_DJCLASSIFIEDS_AD_ID'); ?>:</span>
 			<span class="row_value"><?php echo $item->id; ?></span>
-		</div>
+		</div>  
 		<div class="row">
 			<span class="row_label"><?php echo JText::_('COM_DJCLASSIFIEDS_DISPLAYED'); ?>:</span>
 			<span class="row_value"><?php echo $item->display; ?></span>

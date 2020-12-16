@@ -46,10 +46,10 @@ if($params->get('results_itemid',0)){
 	} 
 
 	?>
-		<div class="djcf_menu djcf_regions" id="mod_djcf_regions<?php echo $module->id;?>">
+		<div class="djcf_menu djcf_regions all-region_contry" id="mod_djcf_regions<?php echo $module->id;?>">
 		<?php 	
 		if($regs){ ?>	
-		<ul class="menu nav">
+		<ul class="all-region_mainland">
 			<?php 
 				$r_count=0;
 				$prev_l = 0;
@@ -73,7 +73,7 @@ if($params->get('results_itemid',0)){
 						}
 						
 					}else if($prev_l<$r->level){
-						echo '<ul>';
+						echo '<ul class="all-region_children">';
 					}else if($r_count>0){
 						echo '</li>';
 					}

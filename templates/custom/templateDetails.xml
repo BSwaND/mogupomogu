@@ -32,6 +32,8 @@
 		<position>breadcrumbs</position>
 		<position>footer</position>
 		<position>slogin</position>
+		<position>map</position>
+		<position>aftor_items</position>
 	</positions>
 	<languages folder="language">
 		<language tag="en-GB">language/en-GB/en-GB.tpl_custom.ini</language>

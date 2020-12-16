@@ -1255,10 +1255,7 @@
 		</div>
 
 		<div class="col-md-6">
-			<div class="bg-white mb-3">
-				<div class="bg-white__header  mb-3">
-					<div class="h2">Эх меню</div>
-				</div>
+			<div class="bg-white menu_for_user mb-3 ">
 				<?php
 				$modules = JModuleHelper::getModules('menu_for_user');
 				foreach($modules as $module) {
@@ -1266,10 +1263,11 @@
 				}
 				?>
 				</div>
-			<div class="bg-white mb-3">
-				<div class="bg-white__header">
-					<div class="h2">Категории пользователя</div>
-				</div>
+			<div class="bg-white menu_for_user mb-3">
+<pre>
+	создать категории для
+	текущего пользователя
+</pre>
 				</div>
 		</div>
 	</div>

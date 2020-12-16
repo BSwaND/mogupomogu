@@ -10,6 +10,7 @@
 defined('_JEXEC') or die;
 
 ?>
+<div class="bg-white">
 <div class="profile<?php echo $this->pageclass_sfx; ?>">
 	<?php if ($this->params->get('show_page_heading')) : ?>
 		<div class="page-header">
@@ -21,7 +22,7 @@ defined('_JEXEC') or die;
 	<?php if (JFactory::getUser()->id == $this->data->id) : ?>
 		<ul class="btn-toolbar pull-right">
 			<li class="btn-group">
-				<a class="btn" href="<?php echo JRoute::_('index.php?option=com_users&task=profile.edit&user_id=' . (int) $this->data->id); ?>">
+				<a class="_btn" href="<?php echo JRoute::_('index.php?option=com_users&task=profile.edit&user_id=' . (int) $this->data->id); ?>">
 					<span class="icon-user"></span>
 					<?php echo JText::_('COM_USERS_EDIT_PROFILE'); ?>
 				</a>
@@ -31,4 +32,5 @@ defined('_JEXEC') or die;
 	<?php echo $this->loadTemplate('core'); ?>
 	<?php echo $this->loadTemplate('params'); ?>
 	<?php echo $this->loadTemplate('custom'); ?>
+</div>
 </div>
