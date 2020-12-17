@@ -65,8 +65,8 @@ require_once(JPATH_BASE.DS.'administrator'.DS.'components'.DS.'com_djclassifieds
 	if($params->get('custom_fields','0')){
 		$fields = modDjClassifiedsItems::getFields($params,$items);
 	}
-		
-	/*$menus	= JSite::getMenu();	
+
+	/*$menus	= JSite::getMenu();
 	$menu_item = $menus->getItems('link','index.php?option=com_djclassifieds&view=items&cid=0',1);
 	$menu_item_blog = $menus->getItems('link','index.php?option=com_djclassifieds&view=items&layout=blog&cid=0',1);
 			

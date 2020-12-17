@@ -90,9 +90,9 @@
 	jimport('joomla.application.module.helper');
 	$attribs['style'] = 'none';
 
-?>
+?> 
 <div id="dj-classifieds" class="clearfix djcftheme-<?php echo $this->theme;?><?php echo $pageclass_sfx;?><?php if(JFactory::getDate() >= $item->date_exp){ echo ' item_expired'; }?>">
-
+	  
 	<div class="row">
 		<div class="col-lg-4">
 			<div class="bg-white">
@@ -169,7 +169,10 @@
 				</div>
 				<div class="adt_card_header">
 					<h1 class="h1"><?= $item->name ?></h1>
-					<?= ($item->t_name) ? ' <div class="label '. json_decode($item->t_params)->bt_class.'">'. $item->t_name .'</div>' : null ?>
+					<div class="">
+						<?= ($item->t_name) ? ' <div class="label '. json_decode($item->t_params)->bt_class.'">'. $item->t_name .'</div>' : null ?>
+						<?= ($this->fields[1] && $this->fields[1]->value != '---') ? ' <div class="label " data-class="'. $this->fields[1]->value .'">'. $this->fields[1]->value .'</div>' : null ?>
+					</div>
 				</div>
 				<div class="adt_card_header_info">
 					<div class="adt_item__sity"><?= $item->r_name ?></div>
@@ -218,8 +221,15 @@
 											echo '</a>';
 										?>
 										<div class="">
-											<div class="adt_author_card_header__name"><?= $item->username ?></div>
-											<div>на сайте с <?= date("Y",  strtotime($userProfile->registerDate)) ?></div>
+											<div class="adt_author_card_header__name">
+												<a href="index.php?option=com_djclassifieds&view=profile&uid=<?= $uid_slug.$profile_itemid ?>">
+													<?= $item->username ?>
+												</a>
+											</div>
+
+											<?php if($userProfile->registerDate){  ?>
+												<div>на сайте с <?= date("Y",  strtotime($userProfile->registerDate)) ?></div>
+											<?php }  ?>
 										</div>
 									</div>
 
@@ -230,10 +240,14 @@
 											<span><a href="#">Подробнее о моем профиле</a></span>
 										</div>
  */ ?>
-										<div class="adt_author_block_body_row">
-											<span class="adt_author_block_body_row__title">Телефон:</span>
-											<span><?= $userProfileField->profile['phone'] ?></span>
-										</div>
+
+										<?php if(isset($userProfileField->profile['phone'])) {?>
+											<div class="adt_author_block_body_row">
+												<span class="adt_author_block_body_row__title">Телефон:</span>
+												<span><?= $userProfileField->profile['phone'] ?></span>
+											</div>
+										<?php }?>
+
 										<div class="adt_author_block_body_row">
 											<span class="adt_author_block_body_row__title">Email:</span>
 											<span><?= $item->u_email ?></span>
@@ -296,6 +310,22 @@
 			echo JModuleHelper::renderModule($module, $attribs);
 		}
 	?>
+
+
+	<hr>
+	ПОСЛЕ
+	<pre>
+					<?php
+						$uid_slug = $item->user_id.':'.DJClassifiedsSEO::getAliasName($item->username);
+						//	$profile_itemid = DJClassifiedsSEO::getUserProfileItemid() ? DJClassifiedsSEO::getUserProfileItemid() : '&Itemid='.$Itemid;
+
+						echo '--------------';
+						print_r( $uid_slug);
+						echo '--------------';
+						//print_r( $profile_itemid );
+					?>
+				</pre>
+
 </div>
 
 <?php if($item->event->afterDJClassifiedsDisplayTitle) { ?>
@@ -350,7 +380,7 @@
 		echo'</div>';
 	}
 ?>
-</div>
+
 
 <script type="text/javascript">
 	this.DJCFShowValueOnClick = function (){

@@ -27,6 +27,14 @@
 
 	defined ('_JEXEC') or die('Restricted access');
 
+	if($fields){
+		$arrItemsField = [];
+		foreach ($fields as $field ){
+			$arrItemsField[ $field->item_id] = $field->value;
+		}
+	}
+
+
 	if($items){	?>
 		<div class="mb-5 bb">
 			<div class="">
@@ -43,8 +51,14 @@
 									<div class="adt_item_info">
 										<a href="<?= JRoute::_(DJClassifiedsSEO::getItemRoute($item->id.':'.$item->alias,$item->cat_id.':'.$item->c_alias,$item->region_id.':'.$item->r_name)) ?>" class="adt_item__header"><?= $item->name ?></a>
 										<div class="adt_item__date"><?= date("d.m.Y", strtotime( $item->date_start) )?></div>
+										<?php /*
 										<a href="<?= JRoute::_(DJClassifiedsSEO::getCategoryRoute($item->cat_id.':'.$item->c_alias)) ?>" class="adt_item__category"><?= $item->c_name ?></a>
-										<div class="label label_hot">Горячее</div>
+                    */ ?>
+
+										<?php	if($arrItemsField[$item->id] && $arrItemsField[$item->id] != '---'){ ?>
+											<div class="label" data-class="<?= $arrItemsField[$item->id]?>"><?= $arrItemsField[$item->id]?></div>
+										<?php	}		?>
+										
 										<div class="">
 											<a href="<?= DJClassifiedsSEO::getRegionRoute($item->region_id.':'.$item->r_name) ?>" class="adt_item__sity"><?= $item->r_name ?></a>
 										</div>
@@ -58,6 +72,19 @@
 
 			<div class="text-center mb-5">
 				<a href="/obyavleniya-polzovatelya" class="btn btn_white">Показать все</a>
+				<p>index.php?option=com_djclassifieds&view=profile&uid=</p>
+				ДО
+				<pre>
+					<?php
+						$uid_slug = $item->user_id.':'.DJClassifiedsSEO::getAliasName($item->username);
+					//	$profile_itemid = DJClassifiedsSEO::getUserProfileItemid() ? DJClassifiedsSEO::getUserProfileItemid() : '&Itemid='.$Itemid;
+
+						echo '--------------';
+						print_r( $uid_slug);    
+						echo '--------------';
+						//print_r( $profile_itemid );
+					?>
+				</pre>
 			</div>
 		</div>
 	<?php } ?>

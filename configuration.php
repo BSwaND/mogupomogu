@@ -5,7 +5,7 @@ class JConfig {
 	public $display_offline_message = '1';
 	public $offline_image = '';
 	public $sitename = 'mogupomogu';
-	public $editor = 'none';
+	public $editor = 'codemirror';
 	public $captcha = '0';
 	public $list_limit = '50';
 	public $access = '1';

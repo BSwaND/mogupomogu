@@ -1,0 +1,2 @@
+INSERT IGNORE INTO `#__djcf_emails` (`id`, `label`, `title`, `content`) VALUES
+(36, 'COM_DJCLASSIFIEDS_ET_ASK_FORM_PROFILE_NOTIFICATION', 'New message', '<p>Hello [[user_name]],</p>\r\n<p> </p>\r\n<p>New message</p>\r\n<p>From</p>\r\n<p>User name: [[contact_author_name]]</p>\r\n<p>User email: [[contact_author_email]]</p>\r\n<p>Please check message content on our website</p>');

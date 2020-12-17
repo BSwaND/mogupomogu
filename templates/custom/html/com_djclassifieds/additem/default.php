@@ -119,10 +119,9 @@
 
 
 
-					<div class="dj-additem clearfix" >
+					<div class="dj-additem clearfix">
 						<form action="<?php echo JRoute::_('index.php'); ?>" method="post" class="form-validate" name="djForm" id="djForm"  enctype="multipart/form-data">
 							<div class="additem_djform">
-
 								<div class="additem_djform_in">
 									<center><img src='<?php echo JURI::base(true) ?>/components/com_djclassifieds/assets/images/long_loader.gif' alt='LOADING' style='display: none;' id='upload_loading' /><div id="alercik"></div></center>
 
@@ -140,6 +139,7 @@
 											</div>
 										</div>
 									<?php }?>
+
 
 									<div class="djform_row">
 										<?php if($par->get('show_tooltips_newad','0')){ ?>
@@ -1267,6 +1267,8 @@
 <pre>
 	создать категории для
 	текущего пользователя
+
+	-вывести доп.поля
 </pre>
 				</div>
 		</div>

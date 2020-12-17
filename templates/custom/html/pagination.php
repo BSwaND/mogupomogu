@@ -33,6 +33,7 @@ function pagination_list_footer($list)
 
 function pagination_list_render($list)
 {
+	$html = null;
 
 	$doc = JFactory::getDocument();
 

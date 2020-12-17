@@ -67,9 +67,9 @@ JHtml::_('jquery.framework');
 									$new_row_class = '';
 								}
 							 ?>
-							<div class="djc_thumbnail djc_thumb_row<?php echo $new_row_class;?>">
-								<a rel="<?php echo JURI::base(true).$img->thumb_item_main;?>" title="<?php echo $img->caption; ?>" href="<?php echo JURI::base(true).$img->thumb_item_main;?>">
-									<img  alt="<?php echo $img->caption; ?>" src="<?php echo JURI::base(true).$img->thumb_item_thumb;?>" />
+							<div class="djc_thumbnail djc_thumb_row<?php echo $new_row_class;?> pr-2">
+								<a rel="<?php echo JURI::base(true).$img->thumb_item_main;?>" title="<?= $item->name ?>" href="<?php echo JURI::base(true).$img->thumb_item_main;?>">
+									<img  alt="<?= $item->name ?>" src="<?php echo JURI::base(true).$img->thumb_item_thumb;?>" />
 								</a>
 							</div>
 							<?php } ?>

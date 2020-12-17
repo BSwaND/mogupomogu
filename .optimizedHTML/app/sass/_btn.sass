@@ -334,14 +334,16 @@ html, body, div, *
 	padding: 0px 10px
 	display: inline-block
 	height: 23px
-	&_hot
+	&_hot,
+	&[data-class="Горячие"]
 		background: $accent
-	&_new
+	&_new,
+	&[data-class="Новое"]
 		background: $green
-	&_boo
+	&_boo,
+	&[data-class="Б/У"]
 		background: $yellow
 		text-transform: uppercase
-
 
 
 .hamburger
@@ -368,3 +370,59 @@ html, body, div, *
 	text-align: center
 .bb
 	border-bottom: 1px solid $grey-2
+
+
+
+
+
+
+// Star pagination
+.pagination
+.pagination-list
+	display: block
+	margin: 30px auto 60px
+	text-align: center
+	padding: 0px 
+	li
+		display: inline-block
+		min-height: 30px
+		min-width: 40px
+		border: 1px solid #e5e5e5
+		text-align: center
+		line-height: 30px
+		font-size: 14px
+		border-radius: 3px
+		margin: 0 5px
+		transition: all .4s
+		&:hover
+			box-shadow: 0 0 5px 0 #ddd
+		&::before
+			display: none !important
+		a
+			display: block
+			padding: 0 10px
+			&:hover
+				text-decoration: none
+				color: #fff
+				transition: all 0.4s
+				background: $accent
+				border-radius: 3px
+		.active
+			display: block
+			padding: 0 10px
+			background: transparentize($accent, 0.5)
+			color: #fff
+			border-radius: 3px
+
+@media (max-width: 768px)
+	.pagination-list
+		li
+			display: inline-block
+		.pagination-start,
+		.pagination-prev,
+		.pagination-next,
+		.pagination-end
+			display: none
+
+// End pagination
+
