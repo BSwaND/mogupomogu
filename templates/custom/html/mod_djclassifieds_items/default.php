@@ -35,7 +35,11 @@
 	}
 
 
-	if($items){	?>
+	if($items){
+		$Itemid = JRequest::getVar('Itemid', 0,'', 'int');
+		$uid_slug = $item->user_id.':'.DJClassifiedsSEO::getAliasName(JFactory::getUser($item->user_id)->get('name'));
+		$profile_itemid = DJClassifiedsSEO::getUserProfileItemid() ? DJClassifiedsSEO::getUserProfileItemid() : '&Itemid='.$Itemid;
+		?>		
 		<div class="mb-5 bb">
 			<div class="">
 				<div class="h1">Другие объявления автора</div>
@@ -44,9 +48,7 @@
 						<?php foreach ($items as $item){ ?>
 							<div class="col-sm-7">
 								<div class="adt_item">
-									<?php
 
-									?>
 									<img src="<?= $item->images['0']->thumb_item_main?>" alt="" class="adt_item__img">
 									<div class="adt_item_info">
 										<a href="<?= JRoute::_(DJClassifiedsSEO::getItemRoute($item->id.':'.$item->alias,$item->cat_id.':'.$item->c_alias,$item->region_id.':'.$item->r_name)) ?>" class="adt_item__header"><?= $item->name ?></a>
@@ -71,24 +73,7 @@
 			</div>
 
 			<div class="text-center mb-5">
-				<a href="/obyavleniya-polzovatelya" class="btn btn_white">Показать все</a>
-				<p>index.php?option=com_djclassifieds&view=profile&uid=</p>
-				ДО
-				<pre>
-					<?php
-						$uid_slug = $item->user_id.':'.DJClassifiedsSEO::getAliasName($item->username);
-					//	$profile_itemid = DJClassifiedsSEO::getUserProfileItemid() ? DJClassifiedsSEO::getUserProfileItemid() : '&Itemid='.$Itemid;
-
-						echo '--------------';
-						print_r( $uid_slug);    
-						echo '--------------';
-						//print_r( $profile_itemid );
-					?>
-				</pre>
+				<a href="/index.php?option=com_djclassifieds&view=profile&uid=<?= $uid_slug.$profile_itemid ?>" class="btn btn_white">Показать все</a>
 			</div>
 		</div>
-	<?php } ?>
-
-
-
-
+	<?php } 
