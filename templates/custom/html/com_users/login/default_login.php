@@ -1,16 +1,19 @@
 <?php
-/**
- * @package     Joomla.Site
- * @subpackage  com_users
- *
- * @copyright   Copyright (C) 2005 - 2020 Open Source Matters, Inc. All rights reserved.
- * @license     GNU General Public License version 2 or later; see LICENSE.txt
- */
+	/**
+	 * @package     Joomla.Site
+	 * @subpackage  com_users
+	 *
+	 * @copyright   Copyright (C) 2005 - 2020 Open Source Matters, Inc. All rights reserved.
+	 * @license     GNU General Public License version 2 or later; see LICENSE.txt
+	 */
 
-defined('_JEXEC') or die;
+	defined('_JEXEC') or die;
 
-JHtml::_('behavior.keepalive');
-JHtml::_('behavior.formvalidator');
+	JHtml::_('behavior.keepalive');
+	JHtml::_('behavior.formvalidator');
+
+	jimport('joomla.application.module.helper');
+	$attribs['style'] = 'none';
 
 ?>
 
@@ -72,31 +75,36 @@ JHtml::_('behavior.formvalidator');
 								<?php echo JHtml::_('form.token'); ?>
 							</fieldset>
 						</form>
-					</div>	
+						<?php
+							$modules = JModuleHelper::getModules('slogin');
+							foreach($modules as $module){
+								echo JModuleHelper::renderModule($module, $attribs);
+							} ?>
+					</div>
 				</div>
 			</div>
-
+			             
 			<div class="bg-white p-3">
-					<ul class="nav nav-tabs nav-stacked nav-stacked__authorization ">
+				<ul class="nav nav-tabs nav-stacked nav-stacked__authorization ">
+					<li class="nav-stacked__authorization__item">
+						<a href="<?php echo JRoute::_('index.php?option=com_users&view=reset'); ?>">
+							<?php echo JText::_('COM_USERS_LOGIN_RESET'); ?>
+						</a>
+					</li>
+					<li class="nav-stacked__authorization__item">
+						<a href="<?php echo JRoute::_('index.php?option=com_users&view=remind'); ?>">
+							<?php echo JText::_('COM_USERS_LOGIN_REMIND'); ?>
+						</a>
+					</li>
+					<?php $usersConfig = JComponentHelper::getParams('com_users'); ?>
+					<?php if ($usersConfig->get('allowUserRegistration')) : ?>
 						<li class="nav-stacked__authorization__item">
-							<a href="<?php echo JRoute::_('index.php?option=com_users&view=reset'); ?>">
-								<?php echo JText::_('COM_USERS_LOGIN_RESET'); ?>
+							<a href="<?php echo JRoute::_('index.php?option=com_users&view=registration'); ?>">
+								<?php echo JText::_('COM_USERS_LOGIN_REGISTER'); ?>
 							</a>
 						</li>
-						<li class="nav-stacked__authorization__item">
-							<a href="<?php echo JRoute::_('index.php?option=com_users&view=remind'); ?>">
-								<?php echo JText::_('COM_USERS_LOGIN_REMIND'); ?>
-							</a>
-						</li>
-						<?php $usersConfig = JComponentHelper::getParams('com_users'); ?>
-						<?php if ($usersConfig->get('allowUserRegistration')) : ?>
-							<li class="nav-stacked__authorization__item">
-								<a href="<?php echo JRoute::_('index.php?option=com_users&view=registration'); ?>">
-									<?php echo JText::_('COM_USERS_LOGIN_REGISTER'); ?>
-								</a>
-							</li>
-						<?php endif; ?>
-					</ul>
+					<?php endif; ?>
+				</ul>
 			</div>
 		</div>
 	</div>

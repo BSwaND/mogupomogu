@@ -77,7 +77,7 @@ $points_a = $par->get('points',0);
 	
 <div class="dj-additem dj-renewitem clearfix" >
 <form action="<?php echo JRoute::_('index.php'); ?>" method="post" class="form-validate" name="djForm" id="djForm"  enctype="multipart/form-data">
-        <div class="additem_djform">
+        <div class="additem_djform"> 
         
 			<div class="title_top"><?php echo JText::_('COM_DJCLASSIFIEDS_RENEW_ADVERT').'&nbsp;-&nbsp;'.$this->item->name; ?></div>
 			<div class="additem_djform_in">

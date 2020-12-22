@@ -17,6 +17,11 @@ document.addEventListener("DOMContentLoaded", function() {
 	});
 
 
+
+	jQuery('.login-box__link__out').click(function (){
+		jQuery('#login-form').submit();
+	})
+
 });
 
 

@@ -9,20 +9,6 @@
 * @autor email  contact@design-joomla.eu
 * @Developer    Lukasz Ciastek - lukasz.ciastek@design-joomla.eu
 * 
-* 
-* DJ Classifieds is free software: you can redistribute it and/or modify
-* it under the terms of the GNU General Public License as published by
-* the Free Software Foundation, either version 3 of the License, or
-* (at your option) any later version.
-*
-* DJ Classifieds is distributed in the hope that it will be useful,
-* but WITHOUT ANY WARRANTY; without even the implied warranty of
-* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-* GNU General Public License for more details.
-*
-* You should have received a copy of the GNU General Public License
-* along with DJ Classifieds. If not, see <http://www.gnu.org/licenses/>.
-* 
 */
 defined ('_JEXEC') or die('Restricted access');
 
@@ -36,6 +22,10 @@ $config  = JFactory::getConfig();
 $app	 = JFactory::getApplication();
 $main_id = JRequest::getVar('cid', 0, '', 'int');
 $user	 = JFactory::getUser();
+
+//$document = JFactory::getDocument();
+//$document->profileUser = $this->profile;
+
 //print_r($this->profile);die();
 
 $menus	= $app->getMenu('site');
@@ -81,7 +71,7 @@ if($menu_jprofileedit_itemid){
 			}
 			
 			if($user->id==$this->profile['id'] && $user->id>0){			
-				echo '<a href="'.$user_edit_profile.'" class="title_edit button">'.JText::_('COM_DJCLASSIFIEDS_PROFILE_EDITION').'</a>';
+				echo '<div><a href="'.$user_edit_profile.'" class="title_edit button">'.JText::_('COM_DJCLASSIFIEDS_PROFILE_EDITION').'</a></div>';
 				//echo '<a href="'.$juser_edit_profile.'" class="title_edit title_jedit button">'.JText::_('COM_DJCLASSIFIEDS_CHANGE_PASSWORD_EMAIL').'</a>';
 			} ?>				
 			</h2>			
@@ -172,7 +162,7 @@ if($menu_jprofileedit_itemid){
 
 			<?php echo $this->loadTemplate('localization'); ?>
 			<?php echo $this->loadTemplate('contactform'); ?>
-			
+
 			<?php if($par->get('profile_social_link','')){ ?>
 				<div class="profile_row row_social_link">
 					<span class="profile_row_label"></span>

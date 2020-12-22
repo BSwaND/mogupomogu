@@ -27,17 +27,10 @@
 /* page titles */
 #dj-classifieds .dj-category .cat_row_title,
 #dj-classifieds h1.main_cat_title,
-#dj-classifieds .dj-cattree-box .title_top,
-#dj-classifieds .dj-regtree-box .title_top,
-#dj-classifieds .title_top h1,
-#dj-classifieds .dj-additem .title_top,
 #dj-classifieds table.paymentdetails td.td_title h2,
-#dj-classifieds .profile_outer h2.profile_name,
-#dj-classifieds .djcf_warning_outer .title_top,
-#dj-classifieds .pointspackages .title_top,
-#dj-classifieds .djcf_checkout_outer .title_top {
+#dj-classifieds .profile_outer h2.profile_name {
   font-weight: normal;
-  font-size: 20px;
+  font-size: 22px;
   line-height: 1.1;
   text-transform: uppercase;
   padding: 0 0 20px;
@@ -1347,16 +1340,9 @@
 
 /* rows */
 #dj-classifieds .dj-additem .djform_row {
-  border-bottom: 1px solid #ebebeb;
   margin-bottom: 20px;
   padding-bottom: 20px;
 }
-
-/*#dj-classifieds .dj-additem .djform_row:last-child {
-  border-bottom: none;
-  margin-bottom: 0;
-  padding-bottom: 0;
-}*/
 
 #dj-classifieds .dj-additem .djform_row.extra_fields,
 #dj-classifieds .dj-additem .djform_row#after_mcat_all {
@@ -1409,6 +1395,9 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   vertical-align: middle;
+}
+#dj-classifieds .dj-additem  .djform_field_foto-block{
+	width: auto;
 }
 
 #dj-classifieds .dj-additem .djform_field img {

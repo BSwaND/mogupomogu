@@ -99,5 +99,55 @@
 					font-size: 18px
 					font-weight: 400
 
+	&_profile
+		&_item
+			font-size: 15px
+			transition: all 0.4s
+			.btn
+				font-size: 12px
+			.btn_wite
+				background: #fff url(../images/group-social.svg) no-repeat 90% center
+				padding-right: 40px
+		&_td
+			flex: 1 1  auto
+			&_outer
+				display: flex
+				padding: 0 30px
+			&__location
+				.adt_profile_body
+					text-align: center
+			&__vied
+				.adt_profile_body
+					text-align: center
+			&__first-child
+				flex: 0 0 200px
+				.adt_profile_head
+					padding-left: 0
+					border-bottom: none
+				.adt_profile_body
+					padding-left: 0
+					height: auto
+		&__outer
+			position: relative
+		&_head
+			border-bottom: 1px solid $grey-2
+			padding: 20px
+		&_body
+			padding: 20px
+			display: flex
+			align-items: center
+			height: calc(100% - 90px)
+
+		&_footer
+			display: flex
+			justify-content: flex-end
+			position: absolute
+			right: 20px
+			bottom: 10px
+		&_img
+			width: 150px
+			height: 150px
+			object-fit: cover
+
 
 

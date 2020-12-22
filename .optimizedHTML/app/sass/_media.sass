@@ -11,6 +11,28 @@
 	.adt
 		&_item
 			display: block
+			
+	.adt_profile
+		&_td
+			order: 1
+			&__first-child
+				flex: 0 0 100%
+				.adt_profile_body
+					padding: 0
+			&__descriptor
+				order: 2
+				flex: 0 0 100%
+			&_outer
+				flex-wrap: wrap
+		&_head
+			font-weight: 600
+			padding-bottom: 5px
+		&_footer
+			bottom: auto
+			top: 20px
+			
+			
+			
 // ≥992px
 +media-breakpoint-down(md)
 	input
@@ -28,6 +50,21 @@
 
 	.control-group
 		display: block
+
+	.adt_profile
+		&_td
+			display: flex
+			border-bottom: 1px solid $grey-2
+			&__descriptor
+				border-bottom: none
+			&__first-child
+				display: block
+				border-bottom: none
+			&_outer
+				flex-direction: column
+		&_head
+			border-bottom: none
+			flex: 0 0 30%
 
 // ≥768px
 +media-breakpoint-down(sm)
@@ -130,11 +167,32 @@
 			margin: auto
 			width:  auto
 
+	.adt_profile_footer
+		position: static
 
 
 // ≥576px
 +media-breakpoint-down(xs)
-	//
+	.adt_profile
+		&_td
+			display: block
+			margin-bottom: 10px
+			&_outer
+				padding: 0
+			&__first-child
+				.adt_profile_head
+					margin-bottom: 10px
+		&_head
+			padding: 10px 0 0
+		&_body
+			padding: 0 
+			
+		&_footer
+			display: block
+			text-align: center
+			margin-top: 30px
+			.btn
+				width: 100%
 
 @media (max-width: 420px)
 	//

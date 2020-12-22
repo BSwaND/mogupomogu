@@ -15,8 +15,6 @@
 	jimport('joomla.application.module.helper');
 	$attribs['style'] = 'none';
 
-
-
 ?>
 <div class="main_body">
 	<div class="row">
@@ -26,7 +24,7 @@
 					<div class="h1"><?php echo $this->escape($this->params->get('page_heading')); ?></div>
 				</div>
 
-				<div class="pt-4 pl-4 pr-4">
+				<div class="pt-4 pl-4 pr-4">  
 					<div class="registration<?php echo $this->pageclass_sfx; ?>">
 						<form id="member-registration" action="<?php echo JRoute::_('index.php?option=com_users&task=registration.register'); ?>" method="post" class="form-validate form-horizontal well" enctype="multipart/form-data">
 							<?php // Iterate through the form fieldsets and display each one. ?>
@@ -54,20 +52,11 @@
 							<?php echo JHtml::_('form.token'); ?>
 						</form>
 					</div>
-
-<pre>
-Сделать:
-	- телевон
-	- подключить в котроллере
-	- доп пjле юзера - телефон
-</pre>
-
 					<?php
 						$modules = JModuleHelper::getModules('slogin');
 						foreach($modules as $module){
 							echo JModuleHelper::renderModule($module, $attribs);
 						} ?>
-
 
 				</div>
 			</div>

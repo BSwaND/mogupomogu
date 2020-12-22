@@ -36,6 +36,7 @@
 		<position>map</position>
 		<position>aftor_items</position>
 		<position>random_adt</position>
+		<position>in_site</position>
 	</positions>
 	<languages folder="language">
 		<language tag="en-GB">language/en-GB/en-GB.tpl_custom.ini</language>

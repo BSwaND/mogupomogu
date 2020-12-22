@@ -19,6 +19,33 @@ html, body, div, *
   background-color: $accent
 
 
+.alert
+	position: relative
+	padding: 1rem 1rem
+	margin: 1rem
+	border: 1px solid transparent
+	border-radius: .25rem
+	position: relative
+	&-error
+		color: #842029
+		background-color: #f8d7da
+		border-color: #f5c2c7
+	&-notice
+		color: #664d03
+		background-color: #fff3cd
+		border-color: #ffecb5
+	&-message
+		color: #0f5132
+		background-color: #d1e7dd
+		border-color: #badbcc
+
+
+
+.close
+		position: absolute
+		right: 20px
+		top: 20px
+		background: none
 
 
 
@@ -52,12 +79,26 @@ html, body, div, *
 		height: 56px
 		background: $accent
 	&_login
-		background: #CECDCE url(../images/accaunt-logo.svg) no-repeat center
+		background: #CECDCE url(../images/accaunt-logo.svg)
 		width: 56px
 		height: 56px
+		display: flex
+		background-size: cover
+		background-position: center
+		background-repeat: no-repeat
 		&:hover
 			//background-color:  lighten(#CECDCE , 10%)
 			filter: opacity(0.8)
+		&__user-name
+			box-shadow: 0 0 10px 0 #ddd
+			border-bottom-left-radius: 8px
+			border-bottom-right-radius: 8px
+			font-size: 12px
+			color: $text
+			background: rgba(255, 255, 255, 0.9)
+			width: 100%
+			align-self: flex-end
+
 	&_footer
 		background: #DAD9DD
 		font-size: 15px
@@ -93,9 +134,60 @@ html, body, div, *
 		background: $accent
 		display: inline-block
 		padding: 7px 15px
+	&_grey
+		background: #CECDCE
+		color: $text
+		font-size: 15px
+		padding: 7px 25px
+		&:hover
+			background: transparentize( #CECDCE , .2)
+			color: $text
+	&_wite
+		font-size: 15px
+		color: $text
+		border: 1px solid $grey-2
+		padding: 7px 25px
+		&:hover
+			background: transparentize( #CECDCE , .2)
+			color: $text
 
 
 
+
+
+
+.login-box
+	display: block
+	position: absolute
+	top: 70px
+	right: 0
+	background: #fff
+	box-shadow: 0 0 10px 0 #ccc
+	z-index: -1
+	min-width: 200px
+	border-radius: 8px
+	padding: 10px
+	transition: all 0.4s
+	opacity: 0
+	&_outer
+		position: relative
+		&:hover
+			.login-box
+				opacity: 1
+				height: auto
+				z-index: 10
+	&__link
+		display: block
+		border-bottom: 1px solid $grey-2
+		padding: 10px  5px
+		cursor: pointer
+		transition: all 0.4s
+		&:hover
+			color: lighten($accent, 20%)
+
+		&:last-child
+			border-bottom: none
+			padding-bottom: 5px
 
 
 .cooperate
@@ -344,6 +436,30 @@ html, body, div, *
 	&[data-class="Б/У"]
 		background: $yellow
 		text-transform: uppercase
+	&_grey
+		font-size: 17px
+		border-radius: 4px
+		padding: 4px 15px
+		text-align: center
+		border: none
+		color: $text
+		display: inline-block
+		background: $grey-2
+		transition: all 0.4s
+		margin: 0 10px
+	&.star
+		width: auto !important
+		padding: 0 !important
+
+	&_active
+		background: #BFEACB
+		color: $text
+		font-weight: 400
+	&_deactive
+		background:  rgba(237, 28, 36, 0.4)
+		color: $text
+		font-weight: 400
+
 
 
 .hamburger
@@ -426,3 +542,12 @@ html, body, div, *
 
 // End pagination
 
+
+
+.mb
+	&-20
+		margin-bottom: 20px
+
+.pb
+	&-20
+		padding-bottom: 20px

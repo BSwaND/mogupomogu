@@ -117,8 +117,6 @@
 
 					?>
 
-
-
 					<div class="dj-additem clearfix">
 						<form action="<?php echo JRoute::_('index.php'); ?>" method="post" class="form-validate" name="djForm" id="djForm"  enctype="multipart/form-data">
 							<div class="additem_djform">
@@ -1264,12 +1262,8 @@
 				?>
 				</div>
 			<div class="bg-white menu_for_user mb-3">
-<pre>
-	создать категории для
-	текущего пользователя
-
-	-вывести доп.поля
-</pre>
+				index.php?option=com_djclassifieds&view=useritems
+				<br>
 				</div>
 		</div>
 	</div>

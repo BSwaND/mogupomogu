@@ -32,7 +32,7 @@
 				<div class="bg-white__header">
 					<div class="row">
 						<div class="col-md-10">
-							<div class="h1"><?=  $active_m->title ?></div>
+								<div class="h1"><?= (isset($active_m->title)) ? $active_m->title : '' ?></div>
 						</div>
 						<div class="col-md-8">
 						</div>

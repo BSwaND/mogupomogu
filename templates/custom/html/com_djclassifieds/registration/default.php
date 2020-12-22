@@ -70,7 +70,7 @@ $dispatcher = JDispatcher::getInstance();
 
 	?>	
 <div class="djcf_registration_outer" >	
-	<div class="dj-additem clearfix" >
+	<div class="dj-additem clearfix" >   
 	<form action="<?php echo JRoute::_('index.php'); ?>" method="post" class="form-validate" name="djForm" id="djForm"  enctype="multipart/form-data">
         <div class="additem_djform">
         	<div class="title_top"><?php echo JText::_('COM_DJCLASSIFIEDS_REGISTRATION'); ?></div>

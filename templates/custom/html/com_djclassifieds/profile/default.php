@@ -8,20 +8,7 @@
 * @autor url    http://design-joomla.eu
 * @autor email  contact@design-joomla.eu
 * @Developer    Lukasz Ciastek - lukasz.ciastek@design-joomla.eu
-* 
-* 
-* DJ Classifieds is free software: you can redistribute it and/or modify
-* it under the terms of the GNU General Public License as published by
-* the Free Software Foundation, either version 3 of the License, or
-* (at your option) any later version.
 *
-* DJ Classifieds is distributed in the hope that it will be useful,
-* but WITHOUT ANY WARRANTY; without even the implied warranty of
-* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-* GNU General Public License for more details.
-*
-* You should have received a copy of the GNU General Public License
-* along with DJ Classifieds. If not, see <http://www.gnu.org/licenses/>.
 * 
 */
 defined ('_JEXEC') or die('Restricted access');
@@ -78,7 +65,6 @@ $mod_attribs['style'] = 'xhtml';
 			echo'</div>';		
 		}				
 		
-		
 		$modules_djcf = &JModuleHelper::getModules('djcf-profile-top');			
 		if(count($modules_djcf)>0){
 			echo '<div class="djcf-ad-items-top clearfix">';
@@ -90,23 +76,22 @@ $mod_attribs['style'] = 'xhtml';
 			
 				<?php if($this->profile['event']->onBeforeDJClassifiedsDisplayProfile) { ?>
 					<div class="djcf_before_profile">
-						<?php echo $this->profile['event']->onBeforeDJClassifiedsDisplayProfile; ?>
+						<?php  echo $this->profile['event']->onBeforeDJClassifiedsDisplayProfile; ?>
 					</div>
 				<?php } ?>
-								
+
 			<div class="profile_outer"><?php echo $this->loadTemplate('profile'); ?></div>
-			
 				<?php if($this->profile['event']->onAfterDJClassifiedsDisplayProfile) { ?>
 					<div class="djcf_after_profile">
-						<?php echo $this->profile['event']->onAfterDJClassifiedsDisplayProfile; ?>
+						<?php  echo $this->profile['event']->onAfterDJClassifiedsDisplayProfile; ?>
 					</div>
 				<?php } ?>
-				
-			<div class="profile_items">
+				   
+			<div class="profile_items">  
 				<?php
 					$items_view = $par->get('profileitems_table_type','');
 					if($items_view){$items_view = '_'.$items_view;}
-					echo $this->loadTemplate('items'.$items_view); 				
+					echo $this->loadTemplate('items'.$items_view);
 				?>
 			</div>						
 			

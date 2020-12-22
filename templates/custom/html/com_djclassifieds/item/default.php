@@ -146,7 +146,7 @@
 					<?php
 						if($user->id>0 && $item->published!=2 &&
 							($user->id==$item->user_id || ($par->get('admin_can_edit_delete','0') && $user->authorise('core.admin', 'com_djclassifieds')))){
-							echo '<a href="index.php?option=com_djclassifieds&view=additem&id='.$item->id.$menu_newad_itemid.'" class="title_edit button btn btn_accent">'.JText::_('COM_DJCLASSIFIEDS_EDIT').'</a>';
+							echo '<a href="index.php?option=com_djclassifieds&view=additem&id='.$item->id.$menu_newad_itemid.'" class="btn btn_accent">'.JText::_('COM_DJCLASSIFIEDS_EDIT').'</a>';
 							if($par->get('ad_preview','0') && JRequest::getInt('prev',0)){
 								echo '<a href="index.php?option=com_djclassifieds&view=additem&task=publish&id='.$item->id.$menu_newad_itemid.'" class="title_save button btn btn_accent">'.JText::_('COM_DJCLASSIFIEDS_SAVE_AND_PUBLISH').'</a>';
 							}

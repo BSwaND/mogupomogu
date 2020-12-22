@@ -9,20 +9,6 @@
 * @autor email  contact@design-joomla.eu
 * @Developer    Lukasz Ciastek - lukasz.ciastek@design-joomla.eu
 * 
-* 
-* DJ Classifieds is free software: you can redistribute it and/or modify
-* it under the terms of the GNU General Public License as published by
-* the Free Software Foundation, either version 3 of the License, or
-* (at your option) any later version.
-*
-* DJ Classifieds is distributed in the hope that it will be useful,
-* but WITHOUT ANY WARRANTY; without even the implied warranty of
-* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-* GNU General Public License for more details.
-*
-* You should have received a copy of the GNU General Public License
-* along with DJ Classifieds. If not, see <http://www.gnu.org/licenses/>.
-* 
 */
 defined ('_JEXEC') or die('Restricted access');
 
@@ -69,7 +55,7 @@ if(!$user->id){
 if($par->get('ask_seller','0') && !$own_profile){ ?>
 	<div class="profile_contact_form">		
 		<?php if($par->get('ask_seller','0')==1){ ?>
-			<button id="ask_form_button" class="button" type="button" ><?php echo JText::_('COM_DJCLASSIFIEDS_PROFILE_ASK_SELLER'); ?></button>
+			<div id="ask_form_button" class="button btn btn_accent-black" >Связаться с автором</div>
 		<?php }else if($par->get('ask_seller','0')==2){
 			if ( file_exists( JPATH_ROOT.'/components/com_community/libraries/core.php' ) ) {
 				$jspath = JPATH_ROOT.DS.'components'.DS.'com_community';
@@ -81,7 +67,7 @@ if($par->get('ask_seller','0') && !$own_profile){ ?>
 				echo 'JoomSocial not installed!';
 			} ?> 
 		<?php } ?>
-		<div id="ask_form" class="af_hidden" style="display:none;overflow:hidden;">
+		<div id="ask_form" class=" bg-white af_hidden p-4" style="display:none;overflow:hidden;">
 									
 			<form action="<?php echo JURI::base();?>index.php" method="post" name="djForm" id="djForm" class="form-validate" enctype="multipart/form-data" >
 				<?php if($par->get('ask_seller_type','0')==0 || $user->id>0){?>
@@ -186,7 +172,7 @@ if($par->get('ask_seller','0') && !$own_profile){ ?>
 				   	
 				   	   		
 			   <div class="clear_both"></div>		
-			   <button class="button validate" type="submit" id="submit_b" ><?php echo JText::_('COM_DJCLASSIFIEDS_SEND'); ?></button>
+			   <input class="button validate btn btn_accent" type="submit" id="submit_b" ><?php echo JText::_('COM_DJCLASSIFIEDS_SEND'); ?></input>
 			   <input type="hidden" name="ask_status" id="ask_status" value="0" />
 			   <input type="hidden" name="option" value="com_djclassifieds" />
 			   <input type="hidden" name="view" value="profile" />

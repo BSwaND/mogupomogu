@@ -89,9 +89,10 @@
 						</div>
 						<div class="d-flex">
 							<a href="/dobavit-obyavlenie" class="btn btn_header">Подать объявление</a>
-							<a href="#" class="btn btn_login "></a>
+							<jdoc:include type="modules" name="in_site" style="none"/>
 						</div>
 					</div>
+
 
 					<div class="header_info_nav">
 						<div class="hamburger hamburger--slider hamburger__mob-menu">
@@ -112,6 +113,7 @@
 
 <main>
 	<div class="container">
+		<jdoc:include type="message" />
 		<div class="main_header">
 			<form action="" class="form_search">
 				<input type="text" placeholder="Поиск по объявлениям ..." class="form_search__input">
