@@ -77,7 +77,7 @@
 	jimport('joomla.application.module.helper');
 	$attribs['style'] = 'none';
 
-?> 
+?>
 <div id="dj-classifieds" class="clearfix djcftheme-<?php echo $this->theme;?><?php echo $pageclass_sfx;?><?php if(JFactory::getDate() >= $item->date_exp){ echo ' item_expired'; }?>">
 	  
 	<div class="row">
@@ -139,7 +139,6 @@
 			</div>
 		</div>
 
-
 		<div class="col-lg-14">
 			<div class="">
 				<div class="">
@@ -155,6 +154,7 @@
 					?>
 				</div>
 				<div class="adt_card_header">
+
 					<h1 class="h1"><?= $item->name ?></h1>
 					<div class="">
 						<?= ($item->t_name) ? ' <div class="label '. json_decode($item->t_params)->bt_class.'">'. $item->t_name .'</div>' : null ?>
@@ -174,7 +174,7 @@
 						</div>
 						<div class="col-md-10">
 							<div class="bg-white p-3 fw-3">
-								<?= $item->description ?>
+								<?= htmlspecialchars_decode( $item->description )?>
 								<div class="mt-3">
 									<?php if($par->get('sb_position','0')=='bottom' && $par->get('sb_code','')!=''){
 										//	echo '<span class="sb_bottom">'.$par->get('sb_code','').'</span>';
@@ -375,11 +375,3 @@
 		DJCFShowValueOnClick();
 	});
 </script>
-
-<!--<hr>-->
-<!--<b>$item</b>-->
-<!--<pre>-->
-<!--	--><?php
-	//		print_r($item);
-	//	?>
-<!--</pre>-->

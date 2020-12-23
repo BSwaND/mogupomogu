@@ -20,17 +20,12 @@ $lang = JFactory::getLanguage();
 $lang->load('plg_user_profile', JPATH_ADMINISTRATOR);
 
 ?>
-<div class="bg-white">
-
-<div class="profile-edit<?php echo $this->pageclass_sfx; ?> ">
-</div>
-	<?php if ($this->params->get('show_page_heading')) : ?>
-		<div class="page-header">
-			<h1>
+<div class="bg-white pl-3 pr-3">
+		<div class="bg-white__header mb-3">
+			<div class="h2">
 				<?php echo $this->escape($this->params->get('page_heading')); ?>
-			</h1>
+			</div>
 		</div>
-	<?php endif; ?>
 	<script type="text/javascript">
 		Joomla.twoFactorMethodChange = function(e)
 		{
@@ -49,6 +44,9 @@ $lang->load('plg_user_profile', JPATH_ADMINISTRATOR);
 			});
 		}
 	</script>
+
+	<div class="text-center"><a href="/" class="btn btn_accent">На главную</a></div>
+	<?php /*
 	<form id="member-profile" action="<?php echo JRoute::_('index.php?option=com_users&task=profile.save'); ?>" method="post" class="form-validate form-horizontal well" enctype="multipart/form-data">
 		<?php // Iterate through the form fieldsets and display each one. ?>
 		<?php foreach ($this->form->getFieldsets() as $group => $fieldset) : ?>
@@ -152,4 +150,5 @@ $lang->load('plg_user_profile', JPATH_ADMINISTRATOR);
 		</div>
 		<?php echo JHtml::_('form.token'); ?>
 	</form>
+ */ ?>
 </div>

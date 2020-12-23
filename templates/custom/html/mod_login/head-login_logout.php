@@ -10,22 +10,35 @@
 	defined('_JEXEC') or die;
 	$document = JFactory::getDocument();
 
-//	$fotoName = ($document->profileUser['img'])->name ;
-//	$fotoPath = ($document->profileUser['img'])->path ;
-//	$fotoExt = ($document->profileUser['img'])->ext ;
-//
-//	echo "<pre>";
-//	print_r( $document->profileUser['img']  );
-//	echo "</pre>";
+
+	$db = JFactory::getDbo();
+	$query = $db->getQuery(true);
+	$query
+		->select(
+			$db->quoteName(
+				array('id','type','name', 'ext' ,'path')
+			)
+		)
+		->from($db->quoteName('#__djcf_images'))
+		->where($db->quoteName('item_id') . ' ='. $user->id);
+	$db->setQuery($query);
+	$db->setLimit(1);
+	$document->profileUser = $db->loadAssoc();
+
+	$fotoName = $document->profileUser['name'];
+	$fotoPath = $document->profileUser['path'];
+	$fotoExt =  $document->profileUser['ext'];
 
 ?>
+
+
 	<div class="login-box_outer ">
 		<?php if ($params->get('greeting', 1)) { ?>
 			<div class="login-greeting">
 			</div>
 		<?php } ?>
 		<div  class="btn btn_login "
-		      <?//= ($fotoName) ? 'style="background-image: url('.$fotoPath.$fotoName.'.'.$fotoExt.')"'  :  null ?> >
+		      <?= ($fotoName) ? 'style="background-image: url('.$fotoPath.$fotoName.'.'.$fotoExt.');background-size: cover "'  :  null ?> >
 		<?= ($user->get('username')) ? '<span class="btn_login__user-name">'. htmlspecialchars($user->get("username")) .'</span>' : null ?>
 		</div>
 

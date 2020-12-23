@@ -29,6 +29,7 @@
 		<position>menu</position>
 		<position>menu_for_user</position>
 		<position>menu_regions_adt</position>
+		<position>menu_for_user_asaid_profile</position>
 		<position>header</position>
 		<position>breadcrumbs</position>
 		<position>footer</position>

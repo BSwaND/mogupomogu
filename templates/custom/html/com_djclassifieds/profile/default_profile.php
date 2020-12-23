@@ -23,10 +23,6 @@ $app	 = JFactory::getApplication();
 $main_id = JRequest::getVar('cid', 0, '', 'int');
 $user	 = JFactory::getUser();
 
-//$document = JFactory::getDocument();
-//$document->profileUser = $this->profile;
-
-//print_r($this->profile);die();
 
 $menus	= $app->getMenu('site');
 $menu_profileedit_itemid = $menus->getItems('link','index.php?option=com_djclassifieds&view=profileedit',1);
@@ -42,6 +38,7 @@ if($menu_jprofileedit_itemid){
 }
 
 ?>
+
 <div class="profile_box">
 	<?php //if($this->profile['img'] || $par->get('profile_avatar_source','')){		
 		$avatar_w = $par->get('profth_width','120')+10;
@@ -73,7 +70,7 @@ if($menu_jprofileedit_itemid){
 			if($user->id==$this->profile['id'] && $user->id>0){			
 				echo '<div><a href="'.$user_edit_profile.'" class="title_edit button">'.JText::_('COM_DJCLASSIFIEDS_PROFILE_EDITION').'</a></div>';
 				//echo '<a href="'.$juser_edit_profile.'" class="title_edit title_jedit button">'.JText::_('COM_DJCLASSIFIEDS_CHANGE_PASSWORD_EMAIL').'</a>';
-			} ?>				
+			} ?>
 			</h2>			
 		</div>
 		<?php if($this->profile['data']){ ?>
@@ -91,73 +88,10 @@ if($menu_jprofileedit_itemid){
 					$tel_tag='https://wa.me/'.preg_replace('/\D/', '', $f->value);
 				}				
 				?>
-				<div class="profile_row row_<?php echo $f->name;?>">
-					<span class="profile_row_label"><?php echo JText::_($f->label); ?></span>
-					<span class="profile_row_value<?php if($f->hide_on_start){echo ' djsvoc" title="'.htmlentities($f->value); }?>" rel="<?php echo $tel_tag; ?>" >
-						<?php 
-						if($f->type=='textarea'){							
-							if($f->value==''){echo '---'; }
-							else{echo $f->value;}								
-						}else if($f->type=='checkbox'){
-							if($f->value==''){echo '---'; }
-							else{
-								echo str_ireplace(';', ', ', substr($f->value,1,-1));
-							}
-						}else if($f->type=='date'){
-							if($f->value_date=='' || $f->value_date=='0000-00-00'){echo '---'; }
-							else{
-								if(!$f->date_format){$f->date_format = 'Y-m-d';}
-								echo DJClassifiedsTheme::formatDate(strtotime($f->value_date),'','',$f->date_format);
-							}
-						}else if($f->type=='date_from_to'){
-							if(!$f->date_format){$f->date_format = 'Y-m-d';}
-							if($f->value_date=='0000-00-00'){echo '---'; }
-							else{
-								echo DJClassifiedsTheme::formatDate(strtotime($f->value_date),'','',$f->date_format);
-							}
-							
-							if($f->value_date_to!='0000-00-00'){
-								echo '<span class="date_from_to_sep"> - </span>'.DJClassifiedsTheme::formatDate(strtotime($f->value_date_to),'','',$f->date_format);
-							} 
-						}else if($f->type=='link'){
-							if($f->value==''){echo '---'; }
-							else{
-								if(strstr($f->value, 'http://') || strstr($f->value, 'https://')){
-									echo '<a '.$f->params.' href="'.$f->value.'">'.str_ireplace(array("http://","https://"), array('',''), $f->value).'</a>';
-								}else if(strstr($f->value, '@')){
-									echo '<a '.$f->params.' href="mailto:'.$f->value.'">'.$f->value.'</a>';
-								}else if(strstr($f->name, 'tel')){
-									echo '<a '.$f->params.' href="tel:'.$f->value.'">'.$f->value.'</a>';
-								}else if(strstr($f->name, 'whatsapp')){
-									echo '<a '.$f->params.' href="https://wa.me/'.preg_replace('/\D/', '', $f->value).'">'.$f->value.'</a>';
-								}else{
-									echo '<a '.$f->params.' href="http://'.$f->value.'">'.$f->value.'</a>';
-								}															
-							}							
-						}else{
-							if($f->value==''){echo '---'; }
-							else{
-								if($par->get('cf_values_to_labels','0') && $f->type!='inputbox' && $f->type!='textarea'){
-									echo JText::_('COM_DJCLASSIFIEDS_'.str_ireplace(' ', '_', strtoupper($f->value)));
-								}else{
-									if($f->hide_on_start){
-										echo substr($f->value, 0,2).'..........<a href="javascript:void(0)" class="djsvoc_link">'.JText::_('COM_DJCLASSIFIEDS_SHOW').'</a>';
-									}else{
-										if($tel_tag){
-											echo '<a href="'.$tel_tag.'">'.$f->value.'</a>';
-										}else{
-											echo $f->value;
-										}
-									}
-								}
-							}	
-						}
-						?>
-					</span>					
-				</div>		
+
 			<?php
 			}?>
-			</div> 			
+			</div> 
 		<?php } ?>
 
 			<?php echo $this->loadTemplate('localization'); ?>

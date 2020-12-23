@@ -101,7 +101,7 @@ $mod_attribs['style'] = 'xhtml';
 					</div>
 				<?php } ?>
 			
-			
+
 	
 	<?php 
 		$modules_djcf = &JModuleHelper::getModules('djcf-profile-items');

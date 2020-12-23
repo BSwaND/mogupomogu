@@ -20,12 +20,12 @@ html, body, div, *
 
 
 .alert
+	cursor: pointer
 	position: relative
 	padding: 1rem 1rem
 	margin: 1rem
 	border: 1px solid transparent
 	border-radius: .25rem
-	position: relative
 	&-error
 		color: #842029
 		background-color: #f8d7da
@@ -38,6 +38,10 @@ html, body, div, *
 		color: #0f5132
 		background-color: #d1e7dd
 		border-color: #badbcc
+	&-warning
+		color: #664d03
+		background-color: #fff3cd
+		border-color: #ffecb5
 
 
 
@@ -80,12 +84,12 @@ html, body, div, *
 		background: $accent
 	&_login
 		background: #CECDCE url(../images/accaunt-logo.svg)
+		background-position: center
+		background-repeat: no-repeat
 		width: 56px
 		height: 56px
 		display: flex
-		background-size: cover
-		background-position: center
-		background-repeat: no-repeat
+		//background-size: cover
 		&:hover
 			//background-color:  lighten(#CECDCE , 10%)
 			filter: opacity(0.8)
@@ -427,13 +431,16 @@ html, body, div, *
 	display: inline-block
 	height: 23px
 	&_hot,
-	&[data-class="Горячие"]
+	&[data-class="Горячие"],
+	&[data-class="HOOT"]
 		background: $accent
 	&_new,
-	&[data-class="Новое"]
+	&[data-class="Новое"],
+	&[data-class="NEW"]
 		background: $green
 	&_boo,
-	&[data-class="Б/У"]
+	&[data-class="Б/У"],
+	&[data-class="BOO"]
 		background: $yellow
 		text-transform: uppercase
 	&_grey
@@ -551,3 +558,9 @@ html, body, div, *
 .pb
 	&-20
 		padding-bottom: 20px
+
+.fz
+	&-18
+		font-size: 18px
+		a
+			font-size: 18px

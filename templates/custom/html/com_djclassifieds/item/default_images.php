@@ -73,7 +73,6 @@ JHtml::_('jquery.framework');
 								</a>
 							</div>
 							<?php } ?>
-							<div class="clear_both"></div>
 						</div>
 					<?php } ?>
 					<?php for($ii=0; $ii<count($this->item_images);$ii++ ){ ?>
@@ -81,7 +80,10 @@ JHtml::_('jquery.framework');
 					<?php } ?>
 				</div>	
 			<?php } ?>
-			</div></div>			
+			</div>
+	</div>
+
+
 	<script type="text/javascript">
 		this.DJCFImageSwitcher = function (){
 			var mainimagelink = document.id('djc_mainimagelink');
@@ -94,11 +96,7 @@ JHtml::_('jquery.framework');
 					mainimagelink.removeEvents('click').addEvent('click', function(evt) {
 						var rel = mainimagelink.rel;
 						document.id(rel).fireEvent('click', document.id(rel));
-			
-						//if(!/android|iphone|ipod|series60|symbian|windows ce|blackberry/i.test(navigator.userAgent)) {
 							return false;
-						//}
-						//return true;
 					});
 				}
 			<?php } ?>
@@ -110,12 +108,7 @@ JHtml::_('jquery.framework');
 		
 				thumblink.addEvent('click',function(event){
 					event.preventDefault();
-					//new Event(element).stop();
-					/*
-					mainimage.onload = function() {
-						fx.start('opacity',0,1);
-					};
-					*/
+
 					var img = new Image();
 					img.onload = function() {
 						fx.start('opacity',0,1);
@@ -190,10 +183,8 @@ JHtml::_('jquery.framework');
 									}
 								}
 							}
-					   // });
 					});
 				});
 			}(jQuery);
-		
 		</script>				
-	<?php } ?>	
+	<?php } 

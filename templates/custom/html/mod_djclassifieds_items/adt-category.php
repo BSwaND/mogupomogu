@@ -33,14 +33,6 @@
 			$arrItemsField[ $field->item_id] = $field->value;
 		}
 	}
-
-//	echo '<pre>';
-//
-//	print_r($arrItemsField);
-//
-//	echo '<hr>';
-//	print_r($items);
-
 	if($items){	?>
 		<div class="row">
 			<?php foreach ($items as $item){ ?>

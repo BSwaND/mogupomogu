@@ -98,7 +98,20 @@
 				&__name
 					font-size: 18px
 					font-weight: 400
-
+			&__marker
+				position: relative
+				padding-right: 30px
+				font-size: 15px
+				&:after
+					content: ''
+					background: url(../images/marker.svg) no-repeat center
+					background-size: contain
+					width: 20px
+					height: 20px
+					position: absolute
+					z-index: 1
+					right: 0
+					filter: grayscale(1)
 	&_profile
 		&_item
 			font-size: 15px
@@ -107,7 +120,7 @@
 				font-size: 12px
 			.btn_wite
 				background: #fff url(../images/group-social.svg) no-repeat 90% center
-				padding-right: 40px
+				padding-right: 50px
 		&_td
 			flex: 1 1  auto
 			&_outer

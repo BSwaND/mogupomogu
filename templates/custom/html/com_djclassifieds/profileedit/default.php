@@ -38,7 +38,8 @@
 		$juser_edit_profile .= '&Itemid=' . $menu_jprofileedit_itemid->id;
 	}
 
-?>    
+?>
+
 <div id="dj-classifieds" class="clearfix djcftheme-<?php echo $par->get('theme', 'default'); ?>">
 	<?php
 		$modules_djcf = &JModuleHelper::getModules('djcf-top');
@@ -59,7 +60,7 @@
 			echo '</div>';
 		}
 
-	?>
+	?>     
 	<div class="row">
 		<div class="col-md-12">
 			<div class="dj-additem clearfix bg-white mb-3 ">
@@ -105,7 +106,7 @@
 										<input type="file" name="new_avatar"/>
 									</div>
 								</div>
-
+								
 								<?php
 							}
 
@@ -509,15 +510,15 @@
 				?>
 			</div>
 			<div class="bg-white menu_for_user mb-3">
-				index.php?option=com_djclassifieds&view=useritems
-				<br>
-				<div class=""><a href="/pomogu">Помогу</a></div>
-				<div class=""><a href="/nuzhdayus">Нуждаюсь</a></div>    
+				<?php
+					$modules = JModuleHelper::getModules('menu_for_user_asaid_profile');
+					foreach($modules as $module) {
+						echo JModuleHelper::renderModule($module, $attribs);
+					}
+				?>
 			</div>
 		</div>
 	</div>
-
-
 </div>
 <script type="text/javascript">
 	window.addEvent('domready', function () {

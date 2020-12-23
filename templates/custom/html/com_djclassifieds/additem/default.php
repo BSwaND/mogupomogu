@@ -10,19 +10,6 @@
 	 * @Developer    Lukasz Ciastek - lukasz.ciastek@design-joomla.eu
 	 *
 	 *
-	 * DJ Classifieds is free software: you can redistribute it and/or modify
-	 * it under the terms of the GNU General Public License as published by
-	 * the Free Software Foundation, either version 3 of the License, or
-	 * (at your option) any later version.
-	 *
-	 * DJ Classifieds is distributed in the hope that it will be useful,
-	 * but WITHOUT ANY WARRANTY; without even the implied warranty of
-	 * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-	 * GNU General Public License for more details.
-	 *
-	 * You should have received a copy of the GNU General Public License
-	 * along with DJ Classifieds. If not, see <http://www.gnu.org/licenses/>.
-	 *
 	 */
 	defined ('_JEXEC') or die('Restricted access');
 
@@ -75,7 +62,6 @@
 	jimport('joomla.application.module.helper');
 	$attribs['style'] = 'none';
 ?>
-
 <div class="main_body">
 	<div class="row">
 		<div class="col-md-12">
@@ -93,7 +79,6 @@
 							?>
 					</div>
 				</div>
-
 
 				<div id="dj-classifieds" class="clearfix djcftheme-<?php echo $par->get('theme','default');?>">
 					<?php
@@ -168,21 +153,7 @@
 										</div>
 										<div class="clear_both"></div>
 									</div>
-									<?php /* ?>
-           	<div class="djform_row">
-                <label class="label" for="sp" id="sp-lbl">
-                	<?php $prom_price = $par->get('prom_price');
-                    echo JText::_('aa');?>
-					
-                </label>
-                <div class="djform_field">
-					<input type="checkbox" class="required validate-checkboxes" name="sp[]" value="1" /><?php echo JText::_('JYES'); ?>
-					<input type="checkbox" class="required validate-checkboxes" name="sp[]" value="2" /><?php echo JText::_('JNO'); ?>
-					<input type="checkbox" class="required validate-checkboxes" name="sp[]" value="3" /><?php echo JText::_('JNO'); ?>		
-                </div>
-                <div class="clear_both"></div>
-            </div>
-            <?php */?>
+
 									<div class="djform_row">
 										<?php if($par->get('show_tooltips_newad','0')){ ?>
 											<label class="label Tips1" for="cat_0" id="cat_0-lbl" title="<?php echo JTEXT::_('COM_DJCLASSIFIEDS_CATEGORY_TOOLTIP')?>">
@@ -341,11 +312,13 @@
 										</div>
 										<div class="clear_both"></div>
 									</div>
-									<?php if(count($this->plugin_category)){
+
+									<?php /*if(count($this->plugin_category)){
 										foreach($this->plugin_category as $plugin_category){
 											echo $plugin_category;
 										}
-									}?>
+									} */?>
+
 									<div class="djform_row extra_fields">
 										<div id="ex_fields"></div>
 										<div class="clear_both"></div>
@@ -1014,87 +987,7 @@
 												echo $plugin_row;
 											}
 										}
-
-										/*
-										$images = array();
-										if(JRequest::getVar('id', 0, '', 'int' )>0){
-										?>
-											<div class="djform_row">
-															 <?php if($par->get('show_tooltips_newad','0')){ ?>
-															<label class="label Tips1" title="<?php echo JTEXT::_('COM_DJCLASSIFIEDS_IMAGES_TOOLTIP')?>">
-																		<?php echo JText::_('COM_DJCLASSIFIEDS_IMAGES');?>
-																		<img src="<?php echo JURI::base(true) ?>/components/com_djclassifieds/assets/images/tip.png" alt="?" />
-																</label>
-											<?php }else{ ?>
-															<label class="label">
-																		<?php echo JText::_('COM_DJCLASSIFIEDS_IMAGES'); ?>
-																</label>
-														<?php } ?>
-															<div class="djform_field">
-										<?php
-											$images_count = 0;
-											if(!$image = $this->item->image_url){
-												echo JText::_('COM_DJCLASSIFIEDS_NO_IMAGES_INCLUDED');
-											}else{
-												echo '<input type="hidden" name="image_url" value="'.$this->item->image_url.'" />';
-												$images=explode(';', substr($image,0,-1));
-												for($i=0; $i<count($images); $i++){
-													?>
-													<?php
-															$img_path= JURI::base(true).'/components/com_djclassifieds/images/';
-														$img_path .= $images[$i];
-														?>
-														<img src="<?php echo $img_path;?>.ths.jpg"/>
-														<input type="checkbox" name="del_img[]" id="del_img[]" value="<?php echo $images[$i];?>"/>
-														<?php echo JText::_('COM_DJCLASSIFIEDS_CHECK_TO_DELETE'); ?>
-														<br/>
-													<?php
-												}
-												echo '<input type="hidden" id="count_images" value="'.count($images).'">';
-											}
-											?>
-															</div>
-															<div class="clear_both"></div>
-													</div>
-											<?php
-										}
-										if(count($images)<$imglimit){
-										?>
-											<div class="djform_row">
-															<?php if($par->get('show_tooltips_newad','0')){ ?>
-															<label class="label Tips1" title="<?php echo JTEXT::_('COM_DJCLASSIFIEDS_ADD_IMAGE_TOOLTIP')?>">
-																		<?php echo JText::_('COM_DJCLASSIFIEDS_ADD_IMAGE');?>
-																		<img src="<?php echo JURI::base(true) ?>/components/com_djclassifieds/assets/images/tip.png" alt="?" />
-																		<?php
-																		$img_maxsize = $par->get('img_maxsize',0);
-													if($img_maxsize>0){
-														echo '<br />'.JText::_('COM_DJCLASSIFIEDS_MAX_IMAGE_SIZE').': '.$img_maxsize.' MB';
-													}
-													echo '<br /><span>'.JText::_('COM_DJCLASSIFIEDS_FIRST_IMAGES_IS_MAIN_IMAGE').'</span>';?>
-																</label>
-											<?php }else{ ?>
-															<label class="label" >
-																		<?php echo JText::_('COM_DJCLASSIFIEDS_ADD_IMAGE');
-													$img_maxsize = $par->get('img_maxsize',0);
-													if($img_maxsize>0){
-														echo '<br />'.JText::_('COM_DJCLASSIFIEDS_MAX_IMAGE_SIZE').': '.$img_maxsize.' MB';
-													}
-													echo '<br /><span>'.JText::_('COM_DJCLASSIFIEDS_FIRST_IMAGES_IS_MAIN_IMAGE').'</span>';
-													?>
-																</label>
-														<?php } ?>
-															<div class="djform_field">
-																	<?php $image_urls = ""?>
-												<div id="uploader">
-													<input type="file"  name="image[]" class="inputbox" />
-													<?php if($imglimit>1){ ?>
-														<a class="add_another_image" href="#" onclick="addImage(<?php echo $imglimit;?>); return false;" ><?php echo JText::_('COM_DJCLASSIFIEDS_ADD_NEX_IMAGE')?></a>
-													<?php }?>
-												</div>
-															</div>
-															<div class="clear_both"></div>
-													</div>
-													 <?php } */?>
+									?>
 								</div>
 							</div>
 							<?php
@@ -1104,60 +997,7 @@
 								if($par->get('promotion','1')=='1' && count($this->promotions)>0){
 									echo  $this->loadTemplate('promotions');
 								}
-								/* if($par->get('promotion','1')=='1' && count($this->promotions)>0){ ?>
-									<div class="prom_rows additem_djform">
-									<div class="title_top"><?php echo JText::_('COM_DJCLASSIFIEDS_PROMOTIONS');	?>
-										<?php if(count($this->promotions)>1){ ?>
-											<div class="promotions_info">
-												<?php echo JText::_('COM_DJCLASSIFIEDS_SELECT_EACH_PROMOTION_YOU_WISH_TO_USE')?>
-											</div>
-										<?php } ?>
-									</div>
-									<div class="additem_djform_in">
-									<?php foreach($this->promotions as $prom){ ?>
-										<div class="djform_row">
-														<label class="label" >
-															<?php
-																echo JText::_($prom->label).'<br /><span>'.JText::_('COM_DJCLASSIFIEDS_PRICE').'&nbsp;';
-																echo DJClassifiedsTheme::priceFormat($prom->price,$par->get('unit_price'));
-												if($points_a && $prom->points>0){
-													echo '&nbsp-&nbsp'.$prom->points.JTEXT::_('COM_DJCLASSIFIEDS_POINTS_SHORT');
-												}
-												if($prom->price_special>0){
-													echo '&nbsp;-&nbsp;'.DJClassifiedsTheme::priceFormat($prom->price_special,$par->get('unit_price')).' '.JTEXT::_('COM_DJCLASSIFIEDS_SPECIAL_PRICE_SHORT');
-												}
-																echo '</span>';
-															?>
-														</label>
-														<div class="djform_field">
-											<div class="djform_prom_v" >
-												<div class="djform_prom_v_in" >
-												<input type="radio" name="<?php echo $prom->name;?>" value="1" <?php  if(strstr($this->item->promotions, $prom->name)){echo "checked";}?> /><label><?php echo JText::_('JYES'); ?></label>
-												<input type="radio" name="<?php echo $prom->name;?>" value="0" <?php  if(!strstr($this->item->promotions, $prom->name)){echo "checked";}?> /><label><?php echo JText::_('JNO'); ?></label>
-												</div>
-											</div>
-											<div class="djform_prom_img" >
-												<div class="djform_prom_img_in" >
-													<?php
-														$tip_content = '<img src=\''.JURI::base(true).'/components/com_djclassifieds/assets/images/'.$prom->name.'_h.png\' />';
-														echo '<img class="Tips2" title="'.$tip_content.'" src="'.JURI::base(true).'/components/com_djclassifieds/assets/images/'.$prom->name.'.png" />';
-													 ?>
-												</div>
-											</div>
-											<div class="djform_prom_desc" >
-												<div class="djform_prom_desc_in" >
-												<?php echo JText::_($prom->description); ?>
-												</div>
-											</div>
 
-														</div>
-														<div class="clear_both"></div>
-												</div>
-												<?php } ?>
-												</div>
-											</div>
-							 <?php } */ ?>
-							<?php
 								if(count($this->plugin_sections)){
 									foreach($this->plugin_sections as $plugin_section){
 										echo $plugin_section;
@@ -1255,50 +1095,24 @@
 		<div class="col-md-6">
 			<div class="bg-white menu_for_user mb-3 ">
 				<?php
-				$modules = JModuleHelper::getModules('menu_for_user');
-				foreach($modules as $module) {
-					echo JModuleHelper::renderModule($module, $attribs);
-				}
+					$modules = JModuleHelper::getModules('menu_for_user');
+					foreach($modules as $module) {
+						echo JModuleHelper::renderModule($module, $attribs);
+					}
 				?>
 				</div>
 			<div class="bg-white menu_for_user mb-3">
-				index.php?option=com_djclassifieds&view=useritems
-				<br>
-				</div>
+				<?php
+					$modules = JModuleHelper::getModules('menu_for_user_asaid_profile');
+					foreach($modules as $module) {
+						echo JModuleHelper::renderModule($module, $attribs);
+					}
+				?>
+			</div>
 		</div>
 	</div>
 
 	<script type="text/javascript">
-		/*
-		function addImage(imglimit){
-
-			lim=document.djForm['image[]'].length;
-			if(!lim){
-				lim=1;
-			}
-
-			if(document.djForm['del_img[]']){
-				lim_old=document.djForm['del_img[]'].length;
-				if(!lim_old){
-					lim_old=1;
-				}
-				lim = lim + lim_old;
-			}
-
-
-			if(lim==imglimit){
-				alert('<?php echo JText::_('COM_DJCLASSIFIEDS_MAXIMUM_NUMBER_OF_IMAGES_IS');?> '+imglimit);
-	}else{
-		var inputdiv = document.createElement('input');
-		inputdiv.setAttribute('name','image[]');
-		inputdiv.setAttribute('type','file');
-		var ni = document.id('uploader');
-		ni.appendChild(document.createElement('br'))
-		ni.appendChild(inputdiv);		
-	}
-
-} */
-
 
 		<?php if($par->get('show_introdesc','1')){?>
 		function introdescLimit(limit){
@@ -1391,19 +1205,6 @@
 								JoomlaCalendar.init(jQuery(this)[0]);
 							});
 						}
-
-						/*var djcals = document.getElements('.djcalendar');
-					 if(djcals){
-						 var startDate = new Date(2008, 8, 7);
-						 djcals.each(function(djcla,index){
-							 Calendar.setup({
-											 inputField  : djcla.id,
-											 ifFormat    : "%Y-%m-%d",
-											 button      : djcla.id+"button",
-											 date      : startDate
-										});
-						 });
-					 }*/
 						document.formvalidator.attachToForm(document.id('djForm'));
 					},
 					onFailure: function(){
@@ -1887,18 +1688,6 @@
 			});
 			myRequest.send();
 
-
-			/*if(cats[a_parent]){
-				//alert(cats[v]);
-				document.id('after_cat_'+parent).innerHTML = cats[a_parent];
-				document.id('cat_'+parent).value=a_parent;
-			}else{
-				document.id('after_cat_'+parent).innerHTML = '';
-				document.id('cat_'+parent).value=a_parent;
-			}
-			document.id('after_cat_'+parent).removeClass('invalid');
-			document.id('after_cat_'+parent).setAttribute("aria-invalid", "false");*/
-
 		}
 
 
@@ -1950,24 +1739,6 @@
 			var JTooltips = new Tips($$('.Tips2'), {
 				showDelay: 200, hideDelay: 200, className: 'djcf_prom', fixed: false
 			});
-
-			/*document.formvalidator.setHandler('djcat', function(value) {
-				 regex=/^p/;
-				 return !regex.test(value);
-			});*/
-
-			/*document.formvalidator.setHandler('djemail', function(value) {
-				var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-				if(re.test(value)){
-					if(document.id('guest_email').hasClass('djinvalid')){
-						 return false;
-				 }else{
-					 return true;
-				 }
-				}else{
-					return false;
-				}
-			});*/
 
 			<?php if($par->get('ad_preview','0')){ ?>
 			var redirect_preview = 0;
