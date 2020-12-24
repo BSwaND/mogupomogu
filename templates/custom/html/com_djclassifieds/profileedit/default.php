@@ -38,6 +38,9 @@
 		$juser_edit_profile .= '&Itemid=' . $menu_jprofileedit_itemid->id;
 	}
 
+
+	include(JPATH_BASE .'/templates/custom/html/com_djclassifieds/profileedit/_getRalationForSlogin.php');
+
 ?>
 
 <div id="dj-classifieds" class="clearfix djcftheme-<?php echo $par->get('theme', 'default'); ?>">
@@ -59,16 +62,16 @@
 			}
 			echo '</div>';
 		}
+	?>
 
-	?>     
 	<div class="row">
 		<div class="col-md-12">
 			<div class="dj-additem clearfix bg-white mb-3 ">
 				<div class="bg-white__header">
 					<div class="h2"><?php echo JText::_('COM_DJCLASSIFIEDS_PROFILE_EDITION'); ?></div>
 				</div>
-				<form action="<?php echo JRoute::_('index.php'); ?>" method="post" class="form-validate p-3" name="djForm" id="djForm"
-				      enctype="multipart/form-data">
+				   
+				<form action="<?php echo JRoute::_('index.php'); ?>" method="post" class="form-validate p-3" name="djForm" id="djForm"  enctype="multipart/form-data">
 					<div class="additem_djform profile_edit_djform">
 						<div class="additem_djform_in">
 							<?php if ($par->get('profile_avatar_source', '')) { ?>
@@ -82,25 +85,25 @@
 									<div class="clear_both"></div>
 								</div>
 							<?php } else { ?>
+
 								<div class="">
-							<span class="label_grey">
-								<?= JText::_('COM_DJCLASSIFIEDS_PROFILE_IMAGE') ?>
-							</span>
+									<span class="label_grey">
+										<?= JText::_('COM_DJCLASSIFIEDS_PROFILE_IMAGE') ?>
+									</span>
 									<div class="djform_field djform_field_foto-block">
 										<?php if (!$this->avatar){
 											echo '<img style="width:' . $par->get('profth_width', '190') . 'px" src="' . JURI::base(true) . '/components/com_djclassifieds/assets/images/default_profile.png" />';
 										}else{
-											echo '<img src="' . JURI::root() . $this->avatar->path . $this->avatar->name . '_th.' . $this->avatar->ext . '" />'; ?>
+											echo '<img src="' . JURI::root() . $this->avatar->path . $this->avatar->name . '_th.' . $this->avatar->ext . '" />'; 
+												} ?>
 										<div class="">
 											<input type="checkbox" name="del_avatar" id="del_avatar" value="<?php echo $this->avatar->id; ?>"/>
 											<input type="hidden" name="del_avatar_id" value="<?php echo $this->avatar->id; ?>"/>
-											<?php echo JText::_('COM_DJCLASSIFIEDS_CHECK_TO_DELETE');
-												} ?>
+											<?php echo JText::_('COM_DJCLASSIFIEDS_CHECK_TO_DELETE');   ?>
 										</div>
-
 									</div>
-
 								</div>
+
 								<div class="text-center bb mb-5 pb-3">
 									<div class="djform_field input_file__outer">
 										<input type="file" name="new_avatar"/>
@@ -485,8 +488,6 @@
 						<a class="btn btn_accent-black"
 						   href="<?php echo $cancel_link; ?>"><?php echo JText::_('COM_DJCLASSIFIEDS_CANCEL') ?></a>
 
-						<?php //echo '<a href="'.$juser_edit_profile.'" class="title_edit title_jedit button">'.JText::_('COM_DJCLASSIFIEDS_CHANGE_PASSWORD_EMAIL').'</a>'; ?>
-
 						<button class="button validate btn btn_accent" type="submit"
 						        id="submit_button"><?php echo JText::_('COM_DJCLASSIFIEDS_SAVE'); ?></button>
 						<input type="hidden" name="user_id" value="<?php echo $user->id ?>"/>
@@ -550,4 +551,25 @@
 			return true;
 		}
 	});
+
+
+	function addInfoForInput(){
+		fetch('https://api.sypexgeo.net/')
+			.then((response) => {
+				return response.json();
+			})
+			.then((data) => {
+				console.log(data);
+				let inputPhone =  jQuery('#jform_profile_phone');
+				if(!inputPhone.val()){
+					inputPhone.attr('placeholder', '+'+data.country.phone+'...' )
+
+					inputPhone.click(function (){
+						inputPhone.val('+'+data.country.phone )
+					})
+				}
+			});
+	}
+	addInfoForInput();
+
 </script>

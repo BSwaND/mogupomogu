@@ -9,19 +9,7 @@
 * @autor email  contact@design-joomla.eu
 * @Developer    Lukasz Ciastek - lukasz.ciastek@design-joomla.eu
 * 
-* 
-* DJ Classifieds is free software: you can redistribute it and/or modify
-* it under the terms of the GNU General Public License as published by
-* the Free Software Foundation, either version 3 of the License, or
-* (at your option) any later version.
 *
-* DJ Classifieds is distributed in the hope that it will be useful,
-* but WITHOUT ANY WARRANTY; without even the implied warranty of
-* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-* GNU General Public License for more details.
-*
-* You should have received a copy of the GNU General Public License
-* along with DJ Classifieds. If not, see <http://www.gnu.org/licenses/>.
 * 
 */
 defined ('_JEXEC') or die('Restricted access');
@@ -29,6 +17,7 @@ JHTML::_('behavior.calendar');
 	$app 		= JFactory::getApplication();
 	$config		= JFactory::getConfig();
 	$document	= JFactory::getDocument();
+	$paramModule = json_decode($module->params);
 	
 	$cid=0;	
 	if($params->get('fallow_cat','1')==1 && JRequest::getVar('option') == 'com_djclassifieds'){
@@ -54,7 +43,8 @@ JHTML::_('behavior.calendar');
 	$link_reset = $link.'&reset=1';
 	
 ?>
-<div id="mod_djcf_search<?php echo $module->id;?>" class="dj_cf_search<?php echo $layout_cl;?>">
+
+<div id="mod_djcf_search<?php echo $module->id;?>" class="dj_cf_search<?= $layout_cl ?> <?= $paramModule->moduleclass_sfx ?> mt-3">
 <form action="<?php echo JRoute::_($link.'&se=1'); ?>" method="get" name="form-search<?php echo $module->id?>" id="form-search<?php echo $module->id?>">
 	<input type="hidden" name="task" value="parsesearch" />	   	
 	<input type="hidden" name="mod_id" value="<?php echo $module->id?>" />
@@ -601,7 +591,7 @@ JHTML::_('behavior.calendar');
 			</div>
 	<?php }?>
 	<div class="search_buttons">										
-		<button type="submit" class="button btn"><?php echo JText::_('MOD_DJCLASSIFIEDS_SEARCH_SEARCH');?></button>		
+		<input type="submit" class="button btn form_aside-search__btn-submit" value="<?= JText::_('MOD_DJCLASSIFIEDS_SEARCH_SEARCH') ?>">
 		<?php 
 		if((JRequest::getInt('se',0)==1 || (JRequest::getInt('cid',0)>0 && JRequest::getInt('option','')=='com_djclassifieds')) && ($params->get('show_reset','1')>0) ){ 
 			if($params->get('show_reset','1')==1){ ?>

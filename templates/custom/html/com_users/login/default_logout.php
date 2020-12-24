@@ -9,6 +9,9 @@
 
 defined('_JEXEC') or die;
 
+	jimport('joomla.application.module.helper');
+	$attribs['style'] = 'none';
+
 ?>
 <div class="logout<?php echo $this->pageclass_sfx; ?>">
 	<?php if ($this->params->get('show_page_heading')) : ?>
@@ -30,10 +33,25 @@ defined('_JEXEC') or die;
 	<?php if (($this->params->get('logoutdescription_show') == 1 && str_replace(' ', '', $this->params->get('logout_description')) != '')|| $this->params->get('logout_image') != '') : ?>
 		</div>
 	<?php endif; ?>
+
+	<div class="bg-white mb-3 ">
+		<div class="bg-white__header">
+			<div class="h2">Меню </div>
+		</div>
+		<div class=" menu_for_user">
+			<?php
+				$modules = JModuleHelper::getModules('menu_for_user');
+				foreach($modules as $module) {
+					echo JModuleHelper::renderModule($module, $attribs);
+				}
+			?>
+		</div>
+	</div>
+
 	<form action="<?php echo JRoute::_('index.php?option=com_users&task=user.logout'); ?>" method="post" class="form-horizontal well">
 		<div class="control-group">
 			<div class="controls">
-				<button type="submit" class="btn btn-primary">
+				<button type="submit" class="btn btn_accent-black">
 					<span class="icon-arrow-left icon-white"></span>
 					<?php echo JText::_('JLOGOUT'); ?>
 				</button>

@@ -86,56 +86,14 @@
 				<div class="bg-white__header ">
 					<div class="h2">Фильтр</div>
 				</div>
-				<form action="" class="form_aside-search">
-					<div class="form_aside-search__input-outer">
-						<input type="text" placeholder="Что вы ищете?">
-						<input type="text" placeholder="Адрес">
-						<label class="label__radius">
-							<span class="label__radius__marker"></span>
-							<input type="text" name="radius" placeholder="Растояние">
-						</label>
-					</div>
 
-					<div class="form_aside-search__input-outer">
-						<div class="form_aside-search__title">Место расположениея</div>
-						<select name="" id="">
-							<option value="Киев">Киев</option>
-							<option value="Одесса">Одесса</option>
-							<option value="Львов">Львов</option>
-						</select>
-					</div>
+				<?php
+					$modules = JModuleHelper::getModules('form_search_product_cart');
+					foreach($modules as $module) {
+						echo JModuleHelper::renderModule($module, $attribs);
+					}
+				?>
 
-					<div class="form_aside-search__input-outer">
-						<select name="" >
-							<option value="Киев">Мебель</option>
-							<option value="Одесса">Одесса</option>
-							<option value="Львов">Львов</option>
-						</select>
-					</div>
-
-					<div class="form_aside-search__input-outer">
-						<div class="form_aside-search__title">Спальни</div>
-						<label class="checkbox_outer">
-							<input type="checkbox" class="checkbox_hidden-input">
-							<span class="checkbox_span-label">1</span>
-						</label>
-						<label class="checkbox_outer">
-							<input type="checkbox" class="checkbox_hidden-input">
-							<span class="checkbox_span-label">2</span>
-						</label>
-						<label class="checkbox_outer">
-							<input type="checkbox" class="checkbox_hidden-input">
-							<span class="checkbox_span-label">3</span>
-						</label>
-						<label class="checkbox_outer">
-							<input type="checkbox" class="checkbox_hidden-input">
-							<span class="checkbox_span-label">4+</span>
-						</label>
-					</div>
-
-					<input type="submit" class="btn form_aside-search__btn-submit" value="Искать">
-					<div class="form_aside-search__btn-clear">Сбросить настройки</div>
-				</form>
 			</div>
 		</div>
 

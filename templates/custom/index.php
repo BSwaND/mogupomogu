@@ -56,7 +56,7 @@
 	<link rel="icon" type="image/png" href="/templates/<?php echo $this->template; ?>/icon/favicon.ico"/>
 	<jdoc:include type="head"/>
 </head>
-<body class="<?php echo $pageclass ? htmlspecialchars($pageclass) : 'default'; ?>">
+<body class="body <?php echo $pageclass ? htmlspecialchars($pageclass) : 'default'; ?>">
 
 
 <header class="header">
@@ -82,8 +82,7 @@
 							<div class="d-flex">
 								<img src="images/phone.svg" alt="phone" class="phone_img">
 								<div class="phone_block">
-									<a href="tel:380939393933" class="phone">+380939393933</a>
-									<a href="tel:380969396966" class="phone">+380969396966</a>
+									<jdoc:include type="modules" name="phones_block" style="none"/>
 								</div>
 							</div>
 						</div>
@@ -115,68 +114,7 @@
 	<div class="container">
 		<jdoc:include type="message" />
 		<div class="main_header">
-			<form action="" class="form_search">
-				<input type="text" placeholder="Поиск по объявлениям ..." class="form_search__input">
-				<input type="submit" value="" class="form_search__submit">
-				<div class="form_search_dop-filter__control_outer">
-					<div class="form_search_dop-filter__control__btn">Фильтр</div>
-				</div>
-
-				<div class="form_search_dop-filter">
-					<div class="form_search_dop-filter__top-control">
-						<div class="row">
-							<div class="col-9">
-								<label class="input_btn_outer">
-									<input type="radio" name="type" checked>
-									<span class="input_btn">Помогу</span>
-								</label>
-							</div>
-							<div class="col-9">
-								<label class="input_btn_outer">
-									<input type="radio" name="type">
-									<span class="input_btn">Нуждаюсь</span>
-								</label>
-							</div>
-						</div>
-					</div>
-
-					<div class="row">
-						<div class="col-md-10">
-							<label>
-								<p class="form_search_dop-filter__name-input">Место расположения</p>
-								<input type="text" name="location">
-							</label>
-							<label>
-								<p class="form_search_dop-filter__name-input">Страна</p>
-								<input type="text" name="country">
-							</label>
-							<label>
-								<p class="form_search_dop-filter__name-input">Город</p>
-								<input type="text" name="sity">
-							</label>
-							<label>
-								<p class="form_search_dop-filter__name-input">Область</p>
-								<input type="text" name="region">
-							</label>
-						</div>
-						<div class="col-md-8">
-							<div class="form_search_dop-filter__last-col">
-								<label class="label__radius">
-									<span class="label__radius__marker"></span>
-									<input type="text" name="radius"  placeholder="Растояние">
-								</label>
-
-								<div class="form_search_dop-filter__control__footer">
-									<input class="form_search__btn-footer" type="submit" value="Искать">
-									<span class="form_search__btn-footer form_search__btn-footer__reset">Сбросить настройки</span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</form>
-
-
+			<jdoc:include type="modules" name="form_search_main" style="none"/>
 
 			<jdoc:include type="modules" name="breadcrumbs" style="none"/>
 
@@ -216,18 +154,13 @@
 				<div class="col-md-5">
 					<div class="footer_address_outer">
 						<div class="footer_address_item d-flex">
-							<img src="images/marker.svg" alt="" class="footer_address_item__icon">
-							<div class="">
-								Украина, Одесса <br>
-								Балковская улица
-							</div>
+							<jdoc:include type="modules" name="address_info_footer" style="none"/>
 						</div>
 						<div class="footer_address_item">
 							<div class="phone_outer">
 								<img src="images/phone.svg" alt="phone" class="phone_img">
 								<div class="header_phone_block">
-									<a href="tel:380939393933" class="phone">+380939393933</a>
-									<a href="tel:380969396966" class="phone">+380969396966</a>
+									<jdoc:include type="modules" name="phones_block" style="none"/>
 								</div>
 							</div>
 						</div>
@@ -236,17 +169,11 @@
 					</div>
 				</div>
 				<div class="col-md-5">
-					<ul class="nav nav_footer">
-						<li><a href="#">О нас</a></li>
-						<li><a href="#">Политика конфиденциальности</a></li>
-						<li><a href="#">Условия о доставке</a></li>
-						<li><a href="#">Мой кабинет</a></li>
-					</ul>
+					<jdoc:include type="modules" name="menu_footer" style="none"/>
 				</div>
 				<div class="col-md-8">
 					<div class="social_outer">
-						<a href="#" class="social_link"><img src="images/instagram.svg" alt="instagram"></a>
-						<a href="#" class="social_link"><img src="images/fb.svg" alt="fb"></a>
+						<jdoc:include type="modules" name="social_block_footer" style="none"/>   
 					</div>
 				</div>
 			</div>
@@ -258,13 +185,11 @@
 			<p class="cooperate">Mogupomogu © Все права защищены.</p>
 		</div>
 	</div>
-
 </footer>
-
+<div class="prelouder">	<div class="louder"></div></div>
 <jdoc:include type="modules" name="footer" style="none"/>
 
 
 <script src="/templates/<?php echo $this->template; ?>/js/scripts.min.js"></script>
-
 </body>
 </html>

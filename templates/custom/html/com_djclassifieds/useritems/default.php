@@ -35,8 +35,10 @@
 	$db->setQuery($query);
 	$db->setLimit(1);
 	$profileUser = $db->loadAssoc();
-	$profileUserPhone = (JUserHelper::getProfile($user->id))->profile['phone'];
-	$profileUserCity = (JUserHelper::getProfile($user->id))->profile['city'];
+
+	$profileUserInfo = JUserHelper::getProfile($user->id);
+	$profileUserPhone = isset($profileUserInfo->profile['phone']) ? $profileUserInfo->profile['phone'] : null;
+	$profileUserCity =  isset($profileUserInfo->profile['city']) ? $profileUserInfo->profile['city'] : null;
 
 
 	

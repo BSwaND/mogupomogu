@@ -30,6 +30,7 @@
 		<position>menu_for_user</position>
 		<position>menu_regions_adt</position>
 		<position>menu_for_user_asaid_profile</position>
+		<position>menu_footer</position>
 		<position>header</position>
 		<position>breadcrumbs</position>
 		<position>footer</position>
@@ -38,6 +39,11 @@
 		<position>aftor_items</position>
 		<position>random_adt</position>
 		<position>in_site</position>
+		<position>phones_block</position>
+		<position>social_block_footer</position>
+		<position>address_info_footer</position>
+		<position>form_search_main</position>
+		<position>form_search_product_cart</position>
 	</positions>
 	<languages folder="language">
 		<language tag="en-GB">language/en-GB/en-GB.tpl_custom.ini</language>

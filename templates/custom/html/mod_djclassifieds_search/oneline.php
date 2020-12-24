@@ -54,8 +54,8 @@ JHTML::_('behavior.calendar');
 	$link_reset = $link.'&reset=1';
 	
 ?>
-<div id="mod_djcf_search<?php echo $module->id;?>" class="dj_cf_search<?php echo $layout_cl;?> dj_cf_search_onerow">
-<form action="<?php echo JRoute::_($link.'&se=1'); ?>" method="get" name="form-search<?php echo $module->id?>" id="form-search<?php echo $module->id?>">
+<div id="mod_djcf_search<?php echo $module->id;?>" class="dj_cf_search<?php echo $layout_cl;?> dj_cf_search_onerow bg-white">
+<form  action="<?php echo JRoute::_($link.'&se=1'); ?>" method="get" name="form-search<?php echo $module->id?>" id="form-search<?php echo $module->id?>">
 	<input type="hidden" name="task" value="parsesearch" />	   	
 	<input type="hidden" name="mod_id" value="<?php echo $module->id?>" />
 	<?php if($params->get('result_view','0')==1){ ?>

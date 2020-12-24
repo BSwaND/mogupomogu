@@ -53,12 +53,25 @@
     width: 100%;
   }
   
-  #dj-classifieds .dj-additem .djform_row .label {
+  #dj-classifieds .dj-additem .djform_row .label,
+  #dj__ferstname-lbl{
     display: block;
     width: auto;
     text-align: center;
+	  padding-bottom: 20px;
   }
-  
+
+
+	#dj-classifieds .dj-additem  #dj__ferstname-lbl{
+		padding-bottom: 20px;
+		text-align: center;
+		display: block;
+		width: 100%;
+	}
+	#dj-classifieds .dj-additem .djform_field {
+		width: 100%;
+	}
+
   #dj-classifieds .dj-additem .djform_row .djform_field {
     float: none;
   }

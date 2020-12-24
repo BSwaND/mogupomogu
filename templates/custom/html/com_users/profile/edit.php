@@ -1,31 +1,35 @@
 <?php
-/**
- * @package     Joomla.Site
- * @subpackage  com_users
- *
- * @copyright   Copyright (C) 2005 - 2020 Open Source Matters, Inc. All rights reserved.
- * @license     GNU General Public License version 2 or later; see LICENSE.txt
- */
+	/**
+	 * @package     Joomla.Site
+	 * @subpackage  com_users
+	 *
+	 * @copyright   Copyright (C) 2005 - 2020 Open Source Matters, Inc. All rights reserved.
+	 * @license     GNU General Public License version 2 or later; see LICENSE.txt
+	 */
 
-defined('_JEXEC') or die;
+	defined('_JEXEC') or die;
 
-JHtml::_('behavior.keepalive');
-JHtml::_('behavior.formvalidator');
-JHtml::_('formbehavior.chosen', 'select');
-JHtml::_('bootstrap.tooltip');
+	JHtml::_('behavior.keepalive');
+	JHtml::_('behavior.formvalidator');
+	JHtml::_('formbehavior.chosen', 'select');
+	JHtml::_('bootstrap.tooltip');
 
+	$user = JFactory::getUser();
 
-// Load user_profile plugin language
-$lang = JFactory::getLanguage();
-$lang->load('plg_user_profile', JPATH_ADMINISTRATOR);
+		// Load user_profile plugin language
+	$lang = JFactory::getLanguage();
+	$lang->load('plg_user_profile', JPATH_ADMINISTRATOR);
+
+	jimport('joomla.application.module.helper');
+	$attribs['style'] = 'none';
 
 ?>
 <div class="bg-white pl-3 pr-3">
-		<div class="bg-white__header mb-3">
-			<div class="h2">
-				<?php echo $this->escape($this->params->get('page_heading')); ?>
-			</div>
+	<div class="bg-white__header mb-3">
+		<div class="h2">
+			Добро пожаловать  <b><?= $user->username ?></b>
 		</div>
+	</div>
 	<script type="text/javascript">
 		Joomla.twoFactorMethodChange = function(e)
 		{
@@ -44,8 +48,18 @@ $lang->load('plg_user_profile', JPATH_ADMINISTRATOR);
 			});
 		}
 	</script>
+	<div class="menu_for_user">
+		<?php
+			$modules = JModuleHelper::getModules('menu_for_user');
+			foreach($modules as $module){
+				echo JModuleHelper::renderModule($module, $attribs);
+			}
+		?>
+	</div>
 
 	<div class="text-center"><a href="/" class="btn btn_accent">На главную</a></div>
+
+
 	<?php /*
 	<form id="member-profile" action="<?php echo JRoute::_('index.php?option=com_users&task=profile.save'); ?>" method="post" class="form-validate form-horizontal well" enctype="multipart/form-data">
 		<?php // Iterate through the form fieldsets and display each one. ?>

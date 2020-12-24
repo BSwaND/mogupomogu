@@ -22,6 +22,20 @@ document.addEventListener("DOMContentLoaded", function() {
 		jQuery('#login-form').submit();
 	})
 
+	
+
+//	Star Louder
+	setTimeout(function (){
+			let prelouder = document.querySelector('.prelouder');
+			let bodyBlock = document.querySelector('body');
+			//if (!prelouder) return;
+			prelouder.classList.add('prelouder_none');
+			bodyBlock.classList.add('body_visible');
+		}
+		, 200
+	)
+	
+
 });
 
 
