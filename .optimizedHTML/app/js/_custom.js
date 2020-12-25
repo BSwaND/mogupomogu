@@ -34,7 +34,43 @@ document.addEventListener("DOMContentLoaded", function() {
 		}
 		, 200
 	)
+
+
+	//NOT LINK
+	jQuery('.user-guest .bg-white a').click(function (e){
+		if(location.pathname !='/profil-polzovatelya'
+			& location.pathname != '/component/users/login'
+			& location.pathname !=  '/kontakty'){
+			e.preventDefault()
+			alert("Для просмотра необходимо авторизоваться");
+		}
+	})
+
 	
+	jQuery('.popup-with-form').magnificPopup({
+		type: 'inline',
+		preloader: false,
+		focus: '#name',
+		callbacks: {
+			beforeOpen: function() {
+				if(jQuery(window).width() < 700) {
+					this.st.focus = false;
+				} else {
+					this.st.focus = '#name';
+				}
+			}
+		}
+	});
+
+
+
+
+	//
+
+	jQuery('.drivers_block').click(function (){
+		 jQuery(this).children('.drivers_block_text').fadeToggle(400) ;
+
+	})
 
 });
 

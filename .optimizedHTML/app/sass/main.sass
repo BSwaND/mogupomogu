@@ -80,6 +80,15 @@ button
 			width: auto
 
 
+hr
+	color: $grey-2
+	background: $grey-2
+	border-color: $grey-2
+	outline: $grey-2
+	border: none
+	height: 1px
+
+
 .header
 	box-shadow: 0 0 5px 0 $grey
 	background: #ffffff
@@ -361,6 +370,7 @@ button
 	.controls
 		margin: auto
 		text-align: center
+		flex: 0 1 100%
 
 .control-label
 	min-width: 37%
@@ -475,7 +485,8 @@ button
 	flex-wrap: wrap
 	justify-content: center
 	.linkgoogleslogin ,
-	.linkfacebookslogin
+	.linkfacebookslogin,
+	.linkinstagramslogin
 		background: #fff
 		border: 1px solid #c7c7cb
 		border-radius: 8px
@@ -488,6 +499,81 @@ button
 		span
 			color: $text
 			font-size: 18px
+
+
+
+
+
+.djform_field_foto-block
+	img
+		width: 190px
+		height: 190px
+.profile_box
+	img
+		width: 190px
+		height: 190px
+
+
+.mfp-content
+	background: #fff
+	max-width: 560px
+	padding: 20px
+	border-radius: 8px
+
+
+
+
+
+
+
+
+.article-banner
+	position: relative
+	margin-bottom: 30px
+	&__img
+		width: 100%
+
+	&__text
+		position: absolute
+		width: 100%
+		background: rgba(255,255,255, 0.7)
+		font-size: 30px
+		font-weight: 500
+		z-index: 5
+		display: block
+		top: 50%
+		transform: translateY(-50%)
+		text-align: center
+		padding: 20px
+
+
+.drivers_block
+	margin-bottom: 10px
+	.h3
+		display: flex
+		width: 100%
+		justify-content: space-between
+		margin-bottom: 10px
+	&_text
+		display: none
+		padding-bottom: 20px
+	&_open-text
+		display: block
+		background: url(../images/arrow-btn.svg) no-repeat center
+		width: 30px
+		height: 30px
+		cursor: pointer
+
+
+
+
+
+
+
+
+
+
+
 
 
 @import media

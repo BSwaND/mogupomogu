@@ -2,34 +2,48 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c3e6878a-d007-46b0-9da7-957ebf4bb918" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/images/avatar/google_102184444323526107828.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/avatar/google_146216.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/custom/html/com_djclassifieds/profileedit/_getRalationForSlogin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/custom/html/mod_djclassifieds_search/main-serch.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/custom/html/mod_djclassifieds_search/mod_djclassifieds_search.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.optimizedHTML/app/images/email.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/arrow-btn.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/article/contact.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/article/rucovodcnvo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/custom/css/uform.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/custom/html/com_content/article/lite-container.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/custom/images/arrow-btn.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/custom/images/contact.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/custom/images/email.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/custom/images/o-nas.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/custom/images/rucovodcnvo.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/6a7b4993-96a7-4cc2-843e-188bc92ea6d3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6a7b4993-96a7-4cc2-843e-188bc92ea6d3.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.optimizedHTML/app/css/styles.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/.optimizedHTML/app/css/styles.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.optimizedHTML/app/index-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/.optimizedHTML/app/index-2.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.optimizedHTML/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/.optimizedHTML/app/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.optimizedHTML/app/js/_custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/.optimizedHTML/app/js/_custom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.optimizedHTML/app/js/_libs.js" beforeDir="false" afterPath="$PROJECT_DIR$/.optimizedHTML/app/js/_libs.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.optimizedHTML/app/js/scripts.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/.optimizedHTML/app/js/scripts.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.optimizedHTML/app/sass/_adt.sass" beforeDir="false" afterPath="$PROJECT_DIR$/.optimizedHTML/app/sass/_adt.sass" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.optimizedHTML/app/sass/_btn.sass" beforeDir="false" afterPath="$PROJECT_DIR$/.optimizedHTML/app/sass/_btn.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.optimizedHTML/app/sass/_libs.sass" beforeDir="false" afterPath="$PROJECT_DIR$/.optimizedHTML/app/sass/_libs.sass" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.optimizedHTML/app/sass/_media.sass" beforeDir="false" afterPath="$PROJECT_DIR$/.optimizedHTML/app/sass/_media.sass" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.optimizedHTML/app/sass/main.sass" beforeDir="false" afterPath="$PROJECT_DIR$/.optimizedHTML/app/sass/main.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/com_djclassifieds/themes/clean/css/responsive.css" beforeDir="false" afterPath="$PROJECT_DIR$/components/com_djclassifieds/themes/clean/css/responsive.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/mod_djclassifieds_search/mod_djclassifieds_search.xml" beforeDir="false" afterPath="$PROJECT_DIR$/modules/mod_djclassifieds_search/mod_djclassifieds_search.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/mod_slogin/tmpl/default/slogin.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/modules/mod_slogin/tmpl/default/slogin.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.optimizedHTML/gulpfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/.optimizedHTML/gulpfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.optimizedHTML/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/.optimizedHTML/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/com_slogin/comslogin.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/media/com_slogin/comslogin.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/custom/error.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/custom/error.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/custom/html/com_content/article/default.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/custom/html/com_content/article/default.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/custom/html/com_djclassifieds/item/default.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/custom/html/com_djclassifieds/item/default.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/custom/html/com_djclassifieds/profile/default_profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/custom/html/com_djclassifieds/profile/default_profile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/custom/html/com_djclassifieds/profileedit/_getRalationForSlogin.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/custom/html/com_djclassifieds/profileedit/_getRalationForSlogin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/custom/html/com_djclassifieds/profileedit/default.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/custom/html/com_djclassifieds/profileedit/default.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/custom/html/com_djclassifieds/useritems/default.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/custom/html/com_djclassifieds/useritems/default.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/custom/html/com_users/login/default_logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/custom/html/com_users/login/default_logout.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/custom/html/com_users/profile/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/custom/html/com_users/profile/edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/custom/html/mod_djclassifieds_search/default.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/custom/html/mod_djclassifieds_search/default.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/custom/html/mod_djclassifieds_search/oneline.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/custom/html/mod_djclassifieds_search/oneline.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/custom/html/com_users/reset/confirm.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/custom/html/com_users/reset/confirm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/custom/html/mod_djclassifieds_maps/baidu.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/custom/html/mod_djclassifieds_maps/baidu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/custom/html/mod_djclassifieds_maps/cluster.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/custom/html/mod_djclassifieds_maps/cluster.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/custom/html/mod_djclassifieds_maps/default.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/custom/html/mod_djclassifieds_maps/default.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/custom/html/mod_djclassifieds_maps/leaflet.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/custom/html/mod_djclassifieds_maps/leaflet.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/custom/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/custom/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/custom/templateDetails.xml" beforeDir="false" afterPath="$PROJECT_DIR$/templates/custom/templateDetails.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/custom/uForm/UFormConfig.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/custom/uForm/UFormConfig.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/custom/uForm/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/templates/custom/uForm/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/custom/uForm/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/templates/custom/uForm/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/custom/uForm/sform.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/custom/uForm/sform.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,18 +84,18 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/custom/html/mod_djclassifieds_search" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/custom/images" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.gutterIcons" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\progect\mogupomogu\www\templates\custom\html\mod_djclassifieds_search" />
+      <recent name="D:\progect\mogupomogu\www\templates\custom\images" />
+      <recent name="D:\progect\mogupomogu\www\images" />
       <recent name="D:\progect\mogupomogu\www\.optimizedHTML\app\images" />
-      <recent name="D:\progect\mogupomogu\www\templates\custom\fonts" />
-      <recent name="D:\progect\mogupomogu\www\templates\custom\html\mod_login" />
-      <recent name="D:\progect\mogupomogu\www\templates\custom\html\mod_djclassifieds_items" />
+      <recent name="D:\progect\mogupomogu\www\images\article" />
+      <recent name="D:\progect\mogupomogu\www\templates\custom\html\com_content\article" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\progect\mogupomogu\www\templates\custom\js" />
@@ -110,6 +124,7 @@
       <workItem from="1608618304385" duration="27864000" />
       <workItem from="1608704394915" duration="28961000" />
       <workItem from="1608793257993" duration="25254000" />
+      <workItem from="1608879000583" duration="32717000" />
     </task>
     <servers />
   </component>

@@ -51,7 +51,7 @@ if($params->get('enable_places_search', '')){
 
 ?>
 
-<div class="dj_cf_maps">
+<div class="dj_cf_maps  p-3">
     <?php if($params->get('enable_places_search', '')){ ?>
 		<div class="djmod_map_places_search">
 			 <span id="user_pos<?php echo $module->id;?>" class="user_pos"></span>

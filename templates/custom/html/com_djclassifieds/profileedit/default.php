@@ -38,7 +38,7 @@
 		$juser_edit_profile .= '&Itemid=' . $menu_jprofileedit_itemid->id;
 	}
 
-
+	  
 	include(JPATH_BASE .'/templates/custom/html/com_djclassifieds/profileedit/_getRalationForSlogin.php');
 
 ?>
@@ -94,7 +94,7 @@
 										<?php if (!$this->avatar){
 											echo '<img style="width:' . $par->get('profth_width', '190') . 'px" src="' . JURI::base(true) . '/components/com_djclassifieds/assets/images/default_profile.png" />';
 										}else{
-											echo '<img src="' . JURI::root() . $this->avatar->path . $this->avatar->name . '_th.' . $this->avatar->ext . '" />'; 
+											echo '<img src="' . JURI::root() . $this->avatar->path . $this->avatar->name . '.'. $this->avatar->ext . '" />';
 												} ?>
 										<div class="">
 											<input type="checkbox" name="del_avatar" id="del_avatar" value="<?php echo $this->avatar->id; ?>"/>

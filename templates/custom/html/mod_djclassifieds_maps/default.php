@@ -89,7 +89,7 @@ $config = JFactory::getConfig();
     }    
     
 ?>
-<div class="dj_cf_maps">
+<div class="dj_cf_maps p-3">
 	<div id="djmod_map_box<?php echo $module->id;?>" style="display:none;">
 		 <div id='djmod_map<?php echo $module->id;?>' class="djmod_map" style='width: <?php echo $params->get('map_width');?>; height: <?php echo $params->get('map_height');?>; border: 1px solid #666; '>						  
 		 </div>      

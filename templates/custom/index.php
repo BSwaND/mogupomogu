@@ -1,10 +1,9 @@
 <?php
-	          
 	defined('_JEXEC') or die;
 
-	$myScript = false; // если "true" - то отключаем все стандатрные скрипты и подключаем свои (в том числе и jQuery)
 	$app = JFactory::getApplication();
 	$user = JFactory::getUser();
+	JFactory::getDocument()->setGenerator('');
 	$this->setHtml5(true);
 	$params = $app->getTemplate(true)->params;
 	$menu = $app->getMenu()->getActive();
@@ -17,12 +16,8 @@
 
 	// Подключение своих стилей:
 	JHtml::_('stylesheet', 'styles.min.css', array('version' => 'v=1.3', 'relative' => true));
+	JHtml::_('stylesheet', 'uform.css', array('version' => 'v=1.3', 'relative' => true));
 
-	if ($myScript) { // при необходимости отключаем все скрипты и подключаем свежий jQuery (параметр выше)
-		$this->_scripts = array();
-		unset($this->_script['text/javascript']);
-		JHtml::_('script', $template_url . '/js/jquery-3.3.1.min.js', array('version' => 'v=3.3.1'));
-	}
 
 	//Протокол Open Graph
 	$pageTitle = $document->getTitle();
@@ -47,6 +42,7 @@
     <meta property="og:image" content="' . $image . '" />
     <meta property="og:url" content="' . JURI:: current() . '" />
 ');
+
 ?>
 
 <!DOCTYPE html>
@@ -56,8 +52,7 @@
 	<link rel="icon" type="image/png" href="/templates/<?php echo $this->template; ?>/icon/favicon.ico"/>
 	<jdoc:include type="head"/>
 </head>
-<body class="body <?php echo $pageclass ? htmlspecialchars($pageclass) : 'default'; ?>">
-
+<body class="body <?=($user->guest == 1) ? 'user-guest' : null?> <?php echo $pageclass ? htmlspecialchars($pageclass) : 'default'; ?>">
 
 <header class="header">
 	<div class="container">
@@ -154,6 +149,7 @@
 				<div class="col-md-5">
 					<div class="footer_address_outer">
 						<div class="footer_address_item d-flex">
+							<p><img class="footer_address_item__icon" src="images/marker.svg" alt="" /></p>
 							<jdoc:include type="modules" name="address_info_footer" style="none"/>
 						</div>
 						<div class="footer_address_item">
@@ -165,7 +161,7 @@
 							</div>
 						</div>
 
-						<div class="btn btn_footer">Отправьте нам сообщение</div>
+						<a class="btn btn_footer popup-with-form" href="#form_footer">Отправьте нам сообщение</a>
 					</div>
 				</div>
 				<div class="col-md-5">
@@ -173,7 +169,7 @@
 				</div>
 				<div class="col-md-8">
 					<div class="social_outer">
-						<jdoc:include type="modules" name="social_block_footer" style="none"/>   
+						<jdoc:include type="modules" name="social_block_footer" style="none"/>
 					</div>
 				</div>
 			</div>
@@ -190,6 +186,50 @@
 <jdoc:include type="modules" name="footer" style="none"/>
 
 
+<div class="">
+	<!-- form itself -->
+	<form id="form_footer" class="uForm mfp-hide white-popup-block form_footer" method="post">
+		<input class="uForm__extended" name="nospam" type="text" value="uform-empty" required>
+		<h1>Оставьте сообщение</h1>
+		<fieldset>
+			<div>
+				<p>
+					<label for="form_footer_name">*ФИО</label>
+					<input id="form_footer_name" name="name" type="text" placeholder="ФИО" required="">
+				</p>
+				<p>
+					<label for="form_footer_email">*Email</label>
+					<input id="form_footer_email" name="email" type="email" placeholder="example@domain.com" required="">
+				</p>
+				<p>
+					<label for="form_footer_phone">Телефон</label>
+					<input id="form_footer_phone" name="phone" type="tel" >
+				</p>
+				<p>
+					<label for="form_footer_textarea">Ваше сообщениее</label><br>
+					<textarea id="form_footer_textarea" class="form_footer_textarea" name="message" required></textarea>
+				</p>
+			</div>
+		</fieldset>
+
+
+
+		<input class="btn btn_accent" type="submit" value="Отправить">
+		<p id="uForm__error-msg" class="uForm__error-msg"></p>
+		<div id="uForm__preload" class="uForm__preload"></div>
+	</form>
+
+	<div id="uForm__overlay" class="uForm__overlay"></div>
+
+	<div id="uForm__modal" class="uForm__modal">
+		<p class="uForm__modal-text">Запрос успешно отправлен</p>
+		<button>Закрыть</button>
+	</div>
+
+</div>
+
+
 <script src="/templates/<?php echo $this->template; ?>/js/scripts.min.js"></script>
+<script src="/templates/custom/uForm/js/script.js"></script>
 </body>
 </html>

@@ -13,7 +13,7 @@ JHtml::_('behavior.keepalive');
 JHtml::_('behavior.formvalidator');
 
 ?>
-<div class="reset-confirm<?php echo $this->pageclass_sfx; ?>">
+<div class="reset-confirm<?php echo $this->pageclass_sfx; ?> bg-white p-3">
 	<?php if ($this->params->get('show_page_heading')) : ?>
 		<div class="page-header">
 			<h1>
@@ -21,22 +21,26 @@ JHtml::_('behavior.formvalidator');
 			</h1>
 		</div>
 	<?php endif; ?>
-	<form action="<?php echo JRoute::_('index.php?option=com_users&task=reset.confirm'); ?>" method="post" class="form-validate form-horizontal well">
-		<?php foreach ($this->form->getFieldsets() as $fieldset) : ?>
-			<fieldset>
-				<?php if (isset($fieldset->label)) : ?>
-					<p><?php echo JText::_($fieldset->label); ?></p>
-				<?php endif; ?>
-				<?php echo $this->form->renderFieldset($fieldset->name); ?>
-			</fieldset>
-		<?php endforeach; ?>
-		<div class="control-group">
-			<div class="controls">
-				<button type="submit" class="btn btn-primary validate">
-					<?php echo JText::_('JSUBMIT'); ?>
-				</button>
-			</div>
+
+		<div class="">
+			<form  action="<?php echo JRoute::_('index.php?option=com_users&task=reset.confirm'); ?>" method="post" class="form-validate form-horizontal well">
+				<?php foreach ($this->form->getFieldsets() as $fieldset) : ?>
+					<fieldset>
+						<?php if (isset($fieldset->label)) : ?>
+							<p><?php echo JText::_($fieldset->label); ?></p>
+						<?php endif; ?>
+						<?php echo $this->form->renderFieldset($fieldset->name); ?>
+					</fieldset>
+				<?php endforeach; ?>
+				<div class="control-group">
+					<div class="controls">
+						<button type="submit" class="btn btn-primary validate btn btn_primary">
+							<?php echo JText::_('JSUBMIT'); ?>
+						</button>
+					</div>
+				</div>
+				<?php echo JHtml::_('form.token'); ?>
+			</form>
 		</div>
-		<?php echo JHtml::_('form.token'); ?>
-	</form>
+
 </div>

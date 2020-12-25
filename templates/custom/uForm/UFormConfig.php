@@ -8,7 +8,7 @@ class UFormConfig
 
     // ################## отправитель и получатели ##################
     public $fromMail = 'test@sofona.info'; // Ваш Email, с которого отправляется письма (если используется SMTP, крайне желательно, чтоб совпадал с email-ом SMTP)
-    public $receiverMails = 'managermail_1@sofona.info, managermail_2@sofona.info'; // Email получателей
+    public $receiverMails = 'front1.sofona@gmail.com'; // Email получателей
     public $bccMails = ''; // Email скрытых получателей (если нужно)
     public $techMails = 'info@sofona.com';
 
@@ -16,8 +16,8 @@ class UFormConfig
     public $isSmtp = true; // если используется SMTP - true, иначе - false
     private $isSSL = ''; // если используется сайт с SSL (https) - true, иначе - false, если оставить пустым, попытается определить автоматически
     public $smtp = [
-        'username' => 'smtpmail@sofona.info',
-        'password' => '*******',
+        'username' => 'trach-test@sofona.info',
+        'password' => 'Kz&1^tvStv7y',
 
         // this is the default for sofona smtp
         'host' => 'mail.smartmail.club',

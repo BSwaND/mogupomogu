@@ -47,7 +47,7 @@ if($menu_jprofileedit_itemid){
 				echo DJClassifiedsSocial::getUserAvatar($this->profile['id'],$par->get('profile_avatar_source',''),'L');
 			}else{
 				if($this->profile['img']){
-					echo '<img alt="'.$this->profile['name'].' - logo" src="'.JURI::base(true).$this->profile['img']->path.$this->profile['img']->name.'_th.'.$this->profile['img']->ext.'" />';	
+					echo '<img alt="'.$this->profile['name'].' - logo" src="'.JURI::base(true).$this->profile['img']->path.$this->profile['img']->name.'.'.$this->profile['img']->ext.'" />';
 				}else{
 					echo '<img alt="'.$this->profile['name'].' - logo" style="width:'.$par->get('profth_width','120').'px" src="'.JURI::base(true).'/components/com_djclassifieds/assets/images/default_profile.png" />';
 				}

@@ -98,7 +98,7 @@ $par = JComponentHelper::getParams( 'com_djclassifieds' );
     	$map_styles = '[{featureType:"poi",elementType:"labels",stylers:[{visibility:"off"}]}]';
     }
 ?>
-<div class="dj_cf_maps">
+<div class="dj_cf_maps  p-3">
 	<?php if($palces_s){ ?>
 		<div class="djmod_map_places_search">
 			 <span id="user_pos<?php echo $module->id;?>" class="user_pos"></span>

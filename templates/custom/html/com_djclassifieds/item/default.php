@@ -158,7 +158,7 @@
 
 											}else{
 												if($this->profile['img']){
-													echo '<img class="adt_author_foto" itemprop="image" alt="'.$item->username.' - logo" src="'.JURI::base(true).$this->profile['img']->path.$this->profile['img']->name.'_ths.'.$this->profile['img']->ext.'" />';
+													echo '<img class="adt_author_foto" itemprop="image" alt="'.$item->username.' - logo" src="'.JURI::base(true).$this->profile['img']->path.$this->profile['img']->name.'.'.$this->profile['img']->ext.'" />';
 												}else{
 													echo '<img class="adt_author_foto" itemprop="image" alt="'.$item->username.' - logo"  src="'.JURI::base(true).'/components/com_djclassifieds/assets/images/default_profile_s.png" />';
 												}

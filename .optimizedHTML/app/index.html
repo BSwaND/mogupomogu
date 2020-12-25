@@ -450,7 +450,7 @@
 							</div>
 						</div>
 						
-						<div class="btn btn_footer">Отправьте нам сообщение</div>
+						<div class="btn btn_footer popup-with-form" href="#form_footer">Отправьте нам сообщение</div>
 					</div>
 				</div>
 				<div class="col-md-6">
@@ -482,6 +482,35 @@
 <div class="prelouder">	<div class="louder"></div></div>
 
 <div class="d" style="height: 800px;"></div>
+
+
+
+<!-- form itself -->
+<form id="form_footer" class="mfp-hide white-popup-block form_footer">
+	<h1>Оставьте сообщение</h1>
+	<fieldset>
+		<div>
+			<p>
+				<label for="form_footer_name">ФИО</label>
+				<input id="form_footer_name" name="name" type="text" placeholder="ФИО" required="">
+			</p>
+			<p>
+				<label for="form_footer_email">Email</label>
+				<input id="form_footer_email" name="email" type="email" placeholder="example@domain.com" required="">
+			</p>
+			<p>
+				<label for="form_footer_phone">Телефон</label>
+				<input id="form_footer_phone" name="phone" type="tel"  required="" placeholder="Телефом">
+			</p>
+			<p>
+				<label for="form_footer_textarea">Textarea</label><br>
+				<textarea id="form_footer_textarea" class="form_footer_textarea"></textarea>
+			</p>
+		</div>
+	</fieldset>
+	
+	<input class="btn btn_accent" type="submit" value="Отправить">
+</form>
 
 
 <!--<script src="https://unpkg.com/@google/markerclustererplus@4.0.1/dist/markerclustererplus.min.js"></script>-->
