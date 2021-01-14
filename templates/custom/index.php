@@ -17,6 +17,7 @@
 	// Подключение своих стилей:
 	JHtml::_('stylesheet', 'styles.min.css', array('version' => 'v=1.3', 'relative' => true));
 	JHtml::_('stylesheet', 'uform.css', array('version' => 'v=1.3', 'relative' => true));
+	JHtml::_('stylesheet', 'custom.css', array('version' => 'v=1.3', 'relative' => true));
 
 
 	//Протокол Open Graph
@@ -75,7 +76,9 @@
 								</div>
 							</div>
 							<div class="d-flex">
+								<?php /*
 								<img src="images/phone.svg" alt="phone" class="phone_img">
+								*/ ?>
 								<div class="phone_block">
 									<jdoc:include type="modules" name="phones_block" style="none"/>
 								</div>
@@ -154,7 +157,9 @@
 						</div>
 						<div class="footer_address_item">
 							<div class="phone_outer">
+								<?php /*
 								<img src="images/phone.svg" alt="phone" class="phone_img">
+ */ ?>
 								<div class="header_phone_block">
 									<jdoc:include type="modules" name="phones_block" style="none"/>
 								</div>
@@ -231,5 +236,6 @@
 
 <script src="/templates/<?php echo $this->template; ?>/js/scripts.min.js"></script>
 <script src="/templates/custom/uForm/js/script.js"></script>
+<script src="/templates/<?php echo $this->template; ?>/js/custom.js"></script>
 </body>
 </html>

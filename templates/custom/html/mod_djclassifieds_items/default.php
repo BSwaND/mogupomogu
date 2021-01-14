@@ -53,6 +53,7 @@
 									<div class="adt_item_info">
 										<a href="<?= JRoute::_(DJClassifiedsSEO::getItemRoute($item->id.':'.$item->alias,$item->cat_id.':'.$item->c_alias,$item->region_id.':'.$item->r_name)) ?>" class="adt_item__header"><?= $item->name ?></a>
 										<div class="adt_item__date"><?= date("d.m.Y", strtotime( $item->date_start) )?></div>
+										<div class="adt_item__date"><b>Действителен до <?= date("d.m.Y", strtotime( $item->date_exp) )?></b></div>
 										<?php /*
 										<a href="<?= JRoute::_(DJClassifiedsSEO::getCategoryRoute($item->cat_id.':'.$item->c_alias)) ?>" class="adt_item__category"><?= $item->c_name ?></a>
                     */ ?>

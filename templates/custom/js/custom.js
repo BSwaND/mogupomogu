@@ -1,0 +1,1 @@
+jQuery("#jform_profile_city,	#jform_profile_region,	#jform_profile_country,	#jform_profile_address1").parents('.control-group').hide();

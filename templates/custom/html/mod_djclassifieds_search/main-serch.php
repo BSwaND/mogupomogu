@@ -112,12 +112,11 @@
 				<div class="row">
 					<div class="col-md-10">
 						<?php	if($params->get('show_loc','1')==1){	?>
-							<div class="search_regions djcf_se_row">
+							<div class="search_regions djcf_se_row"> 
 						<?php if($params->get('show_loc_label','0')==1){ ?>
 							<label><?php echo JText::_('MOD_DJCLASSIFIEDS_SEARCH_LOZALIZATION_LABEL'); ?></label>
 						<?php } ?>
 						<?php
-
 							if($params->get('loc_select_type',0)==1){
 								$loc_address_country = '';
 								if($params->get('show_address','0')==1){
@@ -137,6 +136,9 @@
 								echo $reg_sel;
 
 							}else{
+//								echo '<pre>';
+//								print_r($regions);
+//								echo '</pre>';
 								$reg_sel = '<select  class="inputbox" id="se'.$module->id.'_reg_0" name="se_regs[]" onchange="se'.$module->id.'_new_reg(0,this.value,new Array());"><option value="0">'.JText::_('COM_DJCLASSIFIEDS_SELECT_LOCALIZATION').'</option>';
 								$parent_id=0;
 								$lc=0;

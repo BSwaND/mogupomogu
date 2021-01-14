@@ -121,7 +121,7 @@
 				</div>
 				<div class="adt_card_header_info">
 					<div class="adt_item__sity"><?= $item->r_name ?></div>
-					<div class="adt_item__date"><?=  date("d.m.Y",  strtotime($item->date_start)) ?></div>
+					<div class="adt_item__date"><?=  date("d.m.Y",  strtotime($item->date_start)) ?> - <?= date("d.m.Y", strtotime( $item->date_exp) )?></div>
 				</div>
 
 				<div class="adt_card_body">
@@ -186,17 +186,18 @@
 										</div>
  */ ?>
 
-										<?php if(isset($userProfileField->profile['phone'])) {?>
+										<?php /* if(isset($userProfileField->profile['phone'])) {?>
 											<div class="adt_author_block_body_row">
 												<span class="adt_author_block_body_row__title">Телефон:</span>
 												<span><?= $userProfileField->profile['phone'] ?></span>
 											</div>
 										<?php }?>
-
+										  <?php
 										<div class="adt_author_block_body_row">
 											<span class="adt_author_block_body_row__title">Email:</span>
 											<span><?= $item->u_email ?></span>
 										</div>
+										*/?>
 									</div>
 								</div>
 							</div>

@@ -15,3 +15,6 @@
 	$assocParam = (JLanguageAssociations::isEnabled() && $params->get('show_associations'));
 	JHtml::_('behavior.caption');
 
+	jimport('joomla.application.module.helper');
+	$attribs['style'] = 'none';
+

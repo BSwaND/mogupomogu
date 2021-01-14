@@ -82,7 +82,7 @@ if($col_limit==0){
 	$col_limit = 1;
 }
 	
-?>
+?> 
 <div id="dj-classifieds" class="clearfix">
 	<?php
 		$modules_djcf = &JModuleHelper::getModules('djcf-top');

@@ -99,18 +99,18 @@
 										</div>
 
 										<div class="adt_author_block_body">
-											<?php if(isset($profileUserPhone)) {?>
+											<?php /* if(isset($profileUserPhone)) {?>
 												<div class="adt_author_block_body_row">
 													<span class="adt_author_block_body_row__title">Телефон:</span>
 													<span><?= $profileUserPhone ?></span>
 												</div>
 											<?php }?>
-
+											<?php
 											<div class="adt_author_block_body_row mb-4">
 												<span class="adt_author_block_body_row__title">Email:</span>
 												<span><?= $user->email ?></span>
 											</div>
-
+											   */?>
 											<a href="/component/djclassifieds/?view=profileedit" class="btn btn_grey">Редактировать профиль</a>
 										</div>
 									</div>
@@ -319,7 +319,7 @@
 							<div class="adt_profile_item bg-white p-3">
 								<div class="adt_profile_td_outer">
 									<div class="adt_profile_td adt_profile_td__first-child">
-										<div class="adt_profile_head"><?= 	$itemIsActive ?></div>
+										<div class="adt_profile_head"><?= 	$itemIsActive ?> <br><b>до <?= date('d.m.Y',  strtotime($item->date_exp)) ?></b></div> 
 										<div class="adt_profile_body">
 											<a href="<?= $linkItem ?>">
 												<img class="adt_profile_img" src="<?= ($item->images[0])->thumb_b ?>" alt="<?= $item->name ?>">

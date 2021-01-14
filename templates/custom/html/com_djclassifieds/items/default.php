@@ -27,7 +27,7 @@
 
 <div class="main_body">
 	<div class="row">
-		<div class="col-lg-14">
+		<div class="col-lg-18">
 			<div class="adt_block bg-white">
 				<div class="bg-white__header">
 					<div class="row">
@@ -38,7 +38,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="adt_items">
+				<div class="adt_items"> 
 					<div class="row">
 						<?php foreach ($this->items as $item){ ?>
 							<div class="col-sm-9">
@@ -49,12 +49,14 @@
 									<div class="adt_item_info">
 										<a href="<?= JRoute::_(DJClassifiedsSEO::getItemRoute($item->id.':'.$item->alias,$item->cat_id.':'.$item->c_alias,$item->region_id.':'.$item->r_name)) ?>" class="adt_item__header"><?= $item->name ?></a>
 										<div class="adt_item__date"><?= date("d.m.Y", strtotime( $item->date_start) )?></div>
+										<div class="adt_item__date"><b>Действителен до <?= date("d.m.Y", strtotime( $item->date_exp) )?></b></div>
+
 										<?php /*
 											<a href="<?= JRoute::_(DJClassifiedsSEO::getCategoryRoute($item->cat_id.':'.$item->c_alias)) ?>" class="adt_item__category"><?= $item->c_name ?></a>
-					            */ ?>
+					             ?>
 										<?php	if($item->fields && $item->fields[1] != '---'){ ?>
 											<div class="label" data-class="<?= $item->fields[1]?>"><?= $item->fields[1]?></div>
-										<?php	}		?>
+										<?php	}		*/ ?>
 										<div class="">
 											<a href="<?= DJClassifiedsSEO::getRegionRoute($item->region_id.':'.$item->r_name) ?>" class="adt_item__sity"><?= $item->r_name ?></a>
 										</div>
@@ -72,6 +74,7 @@
 			</div>
 		</div>
 
+		<?php /*
 		<div class="col-lg-4">
 			<div class="bg-white mb-5">
 				<div class="bg-white__header ">
@@ -100,6 +103,7 @@
 				</div>
 			</div>
 		</div>
+		*/ ?>
 	</div>
 </div>
 

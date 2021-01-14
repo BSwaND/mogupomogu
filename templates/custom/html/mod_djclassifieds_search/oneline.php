@@ -153,7 +153,7 @@ JHTML::_('behavior.calendar');
 				
 		<?php }
 	 	if($params->get('show_loc','1')==1){	?>
-		<div class="search_regions djcf_se_row">
+		<div class="search_regions djcf_se_row">  
 			<?php if($params->get('show_loc_label','0')==1){ ?>
 		   		<label><?php echo JText::_('MOD_DJCLASSIFIEDS_SEARCH_LOZALIZATION_LABEL'); ?></label>
 		   	<?php } ?> 			

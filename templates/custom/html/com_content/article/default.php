@@ -26,5 +26,11 @@ defined('_JEXEC') or die;
 			 <?= $this->item->event->afterDisplayContent ?>
 		 </div>
 	 </div>
+
+	<?php
+			$modules = JModuleHelper::getModules('after_content');
+			foreach($modules as $module){
+			echo JModuleHelper::renderModule($module, $attribs);
+		} ?>
 </div>
 

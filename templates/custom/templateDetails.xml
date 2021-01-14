@@ -44,6 +44,7 @@
 		<position>address_info_footer</position>
 		<position>form_search_main</position>
 		<position>form_search_product_cart</position>
+        <position>after_content</position>
 	</positions>
 	<languages folder="language">
 		<language tag="en-GB">language/en-GB/en-GB.tpl_custom.ini</language>

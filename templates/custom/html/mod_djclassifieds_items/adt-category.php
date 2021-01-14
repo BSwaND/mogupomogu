@@ -44,12 +44,14 @@
 						<div class="adt_item_info">
 							<a href="<?= JRoute::_(DJClassifiedsSEO::getItemRoute($item->id.':'.$item->alias,$item->cat_id.':'.$item->c_alias,$item->region_id.':'.$item->r_name)) ?>" class="adt_item__header"><?= $item->name ?></a>
 							<div class="adt_item__date"><?= date("d.m.Y", strtotime( $item->date_start) )?></div>
+							<div class="adt_item__date"><b>Действителен до <?= date("d.m.Y", strtotime( $item->date_exp) )?></b></div>
+							<br>
 							<?php /*
 							<a  href="<?= JRoute::_(DJClassifiedsSEO::getCategoryRoute($item->cat_id.':'.$item->c_alias)) ?>" class="adt_item__category"><?= $item->c_name ?></a>
-              */ ?>
+              ?>
 							<?php	if($arrItemsField[$item->id] && $arrItemsField[$item->id] != '---'){ ?>
 								<div class="label" data-class="<?= $arrItemsField[$item->id]?>"><?= $arrItemsField[$item->id]?></div>
-							<?php	}		?>
+							<?php	}		*/?>
 							<div class="adt_item__sity">
 								<a href="<?= DJClassifiedsSEO::getRegionRoute($item->region_id.':'.$item->r_name) ?>"><?= $item->r_name ?></a>
 							</div>
