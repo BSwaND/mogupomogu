@@ -37,14 +37,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 	//NOT LINK
-	jQuery('.user-guest .bg-white a').click(function (e){
-		if(location.pathname !='/profil-polzovatelya'
-			& location.pathname != '/component/users/login'
-			& location.pathname !=  '/kontakty'){
-			e.preventDefault()
-			alert("Для просмотра необходимо авторизоваться");
-		}
-	})
+		jQuery('.user-guest .bg-white a, .user-guest  .dj_cf_maps ').click(function (e){
+			if(location.pathname !='/profil-polzovatelya'
+				& location.pathname != '/component/users/login'
+				& location.pathname !=  '/kontakty'){
+				e.preventDefault()
+				alert("Для просмотра необходимо авторизоваться");
+			}
+		})                 
+
 
 	
 	jQuery('.popup-with-form').magnificPopup({

@@ -2,30 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c3e6878a-d007-46b0-9da7-957ebf4bb918" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/custom/css/custom.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/custom/html/com_djclassifieds/profileedit/__q.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/custom/js/custom.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.optimizedHTML/app/css/styles.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/.optimizedHTML/app/css/styles.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.optimizedHTML/app/sass/_btn.sass" beforeDir="false" afterPath="$PROJECT_DIR$/.optimizedHTML/app/sass/_btn.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.optimizedHTML/app/sass/_media.sass" beforeDir="false" afterPath="$PROJECT_DIR$/.optimizedHTML/app/sass/_media.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.optimizedHTML/app/sass/main.sass" beforeDir="false" afterPath="$PROJECT_DIR$/.optimizedHTML/app/sass/main.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/custom/html/com_content/article/_header.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/custom/html/com_content/article/_header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/custom/html/com_content/article/default.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/custom/html/com_content/article/default.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/custom/html/com_djclassifieds/categories/default.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/custom/html/com_djclassifieds/categories/default.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/custom/html/com_djclassifieds/item/default.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/custom/html/com_djclassifieds/item/default.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.optimizedHTML/app/js/_custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/.optimizedHTML/app/js/_custom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.optimizedHTML/app/js/scripts.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/.optimizedHTML/app/js/scripts.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/custom/html/com_djclassifieds/items/blog.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/custom/html/com_djclassifieds/items/blog.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/custom/html/com_djclassifieds/items/default.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/custom/html/com_djclassifieds/items/default.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/custom/html/com_djclassifieds/profile/default_items.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/custom/html/com_djclassifieds/profile/default_items.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/custom/html/com_djclassifieds/useritems/default.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/custom/html/com_djclassifieds/useritems/default.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/custom/html/com_users/registration/default.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/custom/html/com_users/registration/default.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/custom/html/mod_djclassifieds_items/adt-category.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/custom/html/mod_djclassifieds_items/adt-category.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/custom/html/mod_djclassifieds_items/clear.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/custom/html/mod_djclassifieds_items/clear.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/custom/html/mod_djclassifieds_items/default.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/custom/html/mod_djclassifieds_items/default.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/custom/html/mod_djclassifieds_search/default.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/custom/html/mod_djclassifieds_search/default.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/custom/html/mod_djclassifieds_search/main-serch.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/custom/html/mod_djclassifieds_search/main-serch.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/custom/html/mod_djclassifieds_search/oneline.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/custom/html/mod_djclassifieds_search/oneline.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/custom/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/custom/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/custom/templateDetails.xml" beforeDir="false" afterPath="$PROJECT_DIR$/templates/custom/templateDetails.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/custom/icon/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/templates/custom/icon/favicon.ico" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,6 +71,7 @@
       <recent name="D:\progect\mogupomogu\www\templates\custom\html\com_content\article" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\progect\mogupomogu\www\templates\custom\icon" />
       <recent name="D:\progect\mogupomogu\www\templates\custom\js" />
       <recent name="D:\progect\mogupomogu\www\templates\custom\css" />
       <recent name="D:\progect\mogupomogu\www\.optimizedHTML\app" />
@@ -116,7 +105,11 @@
       <workItem from="1610108405170" duration="683000" />
       <workItem from="1610526001580" duration="119000" />
       <workItem from="1610533373354" duration="10242000" />
-      <workItem from="1610607470191" duration="15530000" />
+      <workItem from="1610607470191" duration="16545000" />
+      <workItem from="1610631933477" duration="1312000" />
+      <workItem from="1610720596381" duration="100000" />
+      <workItem from="1610952798116" duration="2675000" />
+      <workItem from="1611124555272" duration="821000" />
     </task>
     <servers />
   </component>

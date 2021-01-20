@@ -69,6 +69,9 @@ if(JRequest::getVar('se','0','','string')!='0' && isset($_GET['se_cats'])){
 	$cat_id_se = (int)$cat_id_se;
 }
 
+?>
+
+	<?php
 if($main_id>0 || $main_rid>0 || $se>0 || JRequest::getInt('fav','0') || $uid>0 || ($main_id==0 && $par->get('items_in_main_cat',1)) ){
 	$trigger_before = trim(implode("\n", $this->dispatcher->trigger('onBeforeDJClassifiedsDisplay', array (&$this->items, & $par, 'blog'))));
 	if($trigger_before) { ?>

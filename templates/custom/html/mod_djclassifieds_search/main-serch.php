@@ -69,7 +69,7 @@
 			<?php if($params->get('show_input','1')==1){ ?>
 				<div class="search_word djcf_se_row">
 					<?php $s_value = htmlspecialchars(JRequest::getVar('search',''), ENT_COMPAT, 'UTF-8') ?>
-					<input type="text" id="input_search<?php echo $module->id?>" size="12" name="search" class="inputbox first_input form_search__input" value="<?php echo $s_value; ?>" placeholder="<?php echo JText::_('COM_DJCLASSIFIEDS_SEARCH'); ?>" />
+					<input type="text" id="input_search<?php echo $module->id?>" size="12" name="search" class="inputbox first_input form_search__input" value="<?php echo $s_value; ?>" placeholder="Что Вы ищите?" />
 				</div>
 			<?php } ?>
 

@@ -43,7 +43,7 @@ JHTML::_('behavior.calendar');
 	$link_reset = $link.'&reset=1';
 	
 ?>
-
+	
 <div id="mod_djcf_search<?php echo $module->id;?>" class="dj_cf_search<?= $layout_cl ?> <?= $paramModule->moduleclass_sfx ?> mt-3">
 <form action="<?php echo JRoute::_($link.'&se=1'); ?>" method="get" name="form-search<?php echo $module->id?>" id="form-search<?php echo $module->id?>">
 	<input type="hidden" name="task" value="parsesearch" />	   	
