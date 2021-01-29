@@ -2,18 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c3e6878a-d007-46b0-9da7-957ebf4bb918" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/templates/custom/images/nuzda.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/custom/images/pomogu.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webServers.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.optimizedHTML/app/js/_custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/.optimizedHTML/app/js/_custom.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.optimizedHTML/app/js/scripts.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/.optimizedHTML/app/js/scripts.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/custom/html/com_djclassifieds/items/blog.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/custom/html/com_djclassifieds/items/blog.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/custom/html/com_djclassifieds/items/default.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/custom/html/com_djclassifieds/items/default.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/custom/html/com_djclassifieds/profile/default_items.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/custom/html/com_djclassifieds/profile/default_items.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/custom/html/mod_djclassifieds_items/adt-category.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/custom/html/mod_djclassifieds_items/adt-category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/custom/html/mod_djclassifieds_items/clear.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/custom/html/mod_djclassifieds_items/clear.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/custom/html/mod_djclassifieds_items/default.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/custom/html/mod_djclassifieds_items/default.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/custom/html/mod_djclassifieds_search/default.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/custom/html/mod_djclassifieds_search/default.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.optimizedHTML/app/css/styles.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/.optimizedHTML/app/css/styles.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.optimizedHTML/app/index-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/.optimizedHTML/app/index-2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.optimizedHTML/app/sass/_media.sass" beforeDir="false" afterPath="$PROJECT_DIR$/.optimizedHTML/app/sass/_media.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/logo.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/custom/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/templates/custom/css/custom.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/custom/error.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/custom/error.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/custom/html/mod_djclassifieds_search/main-serch.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/custom/html/mod_djclassifieds_search/main-serch.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/custom/icon/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/templates/custom/icon/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/custom/images/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/templates/custom/images/logo.svg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +110,11 @@
       <workItem from="1610631933477" duration="1312000" />
       <workItem from="1610720596381" duration="100000" />
       <workItem from="1610952798116" duration="2675000" />
-      <workItem from="1611124555272" duration="821000" />
+      <workItem from="1611124555272" duration="1193000" />
+      <workItem from="1611211096965" duration="845000" />
+      <workItem from="1611216689594" duration="213000" />
+      <workItem from="1611740109523" duration="962000" />
+      <workItem from="1611911136316" duration="2346000" />
     </task>
     <servers />
   </component>

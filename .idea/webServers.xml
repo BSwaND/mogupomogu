@@ -9,6 +9,13 @@
           </advancedOptions>
         </fileTransfer>
       </webServer>
+      <webServer id="5deeb0cc-4980-44d4-b17f-b5c49418a526" name="mogupomogu.org" url="http://mogupomogu.org">
+        <fileTransfer rootFolder="/www/mogupomogu.org" host="88.99.0.245" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" showHiddenFiles="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
     </option>
   </component>
 </project>
